@@ -1,0 +1,2 @@
+#declared - დეკლარირებული
+#concatenation - შეერთება
