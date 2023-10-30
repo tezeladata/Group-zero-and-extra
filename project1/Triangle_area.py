@@ -1,0 +1,10 @@
+import math
+print("Hello, this is triangle area calculator")
+a=int(input("First side of triangle is: "))
+b=int(input("Second side of triangle is: "))
+c=int(input("Third side of triangle is: "))
+print("Area will be calculated with Heron's formula:")
+s=0.5*(a+b+c)
+area=math.sqrt(s*(s-a)*(s-b)*(s-c))
+print("With the sides of triangle being:", a, ",", b, ",", c, "\n" "Area of it will be:", area)
+print("Thanks for attention!")
