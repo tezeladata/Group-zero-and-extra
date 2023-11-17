@@ -78,4 +78,105 @@ def hero(bullets, dragons):
         return True
     else:
         return False
+
+#How good are you really?
+def better_than_average(class_points, your_points):
+    class_avg=sum(class_points) / len(class_points)
+    if your_points > class_avg:
+        return True
+    else:
+        return False
+    
+#Calculate BMI
+def bmi(weight, height):
+    your_bmi=(weight)/(height**2)
+    if your_bmi<=18.5:
+        return "Underweight"
+    if your_bmi<=25.0:
+        return "Normal"
+    if your_bmi<=30.0:
+        return "Overweight"
+    if your_bmi>30:
+        return "Obese"
+    
+#Fake Binary
+def fake_bin(x):
+    result=""
+    for num in x:
+        if int(num)<5:
+            result+="0"
+        else:
+            result+="1"
+    return result
+
+#Find Maximum and Minimum Values of a List
+def minimum(arr):
+    return min(arr)
+
+def maximum(arr):
+    return max(arr)
+
+#Beginner - Reduce but Grow
+def grow(arr):
+    result=1
+    for num in arr:
+        result*=num
+    return result
+        
+#Count of positives / sum of negatives
+def count_positives_sum_negatives(arr):
+    result=[]
+    pos=0
+    neg=0
+    for num in arr:
+        if num>0:
+            pos+=1
+        else:
+            neg+=num
+        result=[pos, neg]
+    return result
+
+#Century From Year
+def century(year):
+    century=(year+99) // 100
+    return century
+
+#You only need one - Beginner
+def check(seq, elem):
+    if elem in seq:
+        return True
+    else:
+        return False
+    
+#Convert number to reversed array of digits
+def digitize(n):
+    result=[]
+    for num in str(n):
+        result.insert(0, int(num))
+    return result
+digitize(123134667634)
+
+#Will you make it?
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+    if mpg*fuel_left >= distance_to_pump:
+        return True
+    else:
+        return False
+
+#DNA to RNA Conversion
+def dna_to_rna(dna):
+    rna=dna
+    return rna.replace("T", "U")
+
+#Is n divisible by x and y?
+def is_divisible(n,x,y):
+    return n%x==0 and n%y==0
+
+#Count by X
+def count_by(x, n):
+    result=[]
+    for i in range(1, n+1):
+        a=x*i
+        result.append(a)
+    return result
     
