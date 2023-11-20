@@ -154,7 +154,7 @@ def digitize(n):
     for num in str(n):
         result.insert(0, int(num))
     return result
-digitize(123134667634)
+
 
 #Will you make it?
 def zero_fuel(distance_to_pump, mpg, fuel_left):
