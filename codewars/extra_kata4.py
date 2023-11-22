@@ -82,3 +82,99 @@ def goose_filter(birds):
         if element not in geese:
             not_geese.append(element)
     return not_geese
+
+#Capitalization and Mutability
+def capitalize_word (word):
+    return word[0].upper() + word[1:]
+
+#What's the real floor?
+def get_real_floor(n):
+    if n==0:
+        return 0
+    elif n==1:
+        return 0
+    elif 2<=n<13:
+        return n-1
+    elif n<0:
+        return n
+    else:
+        return n-2
+    
+#Grasshopper - If/else syntax debug
+def check_alive(health):
+    if health <= 0:
+        return False
+    else:
+        return True
+    
+#Name Shuffler
+def name_shuffler(str_):
+    name=str_.split(" ")
+    return name[1] + " " + name[0]
+
+#Find numbers which are divisible by given number
+def divisible_by(numbers, divisor):
+    answer=[]
+    for i in numbers:
+        if i%divisor==0:
+            answer.append(i)
+    return answer
+
+#How many lightsabers do you own?
+def how_many_light_sabers_do_you_own(name=""):
+    if name=="Zach":
+        return 18
+    else:
+        return 0
+    
+#Stringy Strings
+def stringy(size):
+    answer=""
+    for i in range(size):
+        if i%2==0:
+            answer+="1"
+        else:
+            answer+="0"
+    return answer
+
+#Plural
+def plural(n):
+    if n==0:
+        return True
+    elif n==1:
+        return False
+    else:
+        return True
+
+#Training JS #7: if..else and ternary operator
+def sale_hotdogs(n):
+    if n==0:
+        return 0
+    elif n<5:
+        return n*100
+    elif 5<=n<10:
+        return n*95
+    else:
+        return n*90
+
+#Grasshopper - Basic Function Fixer
+def add_five(num):
+    total = num + 5
+    return total
+
+#Lario and Muigi Pipe Problem
+def pipe_fix(nums):
+    new=[]
+    for i in range(nums[0], nums[-1]+1):
+        new.append(i)
+    return new
+
+#Multiplication table for number
+def multi_table(number):
+    table=''
+    for i in range(1, 11):
+        z=i*number
+        table+= "{} * {} = {}\n".format(i, number, z)
+    return table.strip("\n")
+
+#
