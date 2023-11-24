@@ -108,3 +108,87 @@ def hello(name=""):
         return "Hello, " + name.capitalize() + "!"
     else:
         return "Hello, World!"
+    
+#Hex to Decimal
+def hex_to_dec(s):
+    hex={
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3, 
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "a": 10,
+        "b": 11,
+        "c": 12,
+        "d": 13,
+        "e": 14,
+        "f": 15
+        }
+    sum=0
+    lenght=len(s)-1
+    for i in s:
+        sum +=hex[i] * 16**lenght
+        lenght-=1
+    return sum
+
+#Grasshopper - Function syntax debugging
+def main(verb, noun):
+    return verb + noun
+
+#No zeros for heros
+def no_boring_zeros(n):
+    if n==0:
+        return n
+    else:
+        while n%10==0:
+            n=n/10
+    return n
+        
+#Grasshopper - Terminal game combat function
+def combat(health, damage):
+    if health>damage:
+        return health-damage
+    else:
+        return 0
+
+#Exclamation marks series #1: Remove an exclamation mark from the end of string
+def remove(s):
+    if s!="":
+        if s[-1]=="!":
+            return s[0:-1]
+        else:
+            return s
+    else:
+        return ""
+    
+#Enumerable Magic #25 - Take the First N Elements
+def take(arr,n):
+    if n>0:
+        return arr[:n]
+    else:
+        return []
+    
+#Welcome to the City
+def say_hello(name, city, state):
+    names=" ".join(name)
+    return "Hello, {}! Welcome to {}, {}!".format(names, city, state)
+
+#Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+def replace_exclamation(s):
+    for i in "AEIOUaeiou":
+        s=s.replace(i, "!")
+    return s
+
+#Is this my tail?
+def correct_tail(body, tail):
+     if body[-1]==tail:
+        return True
+     else:
+        return False
+     
+#
