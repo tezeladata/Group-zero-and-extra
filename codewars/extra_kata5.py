@@ -190,5 +190,3 @@ def correct_tail(body, tail):
         return True
      else:
         return False
-     
-#
