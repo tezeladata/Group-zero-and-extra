@@ -73,7 +73,7 @@ def generate_range(min, max, step):
 
 #101 Dalmatians - squash the bugs, not the dogs!
 def how_many_dalmatians(n):
-    dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"];
+    dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"]
     if n <=10:
         respond=dogs[0]
     elif n <=50:
