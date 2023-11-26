@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Mountains+of+Christmas:wght@400;700&display=swap');
+body{
+    background-image: url(./images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    font-family: "medievalSharp";
+    font-weight: 900;
+    font-size: 60px;
+    color: tomato;
+}
+h2{
+    text-align: center;
+    font-family: "medievalSharp";
+    font-weight: bolder;
+    font-style: italic;
+    color: tomato;
+    text-decoration-line: underline;
+    text-decoration-style:dashed;
+    text-decoration-color: gray;
+}
+hr{
+    border: 5px;
+    border-top: 5px solid gray;
+}
+p{
+    text-align: center;
+    font-family: "MedievalSharp";
+    font-weight: 700;
+    font-size: larger;
+}
+img{
+    width: 700px;
+    outline-style: solid;
+    outline-color: gray;
+}
