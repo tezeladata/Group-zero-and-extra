@@ -109,3 +109,19 @@ def array(string):
         return None
     else:
         return c
+
+#Exclusive "or" (xor) Logical Operator
+def xor(a,b):
+    return a!=b
+
+#Regular Ball Super Ball
+class Ball(object):
+    def __init__(self, object="regular"):
+        self.ball_type = object
+
+#Gravity Flip
+def flip(d, a):
+    if d == "L":
+        return sorted(a, reverse=True)
+    else:
+        return sorted(a)
