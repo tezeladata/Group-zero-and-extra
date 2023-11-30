@@ -1,0 +1,38 @@
+/* Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values. */
+h1{
+    text-align: center;
+    font-family: "sans-serif";
+    /* You can set the color of borders:*/
+    border: 3px solid green;
+    /* The CSS padding property defines a padding (space) between the text and the border. */
+    padding: 50px;
+    font-size: 50px;
+}
+p{
+    background-color: yellow;
+    opacity: 0.4;
+    text-align: center;
+    font-family: "verdana";
+    /* color tomato in rgb, hex, hsl */
+    /* color: rgb(255, 99, 71);
+    color: #ff6347;
+    color: hsla(9, 100%, 64%, 0.5); */
+    margin: 200px;
+}
+/* bck color */
+body{
+    /* background-color: cadetblue;
+    opacity: 0.5; */
+    background-image: url(background.jpg);
+    /* background-repeat: repeat-x; */
+    /* for better use: */
+    background-repeat: no-repeat;
+    /* Position */
+    background-position: center;
+    /* The background-attachment property specifies 
+    whether the background image should scroll or be fixed (will not scroll with the rest of the page) */
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* The opacity property specifies the opacity/transparency of an element. 
+It can take a value from 0.0 - 1.0. The lower value, the more transparent */
