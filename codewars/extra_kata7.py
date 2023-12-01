@@ -48,3 +48,63 @@ def validate_usr(username):
 websites = []
 for i in range(1000):
     websites.append("codewars")
+
+#Swap Values
+def swap_values(args): 
+    args[0], args[1] = args[1], args[0]
+
+#Check same case
+def same_case(a, b): 
+    upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lower="abcdefghijklmnopqrstuvwxyz"
+    if a in upper and b in upper:
+        return 1
+    elif a in lower and b in lower:
+        return 1
+    elif a in upper and b in lower:
+        return 0
+    elif a in lower and b in upper:
+        return 0
+    else:
+        return -1
+    
+#Find Nearest square number
+import math
+def nearest_sq(n):
+    root=round(math.sqrt(n))
+    return root * root
+
+#Take the Derivative
+def derive(coefficient, exponent): 
+    der=coefficient*exponent
+    return "{}x^{}".format(der, exponent-1)
+
+#Sleigh Authentication
+class Sleigh(object):
+    def authenticate(self, name, password):
+        if name=="Santa Claus" and password=="Ho Ho Ho!":
+            return True
+        else:
+            return False
+        
+#L1: Bartender, drinks!
+def get_drink_by_profession(param):
+    param=param.lower()
+    if param=="jabroni":
+        return "Patron Tequila"
+    elif param=="school counselor":
+        return "Anything with Alcohol"
+    elif param=="programmer":
+        return "Hipster Craft Beer"
+    elif param=="bike gang member":
+        return "Moonshine"
+    elif param=="politician":
+        return "Your tax dollars"
+    elif param=="rapper":
+        return "Cristal"
+    else:
+        return "Beer"
+    
+#String Templates - Bug Fixing #5
+def build_string(*args):
+    return "I like {}!".format(", ".join(args))
