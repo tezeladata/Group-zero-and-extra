@@ -199,3 +199,52 @@ def quadrant(x, y):
 #Chuck Norris VII - True or False? (Beginner)
 def if_chuck_says_so():
     return 3==5
+
+#Unexpected parsing
+def get_status(is_busy):
+    status = "busy" if is_busy else "available"
+    return {"status": status}
+
+#Thinkful - Number Drills: Blue and red marbles
+def guess_blue(blue_start, red_start, blue_pulled, red_pulled):
+    blue=blue_start-blue_pulled
+    red=red_start-red_pulled
+    return blue/(blue+red)
+
+#ASCII Total
+def uni_total(s):
+    a=0
+    for i in s:
+        a+=ord(i)
+    return a
+
+#For UFC Fans (Total Beginners): Conor McGregor vs George Saint Pierre
+def quote(fighter):
+    a={
+        'george saint pierre': "I am not impressed by your performance.",
+        'conor mcgregor'     : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+    }
+    return a[fighter.lower()]
+
+#Who ate the cookie?
+def cookie(x):
+    if type(x)==str:
+        return "Who ate the last cookie? It was Zach!"
+    elif type(x)==float or type(x)==int:
+        return "Who ate the last cookie? It was Monica!"
+    else:
+        return "Who ate the last cookie? It was the dog!"
+    
+#validate code with simple regex
+def validate_code(code):
+    a=[int(i) for i in str(code)]
+    if a[0]==1 or a[0]==2 or a[0]==3:
+        return True
+    else:
+        return False
+    
+#Localize The Barycenter of a Triangle
+def bar_triang(point_a, point_b, point_c): 
+    x=(point_a[0]+point_b[0]+point_c[0])/3
+    y=(point_a[1]+point_b[1]+point_c[1])/3
+    return [round(x, 4), round(y, 4)]
