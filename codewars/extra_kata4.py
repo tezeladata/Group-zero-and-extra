@@ -176,4 +176,3 @@ def multi_table(number):
         z=i*number
         table+= "{} * {} = {}\n".format(i, number, z)
     return table.strip("\n")
-
