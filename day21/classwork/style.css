@@ -1,0 +1,76 @@
+/* body{
+    font-size: 45px;
+    font-family: "verdana";
+    text-align: center;
+} example of inheritance */
+
+/* h1{
+    font-size: 50px;
+    font-family: "verdana";
+    text-decoration-line: overline;
+    text-align: center;
+}
+p{
+    color: brown;
+}
+b{
+    color: plum;
+}
+u{
+    text-decoration-color: tomato;
+    font-size: 40px;
+    font-weight: 900;
+    color: seagreen;
+} */
+/* The descendant selector targets children inside a specific parent. 
+It consists of the parent selector, followed by a space, followed by the child selector. */
+/* h2 b{
+    color: gray;
+    font-weight: 900;
+    font-size: 40px;
+} */
+
+/* h1, h2{
+    color: tomato;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    font-size: xx-large;
+}
+p b{
+    font-weight: 900;
+    font-size: 30px;
+}
+p u{
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration-style: dotted;
+}
+#intro{
+    text-align: right;
+} */
+/* You can target specific elements using hashtag # followed by the ID name as a selector.*/
+
+/* Use a dot . followed by the class name to target all the elements in the same class. */
+/* p.same{
+    color: aqua;
+}
+h2, a.same{
+    color: bisque;
+} */
+.samep{
+    color: tomato;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+#id1{
+    color: green;
+    font-size: 40px;
+    text-align: right;
+}
+#id2{
+    color: blue;
+    font-size: 30px;
+    font-style: italic;
+}
