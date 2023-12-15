@@ -154,3 +154,135 @@ def declare_winner(fighter1, fighter2, first_attacker):
 import math
 def evaporator(content, evap_per_day, threshold):
     return math.ceil(math.log(threshold/100)/ math.log(1.0 - evap_per_day / 100))
+
+#Flatten and sort an array
+def flatten_and_sort(a):
+    return sorted([i for s in a for i in s])
+#or
+def flatten_and_sort(array):
+    new=[]
+    for element in array:
+        new+=element
+    return sorted(new)
+
+#Form The Minimum
+def min_value(digits):
+    new=""
+    for number in sorted(digits):
+        number=str(number)
+        if number not in new:
+            new+=number
+    return int(new)
+
+#Fizz Buzz
+def fizzbuzz(n):
+    new=[]
+    for i in range(1, n+1):
+        if i%3==0 and i%5!=0:
+            new.append("Fizz")
+        elif i%5==0 and i%3!=0:
+            new.append("Buzz")
+        elif i%15==0:
+            new.append("FizzBuzz")
+        else:
+            new.append(i)
+    return new
+
+#Factorial
+def factorial(n):
+    ans=1
+    for i in range(1, n+1):
+        ans*=i
+    return ans
+
+#Power of two
+def power_of_two(x):
+    current_number = 0
+    counter = 0
+    while current_number <= x:
+        current_number = 2**counter
+        counter+=1
+        if current_number == x:
+            return True
+    return False   
+
+#Sum of Minimums!
+def sum_of_minimums(numbers):
+    a=0
+    for i in range(len(numbers)):
+        a+=min(numbers[i])
+    return a
+
+#Predict your age!
+import math
+def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
+    new=[age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8]
+    new2=[]
+    for num in new:
+        num**=2
+        new2.append(num)
+    a=sum(new2)
+    b=a**0.5
+    b/=2
+    return math.floor(b)
+
+#Row Weights
+def row_weights(array):
+    team1=0
+    team2=0
+    for i in range(len(array)):
+        if i%2==0:
+            team2+=array[i]
+        else:
+            team1+=array[i]
+    return team2, team1
+
+#Sum of numbers from 0 to N
+def show_sequence(n):
+    ans="0"
+    count=0
+    for i in range(1, n+1):
+        ans+="+{}".format(i)
+        count+=i
+    ans+=" = {}".format(count)
+    if n==0:
+        return "0=0"
+    elif n<0:
+        return "{}<0".format(n)
+    else:
+        return ans
+    
+#Greet Me
+def greet(name): 
+    name=name.lower()
+    name=list(name)
+    name[0]=name[0].upper()
+    new=""
+    for i in name:
+        new+=i
+    return "Hello {}!".format(new)
+
+#Remove duplicate words
+def remove_duplicate_words(s):
+    s=s.split(" ")
+    sentence=[]
+    for item in s:
+        if item not in sentence:
+            sentence.append(item)
+    return " ".join(sentence)
+    
+#Sum of Cubes
+def sum_cubes(n):
+    new=0
+    for i in range(1, n+1):
+        new+=i**3
+    return new
+
+#Sorted? yes? no? how?
+def is_sorted_and_how(arr):
+    if arr==sorted(arr):
+        return "yes, ascending"
+    elif arr==sorted(arr, reverse=True):
+        return "yes, descending"
+    else:
+        return "no"
