@@ -104,3 +104,23 @@ def reverse_number(n):
     else:
         n=str(n)
         return int(n[::-1])
+
+#Is a number prime?
+def is_prime(num):
+    if num<=0 or num==1:
+        return False
+    i=2
+    while (i<=num**0.5):
+        if num%i==0:
+            return False
+        i+=1
+    return True
+
+#Are they the "same"?
+def comp(array1, array2):
+    if type(array1)!=list or type(array2)!=list:
+        return False
+    res=[]
+    for i in array1:
+        res.append(i**2)
+    return sorted(res)==sorted(array2)
