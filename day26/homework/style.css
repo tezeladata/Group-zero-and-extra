@@ -1,0 +1,57 @@
+body{
+    background-color: #B7B8B6;
+}
+.navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: none;
+    display: block;
+    padding: 40px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #063852;
+    font-size: 20px;
+    font-weight: 700;
+}
+.navbar a:hover{
+    background-color: transparent;
+}
+.bold{
+    font-weight: bold;
+}
+h1, h2{
+    color: #011A27;
+}
+p{
+    color: #73605B;
+}
+h1, h2, p{
+    text-align: center;
+}
+#main_head{
+    font-size: 50px;
+    font-weight: 900;
+}
+h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+hr{
+    border: 1px solid #D09683;
+}
+p{
+    font-size: 20px;
+    font-weight: 500;
+}
+#github{
+    text-decoration: none;
+    color: #011A27;
+}
