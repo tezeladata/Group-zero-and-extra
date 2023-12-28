@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
-    background-color: #3C3F58;
-    font-family: "Roboto slab";
+    background-color: #0D0D0D;
+    font-family: "Roboto";
 }
 ul{
     list-style-type: none;
@@ -22,12 +22,18 @@ header{
 }
 #a1, #a2, #a3, #a4, #a5{
     text-decoration: none;
-    color: #3BBA9C;
+    color: #036D2E;
     padding: 20px;
     text-transform: uppercase;
 }
-h2{
-    color: #66FCF1;
+#span1{
+    color: #7DF26B;
+}
+#h2_1, #h2_2, #h2_3, #h2_4, #h2_5{
+    color: #05F26C;
+}
+p, h1{
+    color: #BFBFBF;
 }
 #a1{
     font-size: 30px;
@@ -81,6 +87,9 @@ h2{
 #img2{
     width: 650px;
     height: 400px;
+    border-radius: 10px;
+}
+#img4{
     border-radius: 10px;
 }
 #p2{
@@ -144,7 +153,7 @@ h2{
     height: 40px;
     border-radius: 7.5px;
     margin-bottom: 10px;
-    background-color: #1F2833;
+    background-color: #F3EAD3;
     padding: 10px;
     font-weight: 500;
     font-size: 20px;
@@ -153,7 +162,7 @@ h2{
     width: 150px;
     height: 60px;
     border-radius: 7.5px;
-    background-color: #3BBA9C;
+    background-color: #05F26C;
     font-weight: 600;
     font-size: 25px;
 }
@@ -164,10 +173,11 @@ h2{
     margin-top: 150px;
     width: 100%;
     height: 100px;
-    background-color: #1F2833;
+    background-color: #F3EAD3;
     border-radius: 10px;
 }
 #p5{
-    color: #3BBA9C;
+    color: black;
     text-align: center;
+    font-weight: 500;
 }
