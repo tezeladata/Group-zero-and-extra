@@ -37,3 +37,51 @@ def solution(s):
         else:
             new_str+=i
     return new_str
+
+#Directions Reduction
+def dir_reduc(arr):
+    opp={"NORTH": "SOUTH",
+        "SOUTH": "NORTH",
+        "EAST": "WEST",
+        "WEST": "EAST"}
+    for i in range(len(arr)-1):
+        if arr[i+1]==opp[arr[i]]:
+            del arr[i], arr[i]
+            return dir_reduc(arr)
+    return arr
+
+#Sort the odd
+def sort_array(source_array):
+    if not source_array:
+        return []
+    else:
+        odd=sorted(x for x in source_array if x%2!=0)
+        for i in range(len(source_array)):
+            if source_array[i]%2!=0:
+                source_array[i]=odd.pop(0)
+        return source_array
+    
+#The Hashtag Generator
+def generate_hashtag(s):
+    if s=="":
+        return False
+    else:
+        s=s.strip()
+        s=s.split(" ")
+        cap=[word.capitalize() for word in s]
+        new_arr="#"
+        for i in range(len(cap)):
+            new_arr+=cap[i]
+        if len(new_arr)>140:
+            return False
+        else:
+            return new_arr
+        
+#Count the smiley faces!
+def count_smileys(arr):
+    smiley=[":)", ":D",";)",";D",":-)",":-D",";-D",";-)","~:)","~:D","~;)","~;D",":-)",":-D",";~)", ":~)", ";-D",";~D",":)",":-D",";~D"]
+    count=0
+    for i in arr:
+        if i in smiley:
+            count+=1
+    return count
