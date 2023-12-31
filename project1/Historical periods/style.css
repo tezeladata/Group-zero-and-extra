@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+body{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "EB Garamond";
+    background-color: #745f16;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+#ul1{
+    justify-content: space-between;
+}
+li{
+    display: inline-block;
+}
+header a, header{
+    color: #c7a587;
+}
+p{
+    color: #c7a587;
+    font-weight: 600;
+}
+.div1{
+    display: flex;
+    align-items: center;
+}
+#p0{
+    font-weight: 400;
+}
+#span1{
+    font-weight: 900;
+}
+#img1{
+    width: 75px;
+    height: 75px;
+}
+.div2 a{
+    margin-left: 100px;
+    text-decoration: none;
+}
+.div3{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    display: flex;
+}
+#img2{
+    width: 500px;
+    height: 550px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* Add border design */
+}
+.div5{
+    background-color: #472611;
+    height: 550px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+h1, h2{
+    color: #d0baa6;
+}
+.type2 h2{
+    color: #472611;
+}
+#main_head, #p1{
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#main_head{
+    font-size: 60px;
+    margin-top: -5px;
+}
+#p1{
+    margin-top: -30px;
+    font-size: 20px;
+}
+#h2_main{
+    text-align: center;
+    font-size: 50px;
+}
+.div6{
+    font-size: 12px;
+    background-color: #472611;
+    border-radius: 8px;
+}
+.div6 img{
+    width: 200px;
+    height: 100px;
+}
+.div6 div{
+    width: 350px;
+}
+.div6 a{
+    text-decoration: none;
+}
+
+.container1, .container2, .container3, .container4, .container5{
+    display: flex;
+}
+.container2, .container3, .container4, .container5{
+    margin-top: 60px;
+}
+.type1{
+    display: flex;
+    max-width: 350px;
+    text-align: center;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    align-items: center;
+    margin-left: 50px;
+}
+.div6 .type1{
+    background-color: #7a5e3b;
+}
+.div6 .type3{
+    background-color: #7a5e3b;
+}
+
+.type2 img{
+    width: 350px;
+    height: 200px;
+}
+.type2{
+    display: flex;
+    position: relative;
+    text-align: center;
+    max-width: 350px;
+    max-height: 200px;
+    margin-left: 110px;
+}
+.type2 h2{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.type3{
+    display: flex;
+    max-width: 350px;
+    text-align: center;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 105px;
+}
+.type1, .type3{
+    margin-top: 50px;
+}
+.type2 img{
+    border-radius: 12px;
+}
+.container1 #h2_2{
+    top: 10%;
+}
+.container2 #h2_5{
+    top: 75%;
+}
+.container3 #h2_8{
+    top: 15%;
+}
+.ancient_mesopotamia, .classical_greece, .roman_empire, .medieval_europe, .age_of_exploration, .enlightenment, .industrial_revolution, .victorian_era, .world_war_1, .roaring_twenties, .world_war_2, .digital_age, .contemporary_era{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+.ancient_mesopotamia{
+    margin-top: 200px;
+}
+#ac_img, #cg_img, #me_img, #aoe_img, #enl_img, #ww1_img, #ww2_img, #da_img, #ce_img{
+    width: 600px;
+    border-radius: 12px;
+}
+#re_img1, #re_img2{
+    width: 400px;
+    height: 350px;
+    border-radius: 12px;
+}
+#ir_img1, #ir_img2, #ve_img1, #ve_img2, #rt_img1, #rt_img2{
+    display: block;
+    width: 600px;
+    height: 300px;
+    border-radius: 12px;
+}
+#ir_img2, #ve_img2, #rt_img2{
+    margin-top: 10px;
+}
+.ac2, .aoe2, .ir2, .ve2, .ww1_2, .ww2_2, .rt2, .da2, .ce2{
+    margin-left: 20px;
+}
+.cg1, .ac2, .enl1, .me1{
+    margin-right: 20px;
+}
+#ac_h2, #cg_h2, #re_h2, #me_h2, #aoe_h2, #enl_h2, #ir_h2, #ve_h2, #ww1_h2, #rt_h2, #ww2_h2, #da_h2, #ce_h2{
+    font-size: 50px;
+    margin-top: -20px;
+    text-align: center;
+}
+#ac_p, #cg_p, #re_p, #ren_p, #me_p, #aoe_p, #enl_p, #ir_p, #ve_p, #ww1_p, #rt_p, #ww2_p, #cw_p, #da_p, #ce_p{
+    font-size: 20px;
+    text-align: center;
+}
+#re_p{
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#ren_img1, #ren_img2, #cw_img1, #cw_img2{
+    width: 681.5px;
+    height: 350px;
+    margin-top: 100px;
+    border-radius: 12px;
+}
+#ren_img3, #ren_img4, #cw_img3, #cw_img4{
+    width: 681.5px;
+    height: 350px;
+    border-radius: 12px;
+}
+.ren2, .cw2{
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-bottom: 60px;
+}
+#ren_h2, #cw_h2{
+    font-size: 50px;
+}
+footer{
+    margin-top: 100px;
+    text-align: center;
+}
+footer a{
+    color: #c7a587;
+}
+footer hr{
+    border: 2px solid #d0baa6;
+}
