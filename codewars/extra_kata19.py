@@ -85,3 +85,86 @@ def count_smileys(arr):
         if i in smiley:
             count+=1
     return count
+
+#Human readable duration format
+units={
+    "year": 60*60*24*365,
+    "day": 60*60*24,
+    "hour": 60*60,
+    "minute": 60,
+    "second": 1,
+    }
+def format_duration(seconds):
+    if not seconds: return "now"
+    result=[]
+    for unit, value in units.items():
+        count, seconds= divmod(seconds, value)
+        if count==1: result.append(f"{count} {unit}")
+        if count>1: result.append(f"{count} {unit}s")
+    *body, tail = result
+    #body now is anything else than tail
+    if not body: return tail
+    return f"{', '.join(body)} and {tail}" if tail else body
+
+#Extract the domain name from a URL
+def domain_name(url):
+    without_scheme = url.split('://', 1)[-1]
+    without_scheme=without_scheme.split(".")
+    if without_scheme[0]=="www":
+        return str(without_scheme[1])
+    else:
+        return str(without_scheme[0])
+
+#Stop gninnipS My sdroW!
+def spin_words(sentence):
+    sentence=sentence.split()
+    for i in range(len(sentence)):
+        if len(sentence[i])>=5:
+            sentence[i]=sentence[i][::-1]
+    return " ".join(sentence)
+
+#UEFA EURO 2016
+def uefa_euro_2016(teams, scores):
+    for i in scores:
+        if scores[0]>scores[1]:
+            return "At match {} - {}, {} won!".format(teams[0], teams[1], teams[0])
+        elif scores[0]==scores[1]:
+            return "At match {} - {}, teams played draw.".format(teams[0], teams[1])
+        else:
+            return "At match {} - {}, {} won!".format(teams[0], teams[1], teams[1])
+        
+#They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it. This is a sadly story #1: Are they opposite?
+def is_opposite(s1,s2):
+    if s1=="" and s2=="":
+        return False
+    else:
+        if s1.swapcase()==s2:
+            return True
+        else:
+            return False    
+        
+#Pirates!! Are the Cannons ready!??
+def cannons_ready(gunners):
+    for key, value in gunners.items():
+        if value=="nay": return 'Shiver me timbers!'
+        else: 'Fire!'
+    return "Fire!"
+
+#NBA full 48 minutes average
+def nba_extrap(ppg, mpg):
+    mpg_48=ppg*(48/mpg)
+    return round(mpg_48, 1)
+
+#Ensure question
+def ensure_question(s):
+    if s=="":
+        return "?"
+    else:
+        if s[-1]!="?": 
+            return s+"?"
+        else: 
+            return s
+        
+#For Twins: 2. Math operations
+def ice_brick_volume(radius, bottle_length, rim_length):
+    return (bottle_length-rim_length)*radius*radius*2
