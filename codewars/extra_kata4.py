@@ -1,178 +1,299 @@
-#Count Odd Numbers below n
-def odd_count(n):
-    return int(n/2)
-
-#I love you, a little , a lot, passionately ... not at all
-def how_much_i_love_you(nb_petals):
-    n=nb_petals % 6
-    if n==1:
-        return "I love you"
-    elif n==2:
-        return "a little"
-    elif n==3:
-        return "a lot"
-    elif n==4:
-        return "passionately"
-    elif n==5:
-        return "madly"
-    elif n==0:
-        return "not at all"
-    
-#Unfinished Loop - Bug Fixing #1
-def create_array(n):
-    res=[]
-    i=1
-    while i<=n: 
-        res+=[i]
-        i+=1
-    return res
-
-#Sort and Star
-def two_sort(array):
-    sentence=""
-    array=sorted(array)
-    first=array[0]
-    for letter in first:
-        sentence+=letter + "***"
-    return sentence[:-3]
-
-#My head is at the wrong end!
-def fix_the_meerkat(arr):
-    return arr[::-1]
-
-#Short Long Short
-def solution(a, b):
-    if len(a)<len(b):
-        c=a+b+a
-        return c
-    elif len(b)<len(a):
-        c=b+a+b
-        return c
-    
-#Find Multiples of a Number
-def find_multiples(integer, limit):
-    numbers=[]
-    for i in range(integer, limit+1, integer):
-            numbers.append(i)
-    return numbers
-
-#Vowel remover
-def shortcut( s ):
-    for i in ["a", "e", "i", "o", "u"]:
-         if i in s:   
-            s=s.replace(i, "")
-    return s
-
-#Drink about
-def people_with_age_drink(age):
-    if age<14:
-        return "drink toddy"
-    if 14<=age<18:
-        return "drink coke"
-    if 18<=age<21:
-        return "drink beer"
-    elif age>=21:
-        return "drink whisky"
-    
-#Filter out the geese
-geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
-def goose_filter(birds):
-    not_geese=[]
-    for element in birds:
-        if element not in geese:
-            not_geese.append(element)
-    return not_geese
-
-#Capitalization and Mutability
-def capitalize_word (word):
-    return word[0].upper() + word[1:]
-
-#What's the real floor?
-def get_real_floor(n):
-    if n==0:
-        return 0
-    elif n==1:
-        return 0
-    elif 2<=n<13:
-        return n-1
-    elif n<0:
-        return n
-    else:
-        return n-2
-    
-#Grasshopper - If/else syntax debug
-def check_alive(health):
-    if health <= 0:
-        return False
-    else:
-        return True
-    
-#Name Shuffler
-def name_shuffler(str_):
-    name=str_.split(" ")
-    return name[1] + " " + name[0]
-
-#Find numbers which are divisible by given number
-def divisible_by(numbers, divisor):
-    answer=[]
-    for i in numbers:
-        if i%divisor==0:
-            answer.append(i)
-    return answer
-
-#How many lightsabers do you own?
-def how_many_light_sabers_do_you_own(name=""):
-    if name=="Zach":
-        return 18
-    else:
-        return 0
-    
-#Stringy Strings
-def stringy(size):
-    answer=""
-    for i in range(size):
-        if i%2==0:
-            answer+="1"
-        else:
-            answer+="0"
-    return answer
-
-#Plural
-def plural(n):
-    if n==0:
-        return True
-    elif n==1:
-        return False
-    else:
-        return True
-
-#Training JS #7: if..else and ternary operator
-def sale_hotdogs(n):
-    if n==0:
-        return 0
-    elif n<5:
-        return n*100
-    elif 5<=n<10:
-        return n*95
-    else:
-        return n*90
-
-#Grasshopper - Basic Function Fixer
-def add_five(num):
-    total = num + 5
-    return total
-
-#Lario and Muigi Pipe Problem
-def pipe_fix(nums):
-    new=[]
-    for i in range(nums[0], nums[-1]+1):
-        new.append(i)
+#String cleaning
+def string_clean(s):
+    new=""
+    for i in s:
+        if i not in "0123456789":
+            new+=i
     return new
 
-#Multiplication table for number
-def multi_table(number):
-    table=''
-    for i in range(1, 11):
-        z=i*number
-        table+= "{} * {} = {}\n".format(i, number, z)
-    return table.strip("\n")
+#Sum of differences in array
+def sum_of_differences(arr):
+    arr.sort(reverse=True)
+    sum=0
+    i=1-1
+    if len(arr)==0:
+        return 0
+    else:
+        while i!=len(arr)-1:
+            sum=sum+(arr[i] - arr[i+1])
+            i+=1
+    return sum
+
+
+#Simple Fun #1: Seats in Theater
+def seats_in_theater(tot_cols, tot_rows, col, row):
+    return ((tot_cols-col+1)*(tot_rows-row))
+
+#Grasshopper - Array Mean
+def find_average(nums):
+    if len(nums)>=1:
+        return sum(nums) / len(nums)
+    else:
+        return 0
+
+#Exclusive "or" (xor) Logical Operator
+def xor(a,b):
+    return a!=b
+
+#Regular Ball Super Ball
+class Ball(object):
+    def __init__(self, object="regular"):
+        self.ball_type = object
+
+#Gravity Flip
+def flip(d, a):
+    if d == "L":
+        return sorted(a, reverse=True)
+    else:
+        return sorted(a)
+    
+#Enumerable Magic - Does My List Include This?
+def include(arr,item):
+    if item in arr:
+        return True
+    else:
+        return False
+    
+#Sum of Multiples
+def sum_mul(n, m):
+    sum=0
+    if m>0 and n>0:
+        for i in range(n,m,n):
+            sum+=i
+        return sum
+    else:
+        return "INVALID"
+    
+#Find out whether the shape is a cube
+def cube_checker(volume, side):
+    if side>0:
+        if side**3==volume:
+            return True
+        else:
+            return False
+    else:
+        return False
+    
+#Multiple of index
+def multiple_of_index(arr):
+    new=[]
+    if arr[0]==0:
+        new.append(arr[0])
+    for i in range(1, len(arr)):
+        if arr[i]%i==0:
+            new.append(arr[i])
+    return new
+
+#Simple validation of a username with regex
+def validate_usr(username):
+    if len(username)<4 or len(username)>16:
+        return False
+    for i in username:
+        if i not in "abcdefghijklmnopqrstuvwxyz0123456789_":
+            return False
+    return True
+
+#Kata Example Twist
+websites = []
+for i in range(1000):
+    websites.append("codewars")
+
+#Swap Values
+def swap_values(args): 
+    args[0], args[1] = args[1], args[0]
+
+#Check same case
+def same_case(a, b): 
+    upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lower="abcdefghijklmnopqrstuvwxyz"
+    if a in upper and b in upper:
+        return 1
+    elif a in lower and b in lower:
+        return 1
+    elif a in upper and b in lower:
+        return 0
+    elif a in lower and b in upper:
+        return 0
+    else:
+        return -1
+    
+#Find Nearest square number
+import math
+def nearest_sq(n):
+    root=round(math.sqrt(n))
+    return root * root
+
+#Take the Derivative
+def derive(coefficient, exponent): 
+    der=coefficient*exponent
+    return "{}x^{}".format(der, exponent-1)
+
+#Sleigh Authentication
+class Sleigh(object):
+    def authenticate(self, name, password):
+        if name=="Santa Claus" and password=="Ho Ho Ho!":
+            return True
+        else:
+            return False
+        
+#L1: Bartender, drinks!
+def get_drink_by_profession(param):
+    param=param.lower()
+    if param=="jabroni":
+        return "Patron Tequila"
+    elif param=="school counselor":
+        return "Anything with Alcohol"
+    elif param=="programmer":
+        return "Hipster Craft Beer"
+    elif param=="bike gang member":
+        return "Moonshine"
+    elif param=="politician":
+        return "Your tax dollars"
+    elif param=="rapper":
+        return "Cristal"
+    else:
+        return "Beer"
+    
+#String Templates - Bug Fixing #5
+def build_string(*args):
+    return "I like {}!".format(", ".join(args))
+
+#Never visit a . . . !?
+fruit = ["kiwi",
+    "pear",
+    "kiwi",
+    "banana",
+    "melon",
+    "banana",
+    "melon",
+    "pineapple",
+    "apple",
+    "pineapple",
+    "cucumber",
+    "cucumber",
+    "pineapple",
+    "orange",
+    "grape",
+    "orange",
+    "grape",
+    "apple",
+    "grape",
+    "cherry",
+    "pear",
+    "cherry",
+    "pear",
+    "kiwi",
+    "banana",
+    "kiwi",
+    "apple",
+    "melon",
+    "banana",
+    "melon",
+    "pineapple",
+    "melon",
+    "pineapple",
+    "cucumber",
+    "orange",
+    "apple",
+    "orange",
+    "grape",
+    "orange",
+    "grape",
+    "cherry",
+    "pear",
+    "cherry",
+    "pear",
+    "apple",
+    "pear",
+    "kiwi",
+    "banana",
+    "kiwi",
+    "banana",
+    "melon",
+    "pineapple",
+    "melon",
+    "apple",
+    "cucumber",
+    "pineapple",
+    "cucumber",
+    "orange",
+    "cucumber",
+    "orange",
+    "grape",
+    "cherry",
+    "apple",
+    "cherry",
+    "pear",
+    "cherry",
+    "pear",
+    "kiwi",
+    "pear",
+    "kiwi",
+    "banana",
+    "apple",
+    "banana",
+    "melon",
+    "pineapple",
+    "melon",
+    "pineapple",
+    "cucumber",
+    "pineapple",
+    "cucumber",
+    "apple",
+    "grape",
+    "orange",
+    "grape",
+    "cherry",
+    "grape",
+    "cherry",
+    "pear",
+    "cherry",
+    "apple",
+    "kiwi",
+    "banana",
+    "kiwi",
+    "banana",
+    "melon",
+    "banana",
+    "melon",
+    "pineapple",
+    "apple",
+    "pineapple"]
+    
+def sum_digits(number):
+    sm=0
+    for n in list(str(number)):
+        sm+=int(n)
+    return sm
+    
+def subtract_sum(number):
+    result=number-sum_digits(number)
+    if result<100:
+        return fruit[result-1]
+    else:
+        return subtract_sum(result)
+    
+#Return the day
+def whatday(num):
+    days={
+        1: "Sunday",
+        2: "Monday",
+        3: "Tuesday",
+        4: "Wednesday",
+        5: "Thursday",
+        6: "Friday",
+        7: "Saturday"
+    }
+    if 1<=num<=7:
+        return days[num]
+    else:
+        return "Wrong, please enter a number between 1 and 7"
+    
+#Basic Training: Add item to an Array
+websites.append("codewars")
+
+#Area of a Square
+import math
+def square_area(A):
+    r=(A*4)/(2*math.pi)
+    return round(r*r,2)

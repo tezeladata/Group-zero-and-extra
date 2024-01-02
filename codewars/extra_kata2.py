@@ -1,200 +1,296 @@
-#L1: Set Alarm
-def set_alarm(employed, vacation):
-    if employed==True and vacation==False:
-        return True
+#Expressions Matter
+def expression_matter(a, b, c):
+    cases=[a+b+c]
+    cases.append(a*b*c)
+    cases.append((a*b)+c)
+    cases.append((a+b)*c)
+    cases.append(a+(b*c))
+    cases.append(a*(b+c))
+    return max(cases)
+
+#Grasshopper - Messi Goals
+la_liga_goals=43
+champions_league_goals=10
+copa_del_rey_goals=5
+
+total_goals=la_liga_goals+champions_league_goals+copa_del_rey_goals
+
+#Sum The Strings
+def sum_str(a, b):
+    if a!="" and b!="":
+        c=int(a)+int(b)
+        return str(c)
+    elif a=="" and b!="":
+        return str(b)
+    elif a!="" and b=="":
+        return str(a)
     else:
-        return False
+        return str(0)
     
-#Sum Mixed Array
-def sum_mix(arr):
-    sum=0
-    for x in arr:
-        sum+=int(x)
-    return sum
+#Difference of Volumes of Cuboids
+def find_difference(a, b):
+    volume_a=1
+    volume_b=1
+    for element in a:
+        volume_a*=element
+    for element in b:
+        volume_b*=element
+    if volume_a>volume_b:
+        return volume_a-volume_b
+    else:
+        return volume_b-volume_a
+    
+#Welcome!
+def greet(language):
+    if language=="english":
+        return "Welcome"
+    if language=="czech":
+        return "Vitejte"
+    if language=="danish":
+        return "Velkomst"
+    if language=="dutch":
+        return "Welkom"
+    if language=="estonian":
+        return "Tere tulemast"
+    if language=="finnish":
+        return "Tervetuloa"
+    if language=="flemish":
+        return "Welgekomen"
+    if language=="french":
+        return "Bienvenue"
+    if language=="german":
+        return "Willkommen"
+    if language=="irish":
+        return "Failte"
+    if language=="italian":
+        return "Benvenuto"
+    if language=="latvian":
+        return "Gaidits"
+    if language=="lithuanian":
+        return "Laukiamas"
+    if language=="polish":
+        return "Witamy"
+    if language=="spanish":
+        return "Bienvenido"
+    if language=="swedish":
+        return "Valkommen"
+    if language=="welsh":
+        return "Croeso"
+    else:
+        return "Welcome"
+    
+#Basic variable assignment
+a = "code"
+b = "wa.rs"
+name = a + b
 
-#Grasshopper - Messi goals function
-def goals(laLiga, copaDelRey, championsLeague):
-    all_goals = laLiga + copaDelRey + championsLeague
-    return all_goals
+#Reverse List Order
+def reverse_list(l):
+    return l[::-1]
 
-#Reversed Words
-def reverse_words(s):
-    reversed=[]
-    for word in s.split():
-        reversed.append(word)
-    reversed.reverse()
-    return " ".join(reversed)
+#Count Odd Numbers below n
+def odd_count(n):
+    return int(n/2)
 
-#Get the mean of an array
-import math
-def get_average(marks):
-    avg=sum(marks) / len(marks)
-    avg=math.floor(avg)
-    return avg
-#or
-def get_average(marks):
-    avg=sum(marks) // len(marks)
-    return avg
+#I love you, a little , a lot, passionately ... not at all
+def how_much_i_love_you(nb_petals):
+    n=nb_petals % 6
+    if n==1:
+        return "I love you"
+    elif n==2:
+        return "a little"
+    elif n==3:
+        return "a lot"
+    elif n==4:
+        return "passionately"
+    elif n==5:
+        return "madly"
+    elif n==0:
+        return "not at all"
+    
+#Unfinished Loop - Bug Fixing #1
+def create_array(n):
+    res=[]
+    i=1
+    while i<=n: 
+        res+=[i]
+        i+=1
+    return res
 
-#Sum without highest and lowest number
-def sum_array(arr):
-    if arr and len(arr)>1:
-        return sum(arr) - min(arr) - max(arr)
+#Sort and Star
+def two_sort(array):
+    sentence=""
+    array=sorted(array)
+    first=array[0]
+    for letter in first:
+        sentence+=letter + "***"
+    return sentence[:-3]
+
+#My head is at the wrong end!
+def fix_the_meerkat(arr):
+    return arr[::-1]
+
+#Short Long Short
+def solution(a, b):
+    if len(a)<len(b):
+        c=a+b+a
+        return c
+    elif len(b)<len(a):
+        c=b+a+b
+        return c
+    
+#Find Multiples of a Number
+def find_multiples(integer, limit):
+    numbers=[]
+    for i in range(integer, limit+1, integer):
+            numbers.append(i)
+    return numbers
+
+#Vowel remover
+def shortcut( s ):
+    for i in ["a", "e", "i", "o", "u"]:
+         if i in s:   
+            s=s.replace(i, "")
+    return s
+
+#Drink about
+def people_with_age_drink(age):
+    if age<14:
+        return "drink toddy"
+    if 14<=age<18:
+        return "drink coke"
+    if 18<=age<21:
+        return "drink beer"
+    elif age>=21:
+        return "drink whisky"
+    
+#Filter out the geese
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+def goose_filter(birds):
+    not_geese=[]
+    for element in birds:
+        if element not in geese:
+            not_geese.append(element)
+    return not_geese
+
+#Capitalization and Mutability
+def capitalize_word (word):
+    return word[0].upper() + word[1:]
+
+#What's the real floor?
+def get_real_floor(n):
+    if n==0:
+        return 0
+    elif n==1:
+        return 0
+    elif 2<=n<13:
+        return n-1
+    elif n<0:
+        return n
+    else:
+        return n-2
+    
+#Grasshopper - If/else syntax debug
+def check_alive(health):
+    if health <= 0:
+        return False
+    else:
+        return True
+    
+#Name Shuffler
+def name_shuffler(str_):
+    name=str_.split(" ")
+    return name[1] + " " + name[0]
+
+#Find numbers which are divisible by given number
+def divisible_by(numbers, divisor):
+    answer=[]
+    for i in numbers:
+        if i%divisor==0:
+            answer.append(i)
+    return answer
+
+#How many lightsabers do you own?
+def how_many_light_sabers_do_you_own(name=""):
+    if name=="Zach":
+        return 18
     else:
         return 0
     
-#Double Char
-def double_char(s):
-    double=""
-    for char in s:
-        char=char*2
-        double+=char
-    return double
-
-#Array plus array
-def array_plus_array(arr1,arr2):
-    return sum(arr1) + sum(arr2)
-
-#The Feast of Many Beasts
-def feast(beast, dish):
-    if beast[0]==dish[0] and beast[-1]==dish[-1]:
-        return True
-    else:
-        return False
-    
-#Parse nice int from char problem
-def get_age(age):
-    return int(age[0])
-
-#Beginner Series #4 Cockroach
-import math
-def cockroach_speed(s):
-    return math.floor(s*27.778)
-
-#Grasshopper - Check for factor
-def check_for_factor(base, factor):
-    if base%factor==0:
-        return True
-    else:
-        return False
-    
-#Switch it Up!
-def switch_it_up(number):
-    if number==0:
-        return "Zero"
-    elif number==1:
-        return "One"
-    elif number==2:
-        return "Two"
-    elif number==3:
-        return "Three"
-    elif number==4:
-        return "Four"
-    elif number==5:
-        return "Five"
-    elif number==6:
-        return "Six"
-    elif number==7:
-        return "Seven"
-    elif number==8:
-        return "Eight"
-    else:
-        return "Nine"
-    
-#Function 2 - squaring an argument
-def square(n):
-    return n**2
-
-#Twice as old
-def twice_as_old(dad_years_old, son_years_old):
-    a=dad_years_old-(son_years_old*2)
-    if a<0:
-        return a*-1
-    else:
-        return a
-    
-#Get Planet Name By ID
-def get_planet_name(id):
-    if id==1:
-        return "Mercury"
-    elif id==2:
-        return "Venus"
-    elif id==3:
-        return "Earth"
-    elif id==4:
-        return "Mars"
-    elif id==5:
-        return "Jupiter"
-    elif id==6:
-        return "Saturn"
-    elif id==7:
-        return "Uranus"
-    else:
-        return "Neptune"
-        
-#Keep up the hoop
-def hoop_count(n):
-    if n<10:
-        return "Keep at it until you get it"
-    else:
-        return "Great, now move on to tricks"
-    
-#Removing Elements
-def remove_every_other(my_list):
-    new_list=[]
-    for i in range(len(my_list)):
+#Stringy Strings
+def stringy(size):
+    answer=""
+    for i in range(size):
         if i%2==0:
-            new_list.append(my_list[i])
-    return new_list
+            answer+="1"
+        else:
+            answer+="0"
+    return answer
 
-#Will there be enough space?
-def enough(cap, on, wait):
-    if cap> on+wait:
+#Plural
+def plural(n):
+    if n==0:
+        return True
+    elif n==1:
+        return False
+    else:
+        return True
+
+#Training JS #7: if..else and ternary operator
+def sale_hotdogs(n):
+    if n==0:
         return 0
+    elif n<5:
+        return n*100
+    elif 5<=n<10:
+        return n*95
     else:
-        return wait+on-cap
-    
-#Count the Monkeys!
-def monkey_count(n):
-    count=[]
-    for i in range(n):
-        count.append(i+1)
-    return count
+        return n*90
 
-#Find the first non-consecutive number
-def first_non_consecutive(arr):
-    for i in range(len(arr)):
-        if arr[i] - arr[i-1] > 1:
-            return arr[i]
-        
-#Grasshopper - Debug sayHello
-def say_hello(name):
-    a= "Hello,", name
-    return " ".join(a)
+#Grasshopper - Basic Function Fixer
+def add_five(num):
+    total = num + 5
+    return total
 
-#Grasshopper - Terminal game move function
-def move(position, roll):
-    return position+roll*2
+#Lario and Muigi Pipe Problem
+def pipe_fix(nums):
+    new=[]
+    for i in range(nums[0], nums[-1]+1):
+        new.append(i)
+    return new
 
-#Is the string uppercase?
-def is_uppercase(inp):
-    cap=inp.upper()
-    if cap==inp:
-        return True
+#Multiplication table for number
+def multi_table(number):
+    table=''
+    for i in range(1, 11):
+        z=i*number
+        table+= "{} * {} = {}\n".format(i, number, z)
+    return table.strip("\n")
+
+#Get Nth Even Number
+def nth_even(n):
+    return n*2-2
+
+#Remove duplicates from list
+def distinct(seq):
+    answer=[]
+    for i in seq:
+        if i not in answer:
+            answer.append(i)
+    return answer
+
+#5 without numbers !!
+def unusual_five():
+    return len("abcde")
+
+#Merge two sorted arrays into one
+def merge_arrays(arr1, arr2):
+    a=sorted(set(arr1+arr2))
+    return a
+
+#Super Duper Easy
+def problem(a):
+    if type(a)!=str:
+        return a*50+6
     else:
-        return False
-    
-#All Star Code Challenge #18
-def str_count(strng, letter):
-    count=0
-    for i in range(len(strng)):
-        if letter==strng[i]:
-            count+=1
-    return count
-
-#Is it even?
-def is_even(n): 
-    if n%2==0:
-        return True
-    else:
-        return False
+        return "Error"

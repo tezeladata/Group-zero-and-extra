@@ -1,272 +1,295 @@
-#Enumerable Magic - Does My List Include This?
-def include(arr,item):
-    if item in arr:
-        return True
-    else:
-        return False
-    
-#Sum of Multiples
-def sum_mul(n, m):
-    sum=0
-    if m>0 and n>0:
-        for i in range(n,m,n):
-            sum+=i
-        return sum
-    else:
-        return "INVALID"
-    
-#Find out whether the shape is a cube
-def cube_checker(volume, side):
-    if side>0:
-        if side**3==volume:
-            return True
-        else:
-            return False
-    else:
-        return False
-    
-#Multiple of index
-def multiple_of_index(arr):
-    new=[]
-    if arr[0]==0:
-        new.append(arr[0])
-    for i in range(1, len(arr)):
-        if arr[i]%i==0:
-            new.append(arr[i])
-    return new
+#Mumbling
+def accum(s):
+    new=""
+    for i in range(len(s)):
+        new+=s[i].upper()
+        new+=(s[i]*(i)).lower()
+        new+="-"
+    return new.strip("-")
 
-#Simple validation of a username with regex
-def validate_usr(username):
-    if len(username)<4 or len(username)>16:
-        return False
-    for i in username:
-        if i not in "abcdefghijklmnopqrstuvwxyz0123456789_":
-            return False
-    return True
-
-#Kata Example Twist
-websites = []
-for i in range(1000):
-    websites.append("codewars")
-
-#Swap Values
-def swap_values(args): 
-    args[0], args[1] = args[1], args[0]
-
-#Check same case
-def same_case(a, b): 
-    upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    lower="abcdefghijklmnopqrstuvwxyz"
-    if a in upper and b in upper:
-        return 1
-    elif a in lower and b in lower:
-        return 1
-    elif a in upper and b in lower:
-        return 0
-    elif a in lower and b in upper:
-        return 0
-    else:
-        return -1
-    
-#Find Nearest square number
-import math
-def nearest_sq(n):
-    root=round(math.sqrt(n))
-    return root * root
-
-#Take the Derivative
-def derive(coefficient, exponent): 
-    der=coefficient*exponent
-    return "{}x^{}".format(der, exponent-1)
-
-#Sleigh Authentication
-class Sleigh(object):
-    def authenticate(self, name, password):
-        if name=="Santa Claus" and password=="Ho Ho Ho!":
+#String ends with?
+def solution(text, ending):
+    counter=len(ending)
+    for i in range(len(ending)):
+        if text[-counter:]==ending:
             return True
         else:
             return False
         
-#L1: Bartender, drinks!
-def get_drink_by_profession(param):
-    param=param.lower()
-    if param=="jabroni":
-        return "Patron Tequila"
-    elif param=="school counselor":
-        return "Anything with Alcohol"
-    elif param=="programmer":
-        return "Hipster Craft Beer"
-    elif param=="bike gang member":
-        return "Moonshine"
-    elif param=="politician":
-        return "Your tax dollars"
-    elif param=="rapper":
-        return "Cristal"
+#Credit Card Mask
+def maskify(cc):
+    if len(cc)<=4:
+        return cc
     else:
-        return "Beer"
-    
-#String Templates - Bug Fixing #5
-def build_string(*args):
-    return "I like {}!".format(", ".join(args))
-
-#Never visit a . . . !?
-fruit = ["kiwi",
-    "pear",
-    "kiwi",
-    "banana",
-    "melon",
-    "banana",
-    "melon",
-    "pineapple",
-    "apple",
-    "pineapple",
-    "cucumber",
-    "cucumber",
-    "pineapple",
-    "orange",
-    "grape",
-    "orange",
-    "grape",
-    "apple",
-    "grape",
-    "cherry",
-    "pear",
-    "cherry",
-    "pear",
-    "kiwi",
-    "banana",
-    "kiwi",
-    "apple",
-    "melon",
-    "banana",
-    "melon",
-    "pineapple",
-    "melon",
-    "pineapple",
-    "cucumber",
-    "orange",
-    "apple",
-    "orange",
-    "grape",
-    "orange",
-    "grape",
-    "cherry",
-    "pear",
-    "cherry",
-    "pear",
-    "apple",
-    "pear",
-    "kiwi",
-    "banana",
-    "kiwi",
-    "banana",
-    "melon",
-    "pineapple",
-    "melon",
-    "apple",
-    "cucumber",
-    "pineapple",
-    "cucumber",
-    "orange",
-    "cucumber",
-    "orange",
-    "grape",
-    "cherry",
-    "apple",
-    "cherry",
-    "pear",
-    "cherry",
-    "pear",
-    "kiwi",
-    "pear",
-    "kiwi",
-    "banana",
-    "apple",
-    "banana",
-    "melon",
-    "pineapple",
-    "melon",
-    "pineapple",
-    "cucumber",
-    "pineapple",
-    "cucumber",
-    "apple",
-    "grape",
-    "orange",
-    "grape",
-    "cherry",
-    "grape",
-    "cherry",
-    "pear",
-    "cherry",
-    "apple",
-    "kiwi",
-    "banana",
-    "kiwi",
-    "banana",
-    "melon",
-    "banana",
-    "melon",
-    "pineapple",
-    "apple",
-    "pineapple"]
-    
-def sum_digits(number):
-    sm=0
-    for n in list(str(number)):
-        sm+=int(n)
-    return sm
-    
-def subtract_sum(number):
-    result=number-sum_digits(number)
-    if result<100:
-        return fruit[result-1]
-    else:
-        return subtract_sum(result)
-    
-#Return the day
-def whatday(num):
-    days={
-        1: "Sunday",
-        2: "Monday",
-        3: "Tuesday",
-        4: "Wednesday",
-        5: "Thursday",
-        6: "Friday",
-        7: "Saturday"
-    }
-    if 1<=num<=7:
-        return days[num]
-    else:
-        return "Wrong, please enter a number between 1 and 7"
-    
-#Basic Training: Add item to an Array
-websites.append("codewars")
-
-#Area of a Square
-import math
-def square_area(A):
-    r=(A*4)/(2*math.pi)
-    return round(r*r,2)
-
-#Triple Trouble
-def triple_trouble(one, two, three):
-    new=""
-    for i in range(len(one)):
-        new+=one[i]
-        new+=two[i]
-        new+=three[i]
+        new=""
+        a=len(cc)
+        for i in range(a-4):
+            new+="#"
+        new+=cc[-4:]
     return new
 
-#How old will I be in 2099?
-def calculate_age(year_of_birth, current_year):
-    if year_of_birth-1>current_year:
-        return "You will be born in {} years.".format(year_of_birth-current_year)
-    elif year_of_birth==current_year:
-        return "You were born this very year!"
-    elif year_of_birth-1 == current_year:
-        return "You will be born in {} year.".format(year_of_birth-current_year)
-    elif current_year-1 == year_of_birth:
-        return "You are {} year old.".format(current_year-year_of_birth)
+#Friend or Foe?
+def friend(x):
+    new=[]
+    for element in x:
+        if len(element)==4:
+            new.append(element)
+    return new
+
+#Binary Addition
+def add_binary(a,b):
+    c=bin(a+b)
+    d=""
+    d+=c[2:]
+    return d
+
+#Is this a triangle?
+def is_triangle(a, b, c):
+    return a+b>c and b+c>a and a+c>b
+
+#Regex validate PIN code
+def validate_pin(pin):
+    return len(pin) in (4, 6) and pin.isdigit()
+
+#Multiply the number
+def multiply(n):
+    a=str(n)
+    a=a.replace("-","")
+    b=len(a)
+    return n*5**b
+
+#Two to One
+def longest(a1, a2):
+    return "".join(sorted(set(a1+a2)))
+
+#Growth of a Population
+from math import floor
+def nb_year(p0, percent, aug, p):
+    a=1
+    multip=1+percent/100
+    previous=p0
+    while previous<p:
+        ne=floor((previous*multip+aug))
+        previous=ne
+        a+=1
+    return a-1
+
+#Categorize New Member
+def open_or_senior(data):
+    new=[]
+    for element in data:
+        if element[0]>=55 and element[1]>7:
+            new.append("Senior")
+        else:
+            new.append("Open")
+    return new
+
+#Find the next perfect square!
+import math
+def find_next_square(sq):
+    a=math.sqrt(sq)
+    if a%1==0:
+        return (a+1)**2
     else:
-        return "You are {} years old.".format(current_year-year_of_birth)
+        return -1
+    
+#Printer Errors
+def printer_error(s):
+    correct_letters="abcdefghijklm"
+    counter=0
+    length=len(s)
+    for i in s:
+        if i not in correct_letters:
+            counter+=1
+    return "{}/{}".format(counter, length)
+
+#Ones and Zeros
+def binary_array_to_number(arr):
+    new=""
+    for i in arr:
+        new+=str(i)
+    a=int(new, 2)
+    return a
+
+#Number of People in the Bus
+def number(bus_stops):
+    counter=0
+    for element in bus_stops:
+        counter+=element[0]-element[1]
+    return counter
+
+#Reverse words
+def reverse_words(text):
+    text=list(text.split(" "))
+    new=""
+    for element in text:
+        new+=element[::-1]
+        new+=" "
+    return new.strip(" ")
+
+#Odd or Even?
+def odd_or_even(arr):
+    sum_of_all=0
+    for i in arr:
+        sum_of_all+=i
+    if sum_of_all%2==0:
+        return "even"
+    else:
+        return "odd"
+    
+#The highest profit wins!
+def min_max(lst):
+    if len(lst)==1:
+        new1=[]
+        new1.append(lst[0])
+        new1.append(new1[0])
+        return new1
+    else:
+        new2=[]
+        new2.append(min(lst))
+        new2.append(max(lst))
+        return new2
+    
+#Find the divisors!
+def divisors(integer):
+    divisors=[]
+    for x in range(2, integer):
+        if integer%x==0:
+            divisors.append(x)
+    if len(divisors)>0:
+        return divisors
+    else:
+        return "{} is prime".format(integer)
+    
+#Sum of the first nth term of Series
+def series_sum(n):
+    num=1
+    counter=1
+    divisor=4
+    while counter<n:
+        num+=1/divisor
+        divisor+=3
+        counter+=1
+    if n==0:
+        return "0.00"
+    else:
+        rounded="{:0.2f}".format(num)
+        return rounded
+    
+#Remove the minimum
+def remove_smallest(numbers):
+    new=[]
+    for x in numbers:
+        new.append(x)
+    if len(numbers)==0:
+        return []
+    else:
+        new.remove(min(new))
+        return new
+    
+#Testing 1-2-3
+def number(lines):
+    new=[]
+    counter=1
+    a=len(lines)
+    while counter<a+1:
+        new.append("{}: {}".format(counter, lines[counter-1]))
+        counter+=1
+    return new
+
+#Count the divisors of a number
+def divisors(n):
+    divisors=0
+    for x in range(1, n+1):
+        if n%x==0:
+            divisors+=1
+    return divisors
+
+#Find the stray number
+def stray(arr):
+    for num in arr:
+         if arr.count(num)==1:
+            return num
+         
+#Sort Numbers
+def solution(nums):
+    if type(nums)==list:
+        if nums==[]:
+            return []
+        else:
+            if len(nums)>0:
+                a=len(nums)
+                new=[]
+                while a>0:
+                    new.append(min(nums))
+                    nums.remove(min(nums))
+                    a-=1
+            return new
+    else:
+        return []
+    
+#Breaking chocolate problem
+def break_chocolate(n, m):
+    if n==0 or m==0:
+        return 0
+    else:
+        return n*m-1
+    
+#Make a function that does arithmetic!
+def arithmetic(a, b, operator):
+    if operator=="add":
+        return a+b
+    elif operator=="subtract":
+        return a-b
+    elif operator=="multiply":
+        return a*b
+    else:
+        return a/b
+    
+#Count the Digit
+def nb_dig(n, d):
+    counter=0
+    for i in range(n+1):
+        counter+=str(i**2).count(str(d))
+    return counter
+
+#Anagram Detection
+def is_anagram(test, original):
+    return sorted(test.lower())==sorted(original.lower())
+
+#Sum of a sequence
+def sequence_sum(begin_number, end_number, step):
+    count=0
+    for x in range(begin_number, end_number+1, step):
+        count+=x
+    return count
+
+#Sum of odd numbers
+def row_sum_odd_numbers(n):
+    return n**3
+
+#Money, Money, Money
+def calculate_years(principal, interest, tax, desired):
+    count=0
+    while principal<desired:
+        principal+=(interest*principal) * (1-tax)
+        count+=1
+    return count
+
+#Remove anchor from URL
+def remove_url_anchor(url):
+    for i in url:
+        if "#" in url:
+            a=url.index("#")
+            return url[0:a]
+        else:
+            return url
+        
+#Don't give me five!
+def dont_give_me_five(start,end):
+    new=[]
+    for i in range(start, end+1):
+        if "5" not in str(i):
+            new.append(i)
+        
+    return len(new)

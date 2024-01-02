@@ -1,192 +1,295 @@
-#Get Nth Even Number
-def nth_even(n):
-    return n*2-2
-
-#Remove duplicates from list
-def distinct(seq):
-    answer=[]
-    for i in seq:
-        if i not in answer:
-            answer.append(i)
-    return answer
-
-#5 without numbers !!
-def unusual_five():
-    return len("abcde")
-
-#Merge two sorted arrays into one
-def merge_arrays(arr1, arr2):
-    a=sorted(set(arr1+arr2))
-    return a
-
-#Super Duper Easy
-def problem(a):
-    if type(a)!=str:
-        return a*50+6
-    else:
-        return "Error"
-
-#To square(root) or not to square(root)
-import math
-def square_or_square_root(arr):
-    new=[]
-    for i in arr:
-        square_root=i**0.5
-        if square_root.is_integer():
-            new.append(square_root)
-        else:
-            new.append(i**2)
+#Triple Trouble
+def triple_trouble(one, two, three):
+    new=""
+    for i in range(len(one)):
+        new+=one[i]
+        new+=two[i]
+        new+=three[i]
     return new
 
-#A wolf in sheep's clothing
-def warn_the_sheep(queue):
-    i=len(queue) - queue.index("wolf") - 1
-    if i==0:
-        return "Pls go away and stop eating my sheep"
+#How old will I be in 2099?
+def calculate_age(year_of_birth, current_year):
+    if year_of_birth-1>current_year:
+        return "You will be born in {} years.".format(year_of_birth-current_year)
+    elif year_of_birth==current_year:
+        return "You were born this very year!"
+    elif year_of_birth-1 == current_year:
+        return "You will be born in {} year.".format(year_of_birth-current_year)
+    elif current_year-1 == year_of_birth:
+        return "You are {} year old.".format(current_year-year_of_birth)
     else:
-        return "Oi! Sheep number {}! You are about to be eaten by a wolf!".format(i)
-        
-#Determine offspring sex based on genes XX and XY chromosomes
-def chromosome_check(chromosome):
-    if "XX" in chromosome:
-        return "Congratulations! You're going to have a daughter."
-    elif "XY" in chromosome:
-        return "Congratulations! You're going to have a son."
+        return "You are {} years old.".format(current_year-year_of_birth)
 
-#Convert to Binary
-def to_binary(n):
-    a=bin(n)
-    return int(a[2:])
+#Regex count lowercase letters
+def lowercase_count(strng):
+    count=0
+    for i in strng:
+        if i!=i.upper():
+            count+=1
+    return count
 
-#The Wide-Mouthed frog!
-def mouth_size(animal): 
-    animal=animal.upper()
-    if animal=="ALLIGATOR":
-        return "small"
+#USD => CNY
+def usdcny(usd):
+    chn=str(usd*6.75)
+    if "." in chn:
+        if chn[-2]==".":
+            chn+="0"
     else:
-        return "wide"
-    
-#Well of Ideas - Easy Version
-def well(x):
-    if x.count("good")==1 or x.count("good")==2:
-        return "Publish!"
-    elif x.count("good")>2:
-        return "I smell a series!"
-    else:
-        return "Fail!"
-    
-#Holiday VIII - Duty Free
-def duty_free(price, discount, holiday_cost):
-    new_price=price * discount / 100
-    return int(holiday_cost / new_price)
+        chn+="00"
+    return "{} Chinese Yuan".format(chn)
 
-#Add Length
-def add_length(str_):
-    new=[]
-    for word in str_.split():
-        new.append(word + " " + str(len(word)))
+#Formatting decimal places #0
+def two_decimal_places(n):
+    return round(n*100)/100
+
+#Name on billboard
+def billboard(name, price=30):
+    new=0
+    for i in name:
+        new+=price
     return new
 
-#Bin to Decimal
-def bin_to_decimal(inp):
-    return int(inp, 2)
+#How many stairs will Suzuki climb in 20 years?
+def stairs_in_20(stairs):
+    total=0
+    for day in stairs:
+        for stair in day:
+            total+=stair
+    return total*20
 
-#The 'if' function
-def _if(bool, func1, func2):
-    if bool==True:
-        func1()
-    else:
-        func2()
-
-#FIxme: Replace all dots
-def replace_dots(s):
-    return s.replace(".", "-")
-
-#Hello, Name or World!
-def hello(name=""):
-    if name!="":
-        return "Hello, " + name.capitalize() + "!"
-    else:
-        return "Hello, World!"
+#OOP: Object Oriented Piracy
+class Ship:
+    def __init__(self, draft, crew):
+        self.draft = draft
+        self.crew = crew
+    def is_worth_it(self):
+        return self.draft - self.crew *1.5 > 20
     
-#Hex to Decimal
-def hex_to_dec(s):
-    hex={
-        "0": 0,
-        "1": 1,
-        "2": 2,
-        "3": 3, 
-        "4": 4,
-        "5": 5,
-        "6": 6,
-        "7": 7,
-        "8": 8,
-        "9": 9,
-        "a": 10,
-        "b": 11,
-        "c": 12,
-        "d": 13,
-        "e": 14,
-        "f": 15
-        }
-    sum=0
-    lenght=len(s)-1
-    for i in s:
-        sum +=hex[i] * 16**lenght
-        lenght-=1
-    return sum
+#Miles per gallon to kilometers per liter
+def converter(mpg):
+    return round(mpg * 1.609344 / 4.54609188, 2)
 
-#Grasshopper - Function syntax debugging
-def main(verb, noun):
-    return verb + noun
+#Incorrect division method
+def divide_numbers(x,y):
+    return x / y
 
-#No zeros for heros
-def no_boring_zeros(n):
-    if n==0:
-        return n
+#Holiday VI - Shark Pontoon
+def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
+    if dolphin==True:
+        shark_speed=shark_speed*0.5
+    my_time=pontoon_distance / you_speed
+    shark_time=shark_distance / shark_speed
+    if my_time>shark_time:
+        return "Shark Bait!"
     else:
-        while n%10==0:
-            n=n/10
-    return n
-        
-#Grasshopper - Terminal game combat function
-def combat(health, damage):
-    if health>damage:
-        return health-damage
+        return "Alive!"
+    
+#Define a card suit
+def define_suit(card):
+    if card[-1]=="C":
+        return "clubs"
+    elif card[-1]=="D":
+        return "diamonds"
+    elif card[-1]=="H":
+        return "hearts"
+    else:
+        return "spades"
+    
+#Do you speak "English"?
+def sp_eng(sentence): 
+    return "english" in sentence.lower()
+
+#SpeedCode #2 - Array Madness
+def array_madness(a,b):
+    new_arr1=[]
+    new_arr2=[]
+    for i in a:
+        new_arr1.append(i**2)
+    for x in b:
+        new_arr2.append(x**3)
+    return sum(new_arr1) > sum(new_arr2)
+
+#No Loops 2 - You only need one
+def check(a, x): 
+    return x in a
+
+#Grasshopper - Combine strings
+def combine_names(first_name, last_name):
+    return "{} {}".format(first_name, last_name)
+
+#Find the Difference in Age between Oldest and Youngest Family Members
+def difference_in_ages(ages):
+    new=(min(ages), max(ages), max(ages)-min(ages))
+    return new
+
+#The falling speed of petals
+def sakura_fall(v):
+    if v>0:
+        return 400/v
     else:
         return 0
+    
+#Remove the time
+def shorten_to_date(long_date):
+    numb=long_date.index(",")
+    return long_date[0:numb]
 
-#Exclamation marks series #1: Remove an exclamation mark from the end of string
+#Exclamation marks series #2: Remove all exclamation marks from the end of sentence
 def remove(s):
-    if s!="":
-        if s[-1]=="!":
-            return s[0:-1]
-        else:
-            return s
-    else:
-        return ""
-    
-#Enumerable Magic #25 - Take the First N Elements
-def take(arr,n):
-    if n>0:
-        return arr[:n]
-    else:
-        return []
-    
-#Welcome to the City
-def say_hello(name, city, state):
-    names=" ".join(name)
-    return "Hello, {}! Welcome to {}, {}!".format(names, city, state)
-
-#Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
-def replace_exclamation(s):
-    for i in "AEIOUaeiou":
-        s=s.replace(i, "!")
+    while s[-1]=="!":
+        s=s[:-1]
     return s
 
-#Is this my tail?
-def correct_tail(body, tail):
-     if body[-1]==tail:
-        return True
-     else:
+#Is it a number?
+def is_digit(s):
+    if len(s)==0 or s[0] not in "-+.0123456789":
         return False
+    for char in s[1:]:
+        if char not in ".0123456789":
+            return False
+    return True
+
+#Regexp Basics - is it a digit?
+def is_digit(n):
+    return n in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+#Smallest unused ID
+def next_id(arr):
+    for i in range(len(arr)+1):
+        if i not in arr:
+            return i
+
+#Fundamentals: Return
+def add(a,b):
+    return a+b
+def multiply(a,b):
+    return a*b
+def divide(a,b):
+    return a/b
+def mod(a,b):
+    return a%b
+def exponent(a,b):
+    return a**b
+def subt(a,b):
+    return a-b
+
+#Fix your code before the garden dies!
+def rain_amount(mm):
+    if mm < 40:
+        return "You need to give your plant " + str(40-mm) + "mm of water"
+    else:
+         return "Your plant has had more than enough water for today!"
+    
+#get ascii value of character
+def get_ascii(ch : str) -> int:
+    return ord(ch)
+
+#CSV representation of array
+def to_csv_text(array):
+    new=[]
+    for i in range(len(array)):
+        for j in range(len(array[i])):
+            array[i][j]=str(array[i][j])
+        new.append(",".join(array[i]))
+    return "\n".join(new)
+
+#Contamination #1 -String-
+def contamination(text, char):
+    new=""
+    if text=="":
+        return ""
+    elif char=="":
+        return ""
+    else:
+        for i in range(len(text)):
+            new+=char
+    return new
+
+#Closest elevator
+def elevator(left, right, call):
+    l=abs(left-call)
+    r=abs(right-call)
+    if l<r:
+        return "left"
+    else:
+        return "right"
+    
+#A Strange Trip to the Market
+def is_lock_ness_monster(string):
+    if "tree fiddy" in string or "three fifty" in string or "3.50" in string:
+        return True
+    else:
+        return False
+    
+#Pythagorean Triple
+def pythagorean_triple(integers):
+    a, b, c = sorted(integers)
+    if a**2 + b**2 == c**2:
+        return True
+    else:
+        return False
+    
+#Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+def remove(s):
+    new=""
+    for i in s:
+        if i!="!":
+            new+=i
+    return new+"!"
+
+#Geometry Basics: Distance between points in 2D
+import math
+def distance_between_points(a, b):
+    return math.sqrt((a.x - b.x)**2 + (a.y - b.y)**2)
+
+#Leonardo Dicaprio and Oscars
+def leo(oscar):
+    if oscar>88:
+        return "Leo got one already!"
+    elif oscar==88:
+        return "Leo finally won the oscar! Leo is happy"
+    elif oscar==86:
+        return "Not even for Wolf of wallstreet?!"
+    else:
+        return "When will you give Leo an Oscar?"
+    
+#Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+def remove(s, n):
+    return s.replace("!", "", n)
+
+#Tip Calculator
+import math
+def calculate_tip(amount, rating):
+    rating=rating.lower()
+    tip={
+        "terrible": 0,
+        "poor": 0.05,
+        "good": 0.1,
+        "great": 0.15,
+        "excellent": 0.2
+    }.get(rating)
+    if tip==None:
+        return 'Rating not recognised'
+    return int(math.ceil(amount*tip))
+
+#Are arrow functions odd?
+def odds(values):
+    return [x for x in values if x%2==1]
+
+#Compare within margin
+def close_compare(a, b, margin=0):
+    if a-b>margin:
+        return 1
+    elif b-a>margin:
+        return -1
+    else:
+        return 0
+    
+#BASIC: Making Six Toast.
+def six_toast(num):
+    if num>6:
+        return num-6
+    elif num==6:
+        return 0
+    else:
+        return 6-num

@@ -1,250 +1,297 @@
-#Smallest unused ID
-def next_id(arr):
-    for i in range(len(arr)+1):
-        if i not in arr:
-            return i
+#Predict your age!
+import math
+def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
+    new=[age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8]
+    new2=[]
+    for num in new:
+        num**=2
+        new2.append(num)
+    a=sum(new2)
+    b=a**0.5
+    b/=2
+    return math.floor(b)
 
-#Fundamentals: Return
-def add(a,b):
-    return a+b
-def multiply(a,b):
-    return a*b
-def divide(a,b):
-    return a/b
-def mod(a,b):
-    return a%b
-def exponent(a,b):
-    return a**b
-def subt(a,b):
-    return a-b
-
-#Fix your code before the garden dies!
-def rain_amount(mm):
-    if mm < 40:
-        return "You need to give your plant " + str(40-mm) + "mm of water"
-    else:
-         return "Your plant has had more than enough water for today!"
-    
-#get ascii value of character
-def get_ascii(ch : str) -> int:
-    return ord(ch)
-
-#CSV representation of array
-def to_csv_text(array):
-    new=[]
+#Row Weights
+def row_weights(array):
+    team1=0
+    team2=0
     for i in range(len(array)):
-        for j in range(len(array[i])):
-            array[i][j]=str(array[i][j])
-        new.append(",".join(array[i]))
-    return "\n".join(new)
+        if i%2==0:
+            team2+=array[i]
+        else:
+            team1+=array[i]
+    return team2, team1
 
-#Contamination #1 -String-
-def contamination(text, char):
-    new=""
-    if text=="":
-        return ""
-    elif char=="":
-        return ""
+#Sum of numbers from 0 to N
+def show_sequence(n):
+    ans="0"
+    count=0
+    for i in range(1, n+1):
+        ans+="+{}".format(i)
+        count+=i
+    ans+=" = {}".format(count)
+    if n==0:
+        return "0=0"
+    elif n<0:
+        return "{}<0".format(n)
     else:
-        for i in range(len(text)):
-            new+=char
+        return ans
+    
+#Greet Me
+def greet(name): 
+    name=name.lower()
+    name=list(name)
+    name[0]=name[0].upper()
+    new=""
+    for i in name:
+        new+=i
+    return "Hello {}!".format(new)
+
+#Remove duplicate words
+def remove_duplicate_words(s):
+    s=s.split(" ")
+    sentence=[]
+    for item in s:
+        if item not in sentence:
+            sentence.append(item)
+    return " ".join(sentence)
+    
+#Sum of Cubes
+def sum_cubes(n):
+    new=0
+    for i in range(1, n+1):
+        new+=i**3
     return new
 
-#Closest elevator
-def elevator(left, right, call):
-    l=abs(left-call)
-    r=abs(right-call)
-    if l<r:
-        return "left"
+#Sorted? yes? no? how?
+def is_sorted_and_how(arr):
+    if arr==sorted(arr):
+        return "yes, ascending"
+    elif arr==sorted(arr, reverse=True):
+        return "yes, descending"
     else:
-        return "right"
+        return "no"
     
-#A Strange Trip to the Market
-def is_lock_ness_monster(string):
-    if "tree fiddy" in string or "three fifty" in string or "3.50" in string:
-        return True
-    else:
-        return False
-    
-#Pythagorean Triple
-def pythagorean_triple(integers):
-    a, b, c = sorted(integers)
-    if a**2 + b**2 == c**2:
-        return True
-    else:
-        return False
-    
-#Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
-def remove(s):
+#Digits explosion
+def explode(s):
+    s=list(s)
     new=""
-    for i in s:
-        if i!="!":
-            new+=i
-    return new+"!"
+    for num in s:
+        new+=str(num)*int(num)
+    return new
 
-#Geometry Basics: Distance between points in 2D
-import math
-def distance_between_points(a, b):
-    return math.sqrt((a.x - b.x)**2 + (a.y - b.y)**2)
-
-#Leonardo Dicaprio and Oscars
-def leo(oscar):
-    if oscar>88:
-        return "Leo got one already!"
-    elif oscar==88:
-        return "Leo finally won the oscar! Leo is happy"
-    elif oscar==86:
-        return "Not even for Wolf of wallstreet?!"
+#Bumps in the Road
+def bumps(road):
+    road=list(road)
+    bump=road.count("n")
+    if bump<=15:
+        return "Woohoo!"
     else:
-        return "When will you give Leo an Oscar?"
+        return "Car Dead"
     
-#Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
-def remove(s, n):
-    return s.replace("!", "", n)
-
-#Tip Calculator
-import math
-def calculate_tip(amount, rating):
-    rating=rating.lower()
-    tip={
-        "terrible": 0,
-        "poor": 0.05,
-        "good": 0.1,
-        "great": 0.15,
-        "excellent": 0.2
-    }.get(rating)
-    if tip==None:
-        return 'Rating not recognised'
-    return int(math.ceil(amount*tip))
-
-#Are arrow functions odd?
-def odds(values):
-    return [x for x in values if x%2==1]
-
-#Compare within margin
-def close_compare(a, b, margin=0):
-    if a-b>margin:
-        return 1
-    elif b-a>margin:
-        return -1
-    else:
-        return 0
-    
-#BASIC: Making Six Toast.
-def six_toast(num):
-    if num>6:
-        return num-6
-    elif num==6:
-        return 0
-    else:
-        return 6-num
-    
-#simple calculator
-def calculator(x,y,op):
-    if op == "+" and (type(x)==int and type(y)==int):
-        return x+y
-    elif op=="-":
-        return x-y
-    elif op=="*":
-        return x*y
-    elif op=="/":
-        return x/y
-    else:
-        return "unknown value"
-    
-#Is there a vowel in there?
-def is_vow(inp):
-    for n in range(0, len(inp)):
-        if inp[n]==97: inp[n] = "a"
-        if inp[n]==101: inp[n] = "e"
-        if inp[n]==105: inp[n] = "i"
-        if inp[n]==111: inp[n] = "o"
-        if inp[n]==117: inp[n] = "u"
-    return inp
-
-#Who is going to pay for the wall?
-def who_is_paying(name):
-    trun=[]
-    trun.append(name)
-    trun.append(name[:2])
-    if len(name)<=2:
-        simple=[]
-        simple.append(name)
-        return simple
-    else:
-        return trun
-    
-#Collatz Conjecture (3n+1)
-def hotpo(n):
-    counter=0
-    while n >1:
-        if ((n % 2) == 0):
-            n= n // 2
-        else:
-            n = n *3 +1
-        counter+=1
-    return counter
-
-#Quadrants
-def quadrant(x, y):
-    if x>0 and y>0:
-        return 1
-    elif x<0 and y>0:
-        return 2
-    elif x<0 and y<0:
-        return 3
-    else:
-        return 4
-    
-#Chuck Norris VII - True or False? (Beginner)
-def if_chuck_says_so():
-    return 3==5
-
-#Unexpected parsing
-def get_status(is_busy):
-    status = "busy" if is_busy else "available"
-    return {"status": status}
-
-#Thinkful - Number Drills: Blue and red marbles
-def guess_blue(blue_start, red_start, blue_pulled, red_pulled):
-    blue=blue_start-blue_pulled
-    red=red_start-red_pulled
-    return blue/(blue+red)
-
-#ASCII Total
-def uni_total(s):
-    a=0
-    for i in s:
-        a+=ord(i)
-    return a
-
-#For UFC Fans (Total Beginners): Conor McGregor vs George Saint Pierre
-def quote(fighter):
-    a={
-        'george saint pierre': "I am not impressed by your performance.",
-        'conor mcgregor'     : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+#Love vs friendship
+def words_to_marks(s):
+    value={
+        "a": 1,
+        "b": 2,
+        "c": 3,
+        "d": 4,
+        "e": 5,
+        "f": 6,
+        "g": 7,
+        "h": 8,
+        "i": 9,
+        "j": 10,
+        "k": 11,
+        "l": 12,
+        "m": 13,
+        "n": 14,
+        "o": 15,
+        "p": 16,
+        "q": 17,
+        "r": 18,
+        "s": 19,
+        "t": 20,
+        "u": 21,
+        "v": 22,
+        "w": 23,
+        "x": 24,
+        "y": 25,
+        "z": 26
     }
-    return a[fighter.lower()]
+    count=0
+    s=list(s)
+    for char in s:
+        count+=value[char]
+    return count
 
-#Who ate the cookie?
-def cookie(x):
-    if type(x)==str:
-        return "Who ate the last cookie? It was Zach!"
-    elif type(x)==float or type(x)==int:
-        return "Who ate the last cookie? It was Monica!"
-    else:
-        return "Who ate the last cookie? It was the dog!"
+#Greatest common divisor
+import math
+def mygcd(x, y):
+    return math.gcd(x, y)
+        
+#Find the vowels
+def vowel_indices(word):
+    word = word.lower()
+    vowels = ["a", "e", "i", "o", "u", "y"]
+    list = []
+    for index in range(len(word)):
+        if word[index] in vowels:
+            list.append(index + 1)
+    return list
+
+#Sort the Gift Code
+def sort_gift_code(code):
+    a=sorted(code)
+    b=""
+    for i in a:
+        b+=i
+    return b
+
+#Sort array by string length
+def sort_by_length(arr):
+    return sorted(arr, key=len)
+
+#Largest 5 digit number in a series
+def solution(digits):
+    res=0
+    for iteration in range(len(digits)):
+        if int(digits[iteration:iteration+5]) > res:
+            res=int(digits[iteration:5+iteration])
+    return res
+
+#Alphabet war
+def alphabet_war(fight):
+    a={
+        "w": 4,
+        "p": 3,
+        "b": 2,
+        "s": 1
+    }
+    b={
+        "m": 4,
+        "q": 3,
+        "d": 2,
+        "z": 1
+    }
+    fight=list(fight)
+    left=0
+    right=0
+    for e in fight:
+        left+=a.get(e, 0)
+        right+=b.get(e, 0)
+    if left>right:
+        return "Left side wins!"
+    elif right>left:
+        return "Right side wins!"
+    elif right==left:
+        return "Let's fight again!"
     
-#validate code with simple regex
-def validate_code(code):
-    a=[int(i) for i in str(code)]
-    if a[0]==1 or a[0]==2 or a[0]==3:
-        return True
+#Largest pair sum in array
+def largest_pair_sum(numbers): 
+    count=0
+    count+=max(numbers)
+    numbers.remove(max(numbers))
+    count+=max(numbers)
+    return count
+
+#Switcheroo
+def switcheroo(s):
+    res=""
+    for letter in s:
+        if letter=="a":
+            letter="b"
+        elif letter=="b":
+            letter="a"
+        res+=letter
+    return res
+
+#Sum of Triangular Numbers
+def sum_triangular_numbers(n):
+    if n<0:
+        return 0
     else:
-        return False
+        return (n*(n+1)*(n+2))/6
     
-#Localize The Barycenter of a Triangle
-def bar_triang(point_a, point_b, point_c): 
-    x=(point_a[0]+point_b[0]+point_c[0])/3
-    y=(point_a[1]+point_b[1]+point_c[1])/3
-    return [round(x, 4), round(y, 4)]
+#Even numbers in an array
+def even_numbers(arr,n):
+    new=[]
+    for num in arr:
+        if num%2==0:
+            new.append(num)
+    return new[-n:]
+
+#Filter the number
+def filter_string(string):
+    new=""
+    for i in string:
+        if i>="0" and i<="9":
+            new+=i
+    return int(new)
+
+#Simple beads count
+def count_red_beads(n):
+    if n<2:
+        return 0
+    else:
+        return (n-1)*2
+    
+#Boiled Eggs
+import math
+def cooking_time(eggs):
+    a=math.ceil(eggs/8)
+    return a*5
+
+#Functional Addition
+def add(n):
+    return lambda x: x+n
+
+#My Language Skills
+def my_languages(results):
+    new=[]
+    for key, value in results.items():
+        if value>=60:
+            new.append(key)
+    return sorted(new, key=lambda x: results[x], reverse=True)
+
+#Sort arrays - 1
+def sortme(names):
+    return sorted(names)
+
+#Speed Control
+def gps(s, x):
+    if len(x)<2:
+        return 0
+    else:
+        numb=max(x[i] - x[i-1] for i in range(1, len(x)))
+    return numb*3600.0/s
+
+#Minimize Sum Of Array (Array Series #1)
+def min_sum(arr):
+    arr=sorted(arr)
+    last_num=0
+    for i in range(len(arr)//2):
+        last_num+=arr[i]*arr[-i-1]
+    return last_num
+
+#Odd-Even String Sort
+def sort_my_string(s):
+    even=""
+    odd=""
+    for i in range(0, len(s), 2):
+        even+=s[i]
+    for i in range(1, len(s), 2):
+        odd+=s[i]
+    return "{} {}".format(even, odd)
+
+#Maximum Triplet Sum (Array Series #7)
+def max_tri_sum(numbers):
+    numbers=set(numbers)
+    numbers=list(numbers)
+    a=0
+    a+=max(numbers)
+    numbers.remove(max(numbers))
+    a+=max(numbers)
+    numbers.remove(max(numbers))
+    a+=max(numbers)
+    return a

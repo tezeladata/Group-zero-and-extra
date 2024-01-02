@@ -1,151 +1,306 @@
-#What is between?
-def between(a,b):
-    numbers=[]
-    for i in range(a, b+1):
-        numbers.append(i)
-    return numbers
-
-#Do I get a bonus?
-def bonus_time(salary, bonus):
-    if bonus==True:
-        return "$" + str(salary*10)
-    else:
-        return "$" + str(salary)
-    
-#Cat years, Dog years
-def human_years_cat_years_dog_years(human_years):
-    if human_years==1:
-        return [human_years, human_years+14, human_years+14]
-    elif human_years==2:
-        return [human_years, human_years+22, human_years+22]
-    else:
-        return [human_years, human_years*4+16, human_years*5+14]
-    
-#altERnaTIng cAsE <=> ALTerNAtiNG CaSe
-def to_alternating_case(string):
-    sentence=""
-    for i in string:
-        if i.isupper():
-            sentence+=i.lower()
-        elif i.islower():
-            sentence+=i.upper()
+#To square(root) or not to square(root)
+import math
+def square_or_square_root(arr):
+    new=[]
+    for i in arr:
+        square_root=i**0.5
+        if square_root.is_integer():
+            new.append(square_root)
         else:
-            sentence+=i
-    return sentence
+            new.append(i**2)
+    return new
+
+#A wolf in sheep's clothing
+def warn_the_sheep(queue):
+    i=len(queue) - queue.index("wolf") - 1
+    if i==0:
+        return "Pls go away and stop eating my sheep"
+    else:
+        return "Oi! Sheep number {}! You are about to be eaten by a wolf!".format(i)
         
-#Powers of 2
-def powers_of_two(n):
-    powers=[]
-    for i in range(0, n+1):
-        powers.append(2**i)
-    return powers
+#Determine offspring sex based on genes XX and XY chromosomes
+def chromosome_check(chromosome):
+    if "XX" in chromosome:
+        return "Congratulations! You're going to have a daughter."
+    elif "XY" in chromosome:
+        return "Congratulations! You're going to have a son."
 
-#Correct the mistakes of the character recognition software
-def correct(s):
-    a=s.replace("5", "S").replace("0", "O").replace("1", "I")
-    return a
+#Convert to Binary
+def to_binary(n):
+    a=bin(n)
+    return int(a[2:])
 
-#Is it a palindrome?
-def is_palindrome(s):
-    return s.lower()==s[::-1].lower()
+#The Wide-Mouthed frog!
+def mouth_size(animal): 
+    animal=animal.upper()
+    if animal=="ALLIGATOR":
+        return "small"
+    else:
+        return "wide"
+    
+#Well of Ideas - Easy Version
+def well(x):
+    if x.count("good")==1 or x.count("good")==2:
+        return "Publish!"
+    elif x.count("good")>2:
+        return "I smell a series!"
+    else:
+        return "Fail!"
+    
+#Holiday VIII - Duty Free
+def duty_free(price, discount, holiday_cost):
+    new_price=price * discount / 100
+    return int(holiday_cost / new_price)
 
-#Student's Final Grade
-def final_grade(exam, projects):
-    if exam>90 or projects>10:
-        return 100
-    elif exam>75 and projects>=5:
-        return 90
-    elif exam>50 and projects>=2:
-        return 75
+#Add Length
+def add_length(str_):
+    new=[]
+    for word in str_.split():
+        new.append(word + " " + str(len(word)))
+    return new
+
+#Bin to Decimal
+def bin_to_decimal(inp):
+    return int(inp, 2)
+
+#The 'if' function
+def _if(bool, func1, func2):
+    if bool==True:
+        func1()
+    else:
+        func2()
+
+#FIxme: Replace all dots
+def replace_dots(s):
+    return s.replace(".", "-")
+
+#Hello, Name or World!
+def hello(name=""):
+    if name!="":
+        return "Hello, " + name.capitalize() + "!"
+    else:
+        return "Hello, World!"
+    
+#Hex to Decimal
+def hex_to_dec(s):
+    hex={
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3, 
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "a": 10,
+        "b": 11,
+        "c": 12,
+        "d": 13,
+        "e": 14,
+        "f": 15
+        }
+    sum=0
+    lenght=len(s)-1
+    for i in s:
+        sum +=hex[i] * 16**lenght
+        lenght-=1
+    return sum
+
+#Grasshopper - Function syntax debugging
+def main(verb, noun):
+    return verb + noun
+
+#No zeros for heros
+def no_boring_zeros(n):
+    if n==0:
+        return n
+    else:
+        while n%10==0:
+            n=n/10
+    return n
+        
+#Grasshopper - Terminal game combat function
+def combat(health, damage):
+    if health>damage:
+        return health-damage
     else:
         return 0
 
-#Expressions Matter
-def expression_matter(a, b, c):
-    cases=[a+b+c]
-    cases.append(a*b*c)
-    cases.append((a*b)+c)
-    cases.append((a+b)*c)
-    cases.append(a+(b*c))
-    cases.append(a*(b+c))
-    return max(cases)
-
-#Grasshopper - Messi Goals
-la_liga_goals=43
-champions_league_goals=10
-copa_del_rey_goals=5
-
-total_goals=la_liga_goals+champions_league_goals+copa_del_rey_goals
-
-#Sum The Strings
-def sum_str(a, b):
-    if a!="" and b!="":
-        c=int(a)+int(b)
-        return str(c)
-    elif a=="" and b!="":
-        return str(b)
-    elif a!="" and b=="":
-        return str(a)
+#Exclamation marks series #1: Remove an exclamation mark from the end of string
+def remove(s):
+    if s!="":
+        if s[-1]=="!":
+            return s[0:-1]
+        else:
+            return s
     else:
-        return str(0)
+        return ""
     
-#Difference of Volumes of Cuboids
-def find_difference(a, b):
-    volume_a=1
-    volume_b=1
-    for element in a:
-        volume_a*=element
-    for element in b:
-        volume_b*=element
-    if volume_a>volume_b:
-        return volume_a-volume_b
+#Enumerable Magic #25 - Take the First N Elements
+def take(arr,n):
+    if n>0:
+        return arr[:n]
     else:
-        return volume_b-volume_a
+        return []
     
-#Welcome!
-def greet(language):
-    if language=="english":
-        return "Welcome"
-    if language=="czech":
-        return "Vitejte"
-    if language=="danish":
-        return "Velkomst"
-    if language=="dutch":
-        return "Welkom"
-    if language=="estonian":
-        return "Tere tulemast"
-    if language=="finnish":
-        return "Tervetuloa"
-    if language=="flemish":
-        return "Welgekomen"
-    if language=="french":
-        return "Bienvenue"
-    if language=="german":
-        return "Willkommen"
-    if language=="irish":
-        return "Failte"
-    if language=="italian":
-        return "Benvenuto"
-    if language=="latvian":
-        return "Gaidits"
-    if language=="lithuanian":
-        return "Laukiamas"
-    if language=="polish":
-        return "Witamy"
-    if language=="spanish":
-        return "Bienvenido"
-    if language=="swedish":
-        return "Valkommen"
-    if language=="welsh":
-        return "Croeso"
-    else:
-        return "Welcome"
-    
-#Basic variable assignment
-a = "code"
-b = "wa.rs"
-name = a + b
+#Welcome to the City
+def say_hello(name, city, state):
+    names=" ".join(name)
+    return "Hello, {}! Welcome to {}, {}!".format(names, city, state)
 
-#Reverse List Order
-def reverse_list(l):
-    return l[::-1]
+#Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+def replace_exclamation(s):
+    for i in "AEIOUaeiou":
+        s=s.replace(i, "!")
+    return s
+
+#Is this my tail?
+def correct_tail(body, tail):
+     if body[-1]==tail:
+        return True
+     else:
+        return False
+     
+#Find the position!
+def position(alphabet):
+    alph={
+        "a": 1,
+        "b": 2,
+        "c": 3,
+        "d": 4,
+        "e": 5,
+        "f": 6,
+        "g": 7,
+        "h": 8,
+        "i": 9,
+        "j": 10,
+        "k": 11,
+        "l": 12,
+        "m": 13,
+        "n": 14,
+        "o": 15,
+        "p": 16,
+        "q": 17,
+        "r": 18,
+        "s": 19,
+        "t": 20,
+        "u": 21,
+        "v": 22,
+        "w": 23,
+        "x": 24,
+        "y": 25,
+        "z": 26 
+    }
+    for i in alphabet:
+        return "Position of alphabet: {}".format(alph[i])
+    
+#Alan Partridge II - Apple Turnover
+def apple(x):
+    if type(x)==int:
+        if x**2>1000:
+            return "It's hotter than the sun!!"
+        else:
+            return "Help yourself to a honeycomb Yorkie for the glovebox."
+    elif int(x)**2>1000:
+        return "It's hotter than the sun!!"
+    elif int(x)**2<1000:
+        return "Help yourself to a honeycomb Yorkie for the glovebox."
+    
+#Grasshopper - Debug
+def weather_info (temp):
+    c = convert_to_celsius(temp)
+    if (c < 0):
+        return (str(c) + " is freezing temperature")
+    else:
+        return (str(c) + " is above freezing temperature")
+    
+def convert_to_celsius (temperature):
+    celsius = (temperature - 32) * (5/9)
+    return celsius
+
+#Find the Remainder
+def remainder(a,b):
+    if min(a,b)==0:
+        return None
+    elif a>b:
+        return a%b
+    else:
+        return b%a
+    
+#Generate range of integers
+def generate_range(min, max, step):
+    a=[]
+    for i in range(min, max+1, step):
+        a.append(i)
+    return a
+
+#101 Dalmatians - squash the bugs, not the dogs!
+def how_many_dalmatians(n):
+    dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"]
+    if n <=10:
+        respond=dogs[0]
+    elif n <=50:
+        respond=dogs[1]
+    elif n==101:
+        respond=dogs[3]
+    else:
+        respond=dogs[2]
+    return respond
+
+#Price of Mangoes
+def mango(quantity, price):
+    return price * (quantity - (quantity // 3))
+
+#Surface Area and Volume of a Box
+def get_size(w,h,d):
+    answer=[]
+    answer.append(2*(w*h + w*d + h*d))
+    answer.append(w*h*d)
+    return answer
+
+#Printing Array elements with Comma delimiters
+def print_array(arr):
+    if arr!=None:
+        return ",".join(str(i) for i in arr)
+    
+#Remove First and Last Character Part Two
+def array(string):
+    a= string.strip().split(",")
+    b= a[1:-1]
+    c= " ".join(b)
+    if len(c)==0:
+        return None
+    else:
+        return c
+
+#Reversing Words in a String
+def reverse(st):
+    st=st.split()
+    st.reverse()
+    return " ".join(st)
+
+#Pillars
+def pillars(num_pill, dist, width):
+    if num_pill<=1:
+        return 0
+    else:
+        return (num_pill-2)*width + (num_pill-1)*dist*100
+    
+#Dollars and Cents
+def format_money(amount):
+    dollar=int(amount)
+    cent=str(int((amount-dollar)*100 +0.1))
+    if len(cent)<1:
+        cent="00"
+    elif len(cent)<2:
+        cent+="0"
+    return "$" + str(dollar) + "." + cent
+
+#Return to Sanity
+def mystery():
+    results = {
+    'sanity': 'Hello'
+    }
+    return results

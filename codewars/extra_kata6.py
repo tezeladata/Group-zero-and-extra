@@ -1,190 +1,306 @@
-#Find the position!
-def position(alphabet):
-    alph={
-        "a": 1,
-        "b": 2,
-        "c": 3,
-        "d": 4,
-        "e": 5,
-        "f": 6,
-        "g": 7,
-        "h": 8,
-        "i": 9,
-        "j": 10,
-        "k": 11,
-        "l": 12,
-        "m": 13,
-        "n": 14,
-        "o": 15,
-        "p": 16,
-        "q": 17,
-        "r": 18,
-        "s": 19,
-        "t": 20,
-        "u": 21,
-        "v": 22,
-        "w": 23,
-        "x": 24,
-        "y": 25,
-        "z": 26 
-    }
-    for i in alphabet:
-        return "Position of alphabet: {}".format(alph[i])
-    
-#Alan Partridge II - Apple Turnover
-def apple(x):
-    if type(x)==int:
-        if x**2>1000:
-            return "It's hotter than the sun!!"
-        else:
-            return "Help yourself to a honeycomb Yorkie for the glovebox."
-    elif int(x)**2>1000:
-        return "It's hotter than the sun!!"
-    elif int(x)**2<1000:
-        return "Help yourself to a honeycomb Yorkie for the glovebox."
-    
-#Grasshopper - Debug
-def weather_info (temp):
-    c = convert_to_celsius(temp)
-    if (c < 0):
-        return (str(c) + " is freezing temperature")
+#simple calculator
+def calculator(x,y,op):
+    if op == "+" and (type(x)==int and type(y)==int):
+        return x+y
+    elif op=="-":
+        return x-y
+    elif op=="*":
+        return x*y
+    elif op=="/":
+        return x/y
     else:
-        return (str(c) + " is above freezing temperature")
+        return "unknown value"
     
-def convert_to_celsius (temperature):
-    celsius = (temperature - 32) * (5/9)
-    return celsius
+#Is there a vowel in there?
+def is_vow(inp):
+    for n in range(0, len(inp)):
+        if inp[n]==97: inp[n] = "a"
+        if inp[n]==101: inp[n] = "e"
+        if inp[n]==105: inp[n] = "i"
+        if inp[n]==111: inp[n] = "o"
+        if inp[n]==117: inp[n] = "u"
+    return inp
 
-#Find the Remainder
-def remainder(a,b):
-    if min(a,b)==0:
-        return None
-    elif a>b:
-        return a%b
+#Who is going to pay for the wall?
+def who_is_paying(name):
+    trun=[]
+    trun.append(name)
+    trun.append(name[:2])
+    if len(name)<=2:
+        simple=[]
+        simple.append(name)
+        return simple
     else:
-        return b%a
+        return trun
     
-#Generate range of integers
-def generate_range(min, max, step):
-    a=[]
-    for i in range(min, max+1, step):
-        a.append(i)
+#Collatz Conjecture (3n+1)
+def hotpo(n):
+    counter=0
+    while n >1:
+        if ((n % 2) == 0):
+            n= n // 2
+        else:
+            n = n *3 +1
+        counter+=1
+    return counter
+
+#Quadrants
+def quadrant(x, y):
+    if x>0 and y>0:
+        return 1
+    elif x<0 and y>0:
+        return 2
+    elif x<0 and y<0:
+        return 3
+    else:
+        return 4
+    
+#Chuck Norris VII - True or False? (Beginner)
+def if_chuck_says_so():
+    return 3==5
+
+#Unexpected parsing
+def get_status(is_busy):
+    status = "busy" if is_busy else "available"
+    return {"status": status}
+
+#Thinkful - Number Drills: Blue and red marbles
+def guess_blue(blue_start, red_start, blue_pulled, red_pulled):
+    blue=blue_start-blue_pulled
+    red=red_start-red_pulled
+    return blue/(blue+red)
+
+#ASCII Total
+def uni_total(s):
+    a=0
+    for i in s:
+        a+=ord(i)
     return a
 
-#101 Dalmatians - squash the bugs, not the dogs!
-def how_many_dalmatians(n):
-    dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"]
-    if n <=10:
-        respond=dogs[0]
-    elif n <=50:
-        respond=dogs[1]
-    elif n==101:
-        respond=dogs[3]
-    else:
-        respond=dogs[2]
-    return respond
-
-#Price of Mangoes
-def mango(quantity, price):
-    return price * (quantity - (quantity // 3))
-
-#Surface Area and Volume of a Box
-def get_size(w,h,d):
-    answer=[]
-    answer.append(2*(w*h + w*d + h*d))
-    answer.append(w*h*d)
-    return answer
-
-#Printing Array elements with Comma delimiters
-def print_array(arr):
-    if arr!=None:
-        return ",".join(str(i) for i in arr)
-    
-#Remove First and Last Character Part Two
-def array(string):
-    a= string.strip().split(",")
-    b= a[1:-1]
-    c= " ".join(b)
-    if len(c)==0:
-        return None
-    else:
-        return c
-
-#Reversing Words in a String
-def reverse(st):
-    st=st.split()
-    st.reverse()
-    return " ".join(st)
-
-#Pillars
-def pillars(num_pill, dist, width):
-    if num_pill<=1:
-        return 0
-    else:
-        return (num_pill-2)*width + (num_pill-1)*dist*100
-    
-#Dollars and Cents
-def format_money(amount):
-    dollar=int(amount)
-    cent=str(int((amount-dollar)*100 +0.1))
-    if len(cent)<1:
-        cent="00"
-    elif len(cent)<2:
-        cent+="0"
-    return "$" + str(dollar) + "." + cent
-
-#Return to Sanity
-def mystery():
-    results = {
-    'sanity': 'Hello'
+#For UFC Fans (Total Beginners): Conor McGregor vs George Saint Pierre
+def quote(fighter):
+    a={
+        'george saint pierre': "I am not impressed by your performance.",
+        'conor mcgregor'     : "I'd like to take this chance to apologize.. To absolutely NOBODY!"
     }
-    return results
+    return a[fighter.lower()]
 
-#String cleaning
-def string_clean(s):
-    new=""
-    for i in s:
-        if i not in "0123456789":
-            new+=i
+#Who ate the cookie?
+def cookie(x):
+    if type(x)==str:
+        return "Who ate the last cookie? It was Zach!"
+    elif type(x)==float or type(x)==int:
+        return "Who ate the last cookie? It was Monica!"
+    else:
+        return "Who ate the last cookie? It was the dog!"
+    
+#validate code with simple regex
+def validate_code(code):
+    a=[int(i) for i in str(code)]
+    if a[0]==1 or a[0]==2 or a[0]==3:
+        return True
+    else:
+        return False
+    
+#Localize The Barycenter of a Triangle
+def bar_triang(point_a, point_b, point_c): 
+    x=(point_a[0]+point_b[0]+point_c[0])/3
+    y=(point_a[1]+point_b[1]+point_c[1])/3
+    return [round(x, 4), round(y, 4)]
+
+#Did she say hallo?
+def validate_hello(greetings):
+    check=False
+    lang=["hello","ciao","salut","hallo","hola","ahoj","czesc"]
+    for x in lang:
+        if x in greetings.lower():
+            check=True
+    return check
+
+#Find the Integral
+def integrate(coefficient, exponent):
+    a=coefficient/(exponent+1)
+    return "{}x^{}".format(int(a), exponent+1)
+
+#Switch/Case - Bug Fixing #6
+def eval_object(v):
+    return{"+": v["a"]+v["b"],
+           "-": v["a"]-v["b"],
+           "/": v["a"]/v["b"],
+           "*": v["a"]*v["b"],
+           "%": v["a"]%v["b"],
+           "**": v["a"]**v["b"], }.get(v["operation"])
+
+#Quadratic Coefficients Solver
+def quadratic(x1, x2):
+    p= -1* (x1 + x2)
+    q= x1*x2
+    return (1, p, q)
+
+#Wilson primes
+def am_i_wilson(n):
+    return n==5 or n==13 or n==563
+
+#Parse float
+def parse_float(string):
+    try:
+        return float(string)
+    except:
+        return None
+    
+#Grader
+def grader(score):
+    if score<0.6 or score>1:
+        return "F"
+    elif score>=0.9:
+        return "A"
+    elif score>=0.8:
+        return "B"
+    elif score>=0.7:
+        return "C"
+    else:
+        return "D"
+    
+#Count the number of cubes with paint on
+def count_squares(cuts):
+    return 6 * cuts**2 + 2
+
+#Power
+def number_to_pwr(number, p): 
+    n=1
+    for i in range(p):
+        n*= number
+    return n
+
+#Vowel Count
+def get_count(sentence):
+    counter=0
+    for i in sentence:
+        if i in "aeiou":
+            counter+=1
+    return counter
+
+#Disemvowel Trolls
+def disemvowel(string_):
+    new_str=""
+    for i in string_:
+        if i not in "aeiouAEIOU":
+            new_str+=i
+    return new_str
+
+#Highest and Lowest
+def high_and_low(numbers):
+    new=[int(x) for x in numbers.split()]
+    return "{} {}".format(max(new), min(new))
+
+#You're a square!
+import math
+def is_square(n):    
+    new=[]
+    for i in range(100000):
+        new.append(i)
+    if n<0:
+        return False
+    else:
+        sqr=math.sqrt(n)
+        if sqr in new:
+            return True
+        else:
+            return False
+#or
+def is_square(n):    
+    sqr=n**0.5
+    if n>=0:
+        if sqr%1==0:
+            return True
+        else:
+            return False
+    else:
+        return False
+    
+#Descending Order
+def descending_order(num):
+    num=str(num)
+    num=list(num)
+    num=sorted(num)
+    num=reversed(num)
+    num="".join(num)
+    return int(num)
+
+#List Filtering
+def filter_list(l):
+    new=[]
+    for i in l:
+        if type(i)!=str:
+            new.append(i)
     return new
 
-#Sum of differences in array
-def sum_of_differences(arr):
-    arr.sort(reverse=True)
-    sum=0
-    i=1-1
-    if len(arr)==0:
-        return 0
+#Get the Middle Character
+def get_middle(s):
+    a=len(s)
+    b=int(a/2)
+    if a%2==0:
+        return s[b-1:b+1]
     else:
-        while i!=len(arr)-1:
-            sum=sum+(arr[i] - arr[i+1])
-            i+=1
-    return sum
+        return s[b:b+1]
+    
+#Isograms
+def is_isogram(string):
+    string=string.lower()
+    for char in string:
+        if string.count(char) >1:
+            return False
+    return True
 
-
-#Simple Fun #1: Seats in Theater
-def seats_in_theater(tot_cols, tot_rows, col, row):
-    return ((tot_cols-col+1)*(tot_rows-row))
-
-#Grasshopper - Array Mean
-def find_average(nums):
-    if len(nums)>=1:
-        return sum(nums) / len(nums)
+#Exes and Ohs
+def xo(s):
+    if s.count("x")+s.count("X")==s.count("o")+s.count("O"):
+        return True
     else:
-        return 0
+        return False
+    
+#Jaden Casing Strings
+def to_jaden_case(string):
+    if len(string)==0:
+        return string
+    str=string.split()
+    for i in range(len(str)):
+        str[i]=str[i].capitalize()
+    return " ".join(str)
 
-#Exclusive "or" (xor) Logical Operator
-def xor(a,b):
-    return a!=b
+#Shortest Word
+def find_short(s):
+    new=list(s.split(" "))
+    counter=[]
+    for element in new:
+        counter.append(len(element))
+    return min(counter)
 
-#Regular Ball Super Ball
-class Ball(object):
-    def __init__(self, object="regular"):
-        self.ball_type = object
+#Complementary DNA
+def DNA_strand(dna):
+    twin={"A":"T", "T":"A", "C":"G", "G":"C"}
+    return "".join(twin[x] for x in dna)
 
-#Gravity Flip
-def flip(d, a):
-    if d == "L":
-        return sorted(a, reverse=True)
-    else:
-        return sorted(a)
+#Sum of two lowest positive integers
+def sum_two_smallest_numbers(numbers):
+    a=0
+    a+=(min(numbers))
+    numbers.remove(min(numbers))
+    b=0
+    b+=(min(numbers))
+    return a+b
+
+#Beginner Series #3 Sum of Numbers
+def get_sum(a,b):
+    counter1=0
+    counter2=0
+    if a==b:
+        return a
+    elif a>b:
+        for i in range(b, a+1):
+            counter1+=i
+        return counter1
+    elif a<b:
+        for i in range(a, b+1):
+            counter2+=i
+        return counter2
