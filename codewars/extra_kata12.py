@@ -133,3 +133,65 @@ def get_missing_element(seq):
     sequence_set = set(seq)
     missing_element = all_elements.difference(sequence_set).pop()
     return missing_element
+
+#Sum of Odd Cubed Numbers
+def cube_odd(arr):
+    new_arr=[]
+    for i in arr:
+        if type(i)==int:
+            new_arr.append(i**3)
+        else:
+            return None
+    sum=0
+    for num in new_arr:
+        if num%2!=0:
+            sum+=num
+    return sum
+
+#How many arguments
+def args_count(*args, **kwargs):
+    return len(args) + len(kwargs)
+    #arg-positional kwarg-keyword
+
+#Debug Sum of Digits of a Number
+def get_sum_of_digits(num):
+    sum=0
+    for i in str(num):
+        sum+=int(i)
+    return sum
+
+#Find The Duplicated Number in a Consecutive Unsorted List
+def find_dup(arr):
+    a=set()
+    for num in arr:
+        if num in a:
+            return num
+        a.add(num)
+
+#Caffeine Script
+def caffeine_buzz(n):
+    if n%12==0:
+        return "CoffeeScript"
+    elif n%6==0:
+        return "JavaScript"
+    elif n%3==0:
+        return "Java"
+    return "mocha_missing!"
+
+#Product Of Maximums Of Array (Array Series #2)
+def max_product(lst, n_largest_elements):
+    new_arr=sorted(lst, reverse=True)[:n_largest_elements]
+    res = 1
+    for i in new_arr:
+        res*=i
+    return res
+
+#Disarium Number (Special Numbers Series #3)
+def disarium_number(number):
+    a=str(number)
+    b=len(a)
+    disarium_sum = sum(int(a[i]) ** (i + 1) for i in range(b))
+    if disarium_sum==number:
+        return "Disarium !!"
+    else:
+        return "Not !!"
