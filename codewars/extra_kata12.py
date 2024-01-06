@@ -195,3 +195,46 @@ def disarium_number(number):
         return "Disarium !!"
     else:
         return "Not !!"
+
+#6kyu
+#IP Validation
+def is_valid_IP(strng):
+    ip=strng.split(".")
+    for i in ip:
+        if i.isdigit()==False or len(ip)!=4:
+            return False
+        if i.startswith("0") and len(i)>1 or int(i)>255:
+            return False
+    return True
+
+#CamelCase Method
+def camel_case(s):
+    s=s.split(" ")
+    cap=[word.capitalize() for word in s]
+    ans=""
+    for word in cap:
+        ans+=word
+    return ans
+
+#WeIrD StRiNg CaSe
+def to_weird_case(words):
+    lst=words.split(" ")
+    res=[]
+    for word in lst:
+        modified=""
+        for i in range(len(word)):
+            if i%2==0:
+                modified+=word[i].upper()
+            else:
+                modified+=word[i].lower()
+        res.append(modified)
+    return " ".join(res)
+
+#Sums of Parts
+def parts_sums(ls):
+    total=sum(ls)
+    partial=[total]
+    for num in ls:
+        total-=num
+        partial.append(total)
+    return partial

@@ -1,0 +1,57 @@
+/* .form1{
+    width: 500px;
+    height: 312.5px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(7,79,19,1) 25%, rgba(7,79,19,1) 75%, rgba(0,0,0,1) 90%);
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 200px;
+    border-radius: 12px;
+    font-size: 25px;
+}
+.form1 input{
+    border-radius: 6px;
+    width: 75%;
+    height: 30px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.form label{
+    margin-top: 10px;
+    text-align: center;
+}
+#submit1{
+    width: 50%;
+    height: 50px;
+    font-size: 23px;
+} */
+
+/* .form3 textarea{
+    display: block;
+    margin-top: 10px;
+} */
+/* #form4, #input5{
+    text-align: center;
+}
+#input5{
+    margin-top: 10px;
+} */
+/* .for_video1{
+    text-align: center;
+    margin-top: 150px;
+}
+#video1{
+    height: 400px;
+    height: 250px;
+} */
+#input1{
+    margin-top: 20px;
+}
+#textarea1{
+    display: block;
+}
+#submit1{
+    margin-top: 5px;
+}
