@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Student registration form</h1>
+        </header>
+        <main>
+            <form>
+                <label for="input1">First name: </label>
+                <div class="for_input">
+                    <input type="text" required id="input1" name="first_name" placeholder="Enter your first name">
+                </div>
+                <br>
+                <label for="input2">Last name: </label>
+                <div class="for_input">
+                    <input type="text" required id="input2" name="last_name" placeholder="Enter your last name"> 
+                </div>
+                <br>
+                <label for="input3">Email: </label>
+                <div class="for_input">
+                    <input type="email" required id="input3" name="email" placeholder="It should contain @"> 
+                </div>
+                <br>
+                <label for="input4">Mobile: </label>
+                <div class="for_input">
+                    <input type="number" required id="input4" name="mobile" placeholder="Only 10 digits allowed"> 
+                </div>
+                <br>
+                <div class="combine1">
+                    <label for="radio1">Gender: </label>
+                    <div id="radio1" required>
+                        <input type="radio" name="gender" id="input5">
+                        <label for="input5">Male</label>
+                        <input type="radio" name="gender" id="input6">
+                        <label for="input6">Female</label>
+                    </div>
+                </div>
+                <br>
+                <label for="input7">Date of birth: </label>
+                <div class="for_input">
+                    <input type="date" name="date_of_birth" id="input7" required>
+                </div>
+                <br>
+                <label for="input8">Address: </label>
+                <div class="for_input">
+                    <textarea id="input8" required name="address"></textarea>
+                </div>
+                <br>
+                <label for="input9">City: </label>
+                <div class="for_input">
+                    <input type="text" required id="input9" name="city">
+                </div>
+                <br>
+                <label for="input10">Area PIN: </label>
+                <div class="for_input">
+                    <input type="text" required id="input10" name="pin">
+                </div>
+                <br>
+                <label for="input11">State: </label>
+                <div class="for_input">
+                    <input type="text" required id="input11" name="state">
+                </div>
+                <br>
+                <label for="select1">Qualification: </label>
+                <select id="select1" required>
+                    <option value="none">Select Qualification:</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Registered Nurse">Registered Nurse</option>
+                    <option value="Sales Representative">Sales Representative</option>
+                    <option value="Electrician">Electrician</option>
+                </select>
+                <br>
+                <div class="combine2">
+                    <label for="combine2">Specialization: </label>
+                    <div class="combine3">
+                        <input type="checkbox" name="Specialization" id="input12">
+                        <label for="input12">Computer Science</label> 
+                        <br>
+                        <input type="checkbox" name="Specialization" id="input13">
+                        <label for="input13">Information Technology</label>
+                        <br>
+                        <input type="checkbox" name="Specialization" id="input14">
+                        <label for="input14">Computer Architecture</label>
+                        <br>
+                        <input type="checkbox" name="Specialization" id="input15">
+                        <label for="input15">Tele Communication</label>
+                    </div>
+                </div>
+                <br>
+                <label for="input16">Password: </label>
+                <div class="for_input">
+                    <input type="password" name="password" id="input16" required>
+                </div>
+                
+                <br>
+                <input type="submit" placeholder="Registered" id="input17">
+            </form>
+        </main>
+    </body>
+</html>

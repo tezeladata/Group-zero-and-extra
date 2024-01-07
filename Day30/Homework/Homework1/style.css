@@ -1,0 +1,28 @@
+h2{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+}
+h2:before, 
+h2:after { 
+    content: ""; 
+    flex: 1 1; 
+    border-bottom: 2px solid #000; 
+    margin: auto; 
+}
+.form1, .form2{
+    font-size: 20px;
+    max-width: 55%;
+}
+.form1 input, .form2 input, .form2 select{
+    margin-top: 10px;
+}
+.bold{
+    font-weight: bold;
+}
+main{
+    text-align: right;
+}
+input, select{
+    width: 250px;
+}

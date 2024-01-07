@@ -1,0 +1,42 @@
+body {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+header {
+    background-color: #C0C0C0;
+    padding: 2px;
+}
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+.form_div {
+    font-size: 20px;
+    width: 50%;
+    margin-left: 30%;
+}
+.for_input {
+    width: 40%;
+    text-align: right;
+}
+.label_input {
+    display: flex;
+    margin-bottom: 10px; 
+}
+.label_input label {
+    width: 50px; 
+    margin-right: 20px; 
+}
+.buttons1, .buttons2{
+    text-align: center;
+    margin-top: 20px;
+}
+.buttons1 button{
+    width: 80px;
+    height: 30px;
+}
+.buttons2 button{
+    width: 100px;
+    height: 50px;
+}

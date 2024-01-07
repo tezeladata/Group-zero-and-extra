@@ -1,0 +1,55 @@
+body{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #FFFFFF;
+}
+header{
+    background-color: #464646;
+    color: white;
+    padding: 5px;
+}
+h1{
+    margin-left: 20px;
+}
+.main_div1, .main_div2, .main_div3, .main_div4{
+    width: 40%;
+}
+.user, .contact_information, .security, .role_assignment{
+    background-color: #F0EDE5;
+    height: 190px;
+}
+.user form, .contact_information form, #input9, .security form, .role_assignment p{
+    margin-left: 10px;
+}
+.user input, .contact_information #input5, .contact_information #input6, .contact_information #input7, .security input{
+    width: 95%;
+    margin-top: 5px;
+}
+.security{
+    height: 120px;
+}
+#p5, #p4, #p3, #p2, #p1{
+    font-weight: 900;
+}
+.combine1, .combine2{
+    display: flex;
+}
+.main_div2, .main_div4{
+    margin-left: 10%;
+}
+.submit{
+    margin-top: 50px;
+    text-align: right;
+    margin-right: 10%;
+}
+.submit button{
+    width: 150px;
+    height: 50px;
+}
+#button1{
+    background-color: #236192;
+}
+#button2{
+    background-color: #9E9E9E;
+}

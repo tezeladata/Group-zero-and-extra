@@ -1,0 +1,65 @@
+body {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+header {
+    height: 50px;
+}
+h1 {
+    text-align: right;
+    text-decoration: underline;
+    margin-right: 100px;
+    color: #821610;
+}
+main {
+    width: 100%;
+    background-color: #F2F2F2;
+}
+form {
+    width: 80%;
+}
+label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    margin-right: 2%;
+}
+input, textarea, select {
+    width: 100%;
+    margin-top: 15px;
+}
+.for_input {
+    display: inline-block;
+    width: 60%;
+}
+.combine1,
+.combine2 {
+    display: flex;
+    align-items: center;
+}
+.combine3 {
+    display: block;
+}
+#radio1,
+.combine3 {
+    width: auto;
+}
+#input5,
+#input6 {
+    width: 7%;
+}
+#input17 {
+    width: 10%;
+    height: 40px;
+    margin-left: 245px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+}
+#radio1 {
+    margin-left: 23.7%;
+}
+#select1 {
+    margin-left: 32.3%;
+    width: 60.7%;
+}

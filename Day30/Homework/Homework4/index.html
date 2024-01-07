@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>File Upload</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img src="Screenshot 2024-01-07 175353.png" id="img1">
+            <h2><span id="span1">Form Owner: </span>biz.formsmarts.com</h2>
+        </header>
+        <hr>
+        <main>
+            <h1>File Upload Demo</h1>
+            <p>This is a demo of FormSmarts file Upload feature.</p>
+            <form id="form1">
+                <div class="combine">
+                    <div class="for_label">
+                        <label for="input1">Full Name</label>
+                    </div>
+                    <div class="for_input">
+                        <input id="input1" type="text" required name="full_name" placeholder="Full Name">
+                    </div>
+                    <br> 
+                </div>
+                <div class="combine">
+                    <div class="for_label">
+                        <label for="input2">Email <span id="span2">*</span></label>
+                    </div>
+                    <div class="for_input">
+                        <input id="input2" type="email" required name="email" placeholder="Email">
+                    </div>
+                    <br>
+                </div>
+                <div class="combine">
+                    <div class="for_label">
+                        <label for="input3">Upload Your Picture <span id="span3">*</span></label>
+                    </div>
+                    <div class="for_input">
+                        <input id="input3" type="file" required name="file" placeholder="Choose file"> 
+                    </div>
+                    <br>
+                </div>
+                <div class="combine">
+                    <div class="for_label">
+                        <label for="input4">Comments</label>
+                    </div>
+                    <div class="for_input">
+                        <textarea id="input4" placeholder="Any comments" name="comment"></textarea>
+                    </div>
+                    <br>
+                </div>
+                <div class="combine">
+                    <div class="for_input">
+                        <input type="submit" id="input5">
+                    </div>
+                </div>
+                
+            </form>
+        </main>
+    </body>
+</html>
