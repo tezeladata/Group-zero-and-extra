@@ -238,3 +238,59 @@ def parts_sums(ls):
         total-=num
         partial.append(total)
     return partial
+
+#Array.diff
+def array_diff(a, b):
+    for i in b:
+        if i in a:
+            for x in range(a.count(i)):
+                a.remove(i)
+    return a
+
+#Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
+def sum_dig_pow(a, b): 
+    numbers=[1,2,3,4,5,6,7,8,9,89,135,175,518,598,1306,1676,2427,2646798,12157692622039623539]
+    new_arr=[]
+    for i in range(a,b+1):
+        if i in numbers:
+            new_arr.append(i)
+    return new_arr
+#or
+def sum_dig_pow(a, b):
+    l = []
+    for i in range(a,b+1):
+        k = 0
+        p = str(i)
+        for j in range(len(p)):
+            k += int(p[j]) ** (j+1)
+        if k == i:
+            l.append(i)
+    return l
+
+#The Vowel Code
+vowels={
+        "a": "1",
+        "e": "2",
+        "i": "3",
+        "o": "4",
+        "u": "5"
+    }
+def encode(st):
+    for i in vowels:
+        st=st.replace(i, vowels[i])
+    return st
+    
+def decode(st):
+    for key, value in vowels.items():
+        st=st.replace(value, key)
+    return st
+
+#Length of missing array
+def get_length_of_missing_array(array_of_arrays):
+    if not array_of_arrays or any(not arr for arr in array_of_arrays):
+        return 0
+    sorted_arrays = sorted(array_of_arrays, key=len)
+    for i in range(len(sorted_arrays) - 1):
+        if len(sorted_arrays[i]) + 1 != len(sorted_arrays[i + 1]):
+            return len(sorted_arrays[i]) + 1
+    return len(sorted_arrays[-1]) + 1
