@@ -1,0 +1,25 @@
+#button1{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(28, 112, 15);
+    width: 400px;
+    height: 100px;
+    font-size: 40px;
+}
+.div1{
+    text-align: center;
+    margin-top: 50px;
+}
+#img1{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+}
+.div2, .div3{
+    margin-top: 50px;
+    text-align: center;
+}
+.div3{
+    font-size: 20px;
+
+}

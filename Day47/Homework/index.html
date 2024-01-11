@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Registration form</h1>
+    </header>
+    <main>
+        <form>
+            <label for="input1">First name: </label>
+            <div class="for_input">
+                <input type="text" required id="input1" name="first_name" placeholder="Enter your first name">
+            </div>
+            <br>
+            <label for="input2">Last name: </label>
+            <div class="for_input">
+                <input type="text" required id="input2" name="last_name" placeholder="Enter your last name"> 
+            </div>
+            <br>
+            <label for="input3">Email: </label>
+            <div class="for_input">
+                <input type="email" required id="input3" name="email" placeholder="It should contain @"> 
+            </div>
+            <br>
+            <label for="input4">Mobile: </label>
+            <div class="for_input">
+                <input type="number" required id="input4" name="mobile" placeholder="Only 10 digits allowed"> 
+            </div>
+            <div class="for_submit">
+                <input type="submit" placeholder="Registered" id="input5">
+            </div>
+        </form>
+        <section class="for_js">
+            <p id="p1"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day41</title>
+</head>
+<body>
+    <!-- Buttons for later js -->
+    <button id="button1">Click this to make image width smaller</button> <br>
+    <button id="button2">Click this to make image width bigger</button> <br>
+    <button id="button3">Click this to make image width normal</button>
+    <img id='img1' width="300" src="img1.png" style="display: block;">
+
+    <p id="myp">Hello</p>
+    <!-- Different languages -->
+    <button onclick="myp.textContent = 'Hola' ">Spanish</button>
+    <button onclick="myp.textContent = 'Bonjour' ">French</button>
+    <button onclick="myp.textContent = 'Hallo' ">German</button>
+    <button onclick="myp.textContent = 'Ciao' ">Italian</button>
+    <button onclick="myp.textContent = 'Olá' ">Portuguese</button><br><br>
+    
+
+    <!-- Third Homework -->
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <script>
+        // Smaller img
+        document.getElementById("button1").onclick=function(){
+            document.getElementById("img1").style.width="100px";
+        }
+        // Bigger img
+        document.getElementById("button2").onclick=function(){
+            document.getElementById("img1").style.width="500px";
+        }
+        // Normal img
+        document.getElementById("button3").onclick=function(){
+            document.getElementById("img1").style.width="300px";
+        }
+
+        // Second Homework
+        let num1=3.14159;
+        let num2=2.71828;
+        console.log(num1+num2)
+        console.log(Math.pow(num1, num2))
+        console.log(Math.sqrt(num2))
+        console.log(num1*num2)
+        console.log(Math.ceil(num2))
+
+        // Third Homework
+        let text1=window.prompt("Enter your first name:");
+        let text2=window.prompt("Enter your last name:");
+        document.getElementById("p1").textContent=text1;
+        document.getElementById("p2").textContent=text2;
+    </script>
+</body>
+</html>

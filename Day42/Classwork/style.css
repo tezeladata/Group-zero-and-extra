@@ -1,0 +1,35 @@
+#button1{
+    background-color: #FFBD33;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    width: 150px;
+    height: 60px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#button1:hover{
+    width: 200px;
+    background-color: #DBFF33;
+    box-shadow:  5px 5px 10px #5a5a5a,
+             -5px -5px 10px #ffffff;
+    font-size: 30px;
+}
+#button1:active{
+    height: 80px;
+    background-color: #75FF33;
+    box-shadow:  -5px 5px 10px #5a5a5a,
+             5px -5px 10px #ffffff;
+}
+.div1{
+    text-align: center;
+}
+.box_model{
+    padding: 50px 50px 50px 50px; 
+    /*      top, right, botton, left */
+    margin: 20px;
+    width: 20%;
+    background-color: gray;
+    border: 15px green solid;
+}

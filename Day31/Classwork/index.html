@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="form1">
+            <p id="p1">0</p>
+            <button id="button1">Iteration</button><br>
+        </form>
+        
+        <form id="form2">
+            <select>
+                <option value="None">Select country</option>
+                <option value="Geo" selected>Georgia</option>
+                <option value="Ukr">ukraine</option>
+                <option value="gb">Great Britain</option>
+                <option value="usa">USA</option><br>
+            </select>
+            <input type="submit">
+        </form>
+        
+
+
+
+        <script>
+            let myp=document.getElementById("p1");
+            let Iteration=0;
+            document.getElementById("button1").onclick=function(event){
+                event.preventDefault();
+                Iteration+=1;
+                document.getElementById("p1").innerHTML=Iteration;
+            }
+        </script>
+    </body>
+</html>

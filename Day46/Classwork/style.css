@@ -1,0 +1,88 @@
+.div1, .div3, .div5, .div7, .div9, .div11, .div15, .div17{
+    width: 150px;
+    height: 100px;
+    background-color: red;
+}
+.div2, .div4, .div6, .div8, .div10, .div12, .div16{
+    width: 200px;
+    height: 50px;
+    background-color: green;
+}
+.container1, .container2, .container3, .container4, .container5, .container6{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+.container1{
+    justify-content: flex-start;
+}
+.container2{
+    justify-content: flex-end;
+}
+.container3{
+    justify-content: center;
+}
+.container4{
+    justify-content: space-between;
+}
+.container5{
+    justify-content: space-around;
+}
+
+
+/* Using align-items */
+.container7{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 100px;
+    height: 800px;
+    background-color: black;
+}
+.div13{
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    margin: 10px;
+}
+.div14{
+    width: 300px;
+    height: 100px;
+    background-color: blue;
+    margin: 10px;
+}
+
+/* Another example:
+#pond {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+*/
+
+.container8{
+    width: 100%;
+    margin-top: 100px;
+    height: 500px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Using order:
+#pond {
+  display: flex;
+}
+
+.yellow {
+order: 2
+} */
+
+/* Another property you can apply to individual items is align-self. This property accepts the same values as align-items and its value for the specific item. */
+
+/* .yellow {
+    align-self: flex-end;
+    } */
+
+
+/* align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect. */

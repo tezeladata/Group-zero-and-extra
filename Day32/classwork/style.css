@@ -1,0 +1,62 @@
+#div1{
+    text-align: center;
+}
+#github_logo{
+    /* width: 200px;
+    height: 200px; */
+    width: 10%;
+    height: 150px;
+}
+#p1{
+    font-size: 25px;
+    font-family: "sans-serif";
+    font-weight: 600;
+}
+#button1{
+    font-size: 20px;
+    background-color: green;
+}
+#h2_1{
+    font-size: 28px;
+    text-align: right;
+}
+#p2{
+    font-family: sans-serif;
+    font-size: large;
+    text-align: right;
+}
+/* .div2{
+    width: 30%;
+    height: 500px;
+    background-color: brown;
+}
+.div3{
+    width: 70%;
+    height: 500px;
+    background-color: chartreuse;
+} */
+.div4{
+    width: 400px;
+    height: 150px;
+    background: rgb(7,79,19);
+    background: linear-gradient(90deg, rgba(7,79,19,1) 50%, rgba(74,111,218,1) 100%, rgba(3,54,0,1) 100%);
+    margin-left: 400px;
+    text-align: justify;
+}
+.div4 h2{
+    text-align: center;
+    color: orange;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.div4 p{
+    text-align: left;
+    font-weight: 600;
+    text-decoration: underline coral;
+}
+.div4 h3{
+    text-align: right;
+    font-weight: 700;
+    text-shadow: 10px 8px 2px black;
+    /* /*first one is horizontal, second is vertical, third is blur and fourth is color */
+}

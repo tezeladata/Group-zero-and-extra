@@ -1,0 +1,44 @@
+#a1, #a2 {
+    font-size: 30px;
+    text-decoration: none;
+}
+.div1{
+    text-align: center;
+    margin-top: 20px;
+}
+/* defines the style 
+  unvisited links */
+  #a1:link {
+    color: #D11BCE;
+    text-decoration: none;
+  }
+  
+  /* a link is hovered when
+    the mouse is over it */
+  #a1:hover {
+    color: #6897EE;
+    background-color: #000000;
+  }
+  
+  /* click on the link but hasn't 
+    released the mouse button yet */
+  #a1:active{
+    color: #B8860B;
+    background-color: #000000;
+  }
+th, td{
+    border: 2px black solid;
+    text-align: center;
+    width: 100px;
+}
+table{
+    border: 2px black solid;
+    border-collapse: collapse;
+}
+tr:nth-child(odd){
+    background-color: green;
+}
+
+#table2{
+    margin-top: 20px;
+}

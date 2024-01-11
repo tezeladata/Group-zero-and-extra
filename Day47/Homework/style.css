@@ -1,0 +1,50 @@
+body{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+header{
+    height: 50px;
+}
+h1{
+    text-align: right;
+    text-decoration: underline;
+    margin-right: 100px;
+    color: #821610;
+}
+main{
+    width: 100%;
+    background-color: #F2F2F2;
+}
+form, .for_js {
+    width: 80%;
+}
+label{
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    margin-right: 2%;
+}
+input{
+    width: 100%;
+    margin-top: 15px;
+}
+.for_input{
+    display: inline-block;
+    width: 60%;
+}
+#input5{
+    width: 20%;
+    height: 60px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+}
+.for_submit{
+    margin-left: 25%;
+}
+.for_js{
+    margin-left: 20%;
+}
+#p1{
+    font-size: 18px;
+}
