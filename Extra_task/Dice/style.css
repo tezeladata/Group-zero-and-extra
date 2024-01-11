@@ -1,0 +1,52 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+}
+img{
+    width: 400px;
+    height: 300px;
+}
+.div2{
+    margin-left: 5%;
+    text-align: center;
+    margin-right: 20%;
+    background-color: black;
+    border-radius: 10px;
+    color: #fff;
+}
+.div2 form, .div1{
+    padding: 40px;
+}
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+#button1, #resetButton{
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+  
+#button1, #resetButton{
+    background: white;
+    box-shadow: 0 0 25px white;
+}
+  
+#button1, #resetButton{
+    box-shadow: 0 0 5px rgb(255, 255, 255),
+                0 0 25px rgb(255, 255, 255),
+                0 0 50px rgb(255, 255, 255),
+                0 0 100px rgb(255, 255, 255);
+}

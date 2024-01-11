@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-family: "Roboto";
+}
+header{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    padding: 20px;
+}
+nav .nav-content{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .first a{
+    font-weight: 500;
+    font-size: 60px;
+    color: #4070f4;
+    text-decoration: none;
+}
+.nav-content .second{
+    display: flex;
+}
+.nav-content .second li{
+    list-style: none;
+    margin: 0 8px;
+}
+.second li a{
+    text-decoration: none;
+    color: #0E2431;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px 4px;
+}
+.second li a:hover{
+     color: #4070f4;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+.div1 h1, .div1 h2{
+    margin-left: 5%;
+}
+.hero h1{
+    font-size: 120px;
+}
+.hero h2{
+    margin-top: -30px;
+    font-size: 50px;
+}
+#span1{
+    color: #4070f4;
+}
+#img1{
+    width: 800px;
+    height: 600px;
+    border-radius: 18px;
+    cursor: pointer;
+    border:  3px solid #02A9F7;
+}
+.home, .about{
+    display: flex;
+    margin-top: 150px;
+}
+#img2{
+    border:  3px solid #02A9F7;
+    border-radius: 12px;
+    margin-right: 50px;
+}
+#p1{
+    font-size: 20px;
+}
+#img3, #img4{
+    width: 400px;
+    height: 300px;
+}
+.div5, .div6{
+    width: 45%;
+    border:  3px solid #02A9F7;
+    border-radius: 12px;
+    text-align: center;
+    background-color: white;
+}
+.div5{
+    margin-right: 10%;
+}
+.div5 p, .div6 p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.products h2, .services h2{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+.products img{
+    width: 45%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+#img5, #img6{
+    margin-right: 9.5%;
+}
+#img6, #img8{
+    margin-top: 50px;
+}
+.services button{
+    margin: 12px;
+    width: 30%;
+    height: 200px;
+    border-radius: 10px;
+    background: #333;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+      inset -5px -5px 10px #222;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
+}
+.services button:hover {
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+      inset -5px -5px 10px #444;
+    color: #d6d6d6;
+    transition: 500ms;
+}
+#button1, #button2, #button4, #button5{
+    margin-right: 2%;
+}
+.contact{
+    text-align: center;
+}
+input {
+    background-color: #212121;
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+input:focus {
+    color: rgb(0,140,255);
+    background-color: #212121;
+    outline-color: rgb(0,140,255);
+    box-shadow: -3px -3px 15px rgb(0,140,255);
+    transition: .1s;
+    transition-property: box-shadow;
+}
+#submit_button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    margin-top: 30px;
+    width: 400px;
+    height: 50px;
+}
+#submit_button, #li1{
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+}
+.contact h2{
+    font-size: 50px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+footer{
+    margin-top: 150px;
+    text-align: center;
+}
+#li1{
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
