@@ -1,0 +1,139 @@
+@import url('https://fonts.cdnfonts.com/css/youtube-sans');
+body{
+    background-color: #0f0f0f;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    font-family: "youtube sans";
+}
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, .sidebar_img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#img1:hover, #img4:hover, #img3:hover{
+    background-color: #272727;
+    border-radius: 50%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_middle{
+    display: flex;
+}
+#input1{
+    width: 450px;
+    height: 10px;
+    border: 1px solid #222222;
+    border-radius: 30px;
+    background: #121212;
+    padding: 15px;
+    font-size: 18px;
+}  
+#input1:focus{
+    outline-color: #222222;
+    background: #121212;
+    box-shadow: inset 20px 20px 60px #c5c5c5,
+           inset -20px -20px 60px #ffffff;
+}
+#img3, #img4{
+    margin-left: 10px;
+}
+#img2{
+    margin-left: 20px;
+}
+.sidebar{
+    width: 250px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.container:hover{
+    background-color: #272727;
+    border-radius: 12px;
+}
+.sidebar p{
+    margin-left: 25px;
+    color: white;
+    font-size: 18px;
+}
+.sidebar_hr{
+    border: 1px solid #222222;
+}
+#head_p, #head_p2{
+    margin: 0;
+    margin-top: 20px;
+    font-size: 22px;
+}
+#img6, #img7, #img8{
+    border-radius: 50%;
+}
+main{
+    display: flex;
+}
+h1{
+    font-size: 45px;
+    color: white;
+}
+#p1{
+    color: #a0a4a3;
+    margin-top: -20px;
+}
+#p2{
+    text-align: center;
+}
+.div6 a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #a0a4a3;
+}
+.main_content{
+    width: 75%;
+    margin-left: 5%;
+}
+#img9{
+    width: 100%;
+    margin-top: 20px;
+}
+.div4{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.div6{
+    margin-left: 30px;
+}
+#img10{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+#videos_h2{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.video_parts{
+    width: 30%;
+}
+.video_parts p{
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+
+.part1, .part2, .part3, .part4{
+    display: flex;
+    justify-content: space-between;
+}
+.part2, .part3, .part4{
+    margin-top: 50px;
+}
+.for_section a{
+    text-decoration: none;
+    color: green;
+}
