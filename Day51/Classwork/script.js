@@ -96,3 +96,8 @@ if (!(sunny==true)){
 else{
     console.log("sunny")
 }
+
+
+// we use === to check if values are equal
+let x = confirm("Proceed to payment?");
+console.log(x);
