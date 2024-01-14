@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Roboto";
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #010504;
+    scrollbar-width: thin;
+}
+header, .section-main{
+    box-sizing: border-box;
+}
+.section-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(Images/GOA\ background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: 0.6s;
+}
+header.sticky{
+    background: #4CA153;
+    padding: 15px 100px;
+}
+header .brand{
+    color: green;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .menu a{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+header a{
+    position: relative;
+    text-decoration: none;
+}
+a::before {
+    background: #282828;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+header .btn{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.section-two{
+    padding: 20px 100px;
+}
+@media (max-width: 1060px){
+    header .btn{
+        display: block;
+    }
+    header .menu{
+        position: fixed;
+        background: green;
+        flex-direction: column;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+    header .menu.active{
+        right: 0;
+    }
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+    }
+    header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+    }
+}
+@media (max-width: 630px){
+    h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+    text-align: center;
+}
+h2{
+    color: white;
+    font-size: 40px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+.section-two p{
+    color: white;
+    font-size: 18px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+.span1, #span2{
+    color: green;
+}
+.span3{
+    color: white;
+    font-size: 40px;
+    padding: 5px;
+}
+.about, .courses, .media, .join_goa{
+    color: white;
+    margin-top: 150px;
+}
+.about_div{
+    display: flex;
+}
+.about h2, .courses h2, .join_goa h2{
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+.div1, .div2, .div1 p, .left, .right, .div4 p, .div5 p, .div6 p, .div7 p{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.div1, .div2{
+    width: 40%;
+    border-radius: 12px;
+}
+.div1{
+    background-color: #4CA153;
+    color: black;
+}
+.div1 p, .div2 p, .div4 p, .div5 p, .div6 p, .div7 p{
+    cursor: pointer;
+}
+.div2 h3, .div1, .div4, .div5, .div6, .div7{
+    text-align: center;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+}
+.div2{
+    background: url(Images/Goa\ Banner.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: yellow;
+}
+.button1, #button2{
+    margin-top: 20px;
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    color: black;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+.button1:hover, #button2:hover {
+    background-color: white;
+    color: black;
+    box-shadow: green 0px 7px 29px 0px;
+}
+.button1:active, #button2:active{
+    background-color: white;
+    color: black;
+    box-shadow: green 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 100ms;
+}
+.courses{
+    width: 100%;
+    background-color: #4CA153;
+}
+.part1, .part2{
+    width: 100%;
+    display: flex;
+}
+.div4, .div5, .div6, .div7{
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: black;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.div6, .div7{
+    margin-bottom: 100px;
+    height: 200px;
+}
+#img1, #img2{
+    width: 100%;
+    height: 400px;
+}
+.div8{
+    width: 30%;
+    text-align: center;
+    margin-left: 5%;
+}
+.media{
+    display: flex;
+}
+.part2{
+    margin-top: 100px;
+}
+.container2 img{
+    width: 150px;
+}
+.container2 a{
+    text-decoration: none;
+    color: white;
+}
+.container2 div{
+    text-align: center;
+}
+.container2{
+    display: flex;
+    width: 50%;
+    margin-left: 10%;
+    justify-content: space-between;
+}
+.div12{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.div12 img, .div14 iframe{
+    width: 40%;
+    height: 300px;
+    border-radius: 12px;
+}
+.div13, .div14{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.p_div{
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    margin-top: -50px;
+}
+footer{
+    margin-top: 300px;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    color: white;
+}
