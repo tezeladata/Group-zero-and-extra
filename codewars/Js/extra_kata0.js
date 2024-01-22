@@ -30,3 +30,34 @@ function solution(str){
     let ans=rvrs.join("");
     return ans
   }
+
+// Return Negative
+function makeNegative(num) {
+  if (num>=0){
+    return num*(-1)
+  }
+  else{
+    return num
+  }
+}
+
+// Convert boolean values to strings 'Yes' or 'No'.
+function boolToWord( bool ){
+  if (bool==true){
+    return "Yes"
+  }
+  else{
+    return "No"
+  }
+}
+
+// Sum of positive
+function positiveSum(arr) {
+  let sum=0;
+  for (let i=0; i<arr.length; i++){
+    if (arr[i]>0){
+      sum+=arr[i];
+    }
+  }
+  return sum;
+}

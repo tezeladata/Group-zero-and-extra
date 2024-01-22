@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    background: url(vecteezy_abstract-gradient-pastel-blue-and-purple-background-neon_8617161-1.jpg),no-repeat;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Flex-direction: row; x axis
+   Flex-direction: column; y axis*/
+.main-part{
+    background-color: white;
+    width: 1000px;
+    height: 600px;
+    border-radius: 12px;
+}
+.head{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.head a{
+    text-decoration: none;
+    color: black;
+}
+.menu a{
+    color: gray;
+    margin-left: 15px;
+}
+#span1{
+    font-weight: 700;
+}
+#get-started{
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #5E1DEF;
+    color: white;
+}
+.container{
+    margin-top: 100px;
+}
+.part1{
+    padding: 30px;
+    width: 50%;
+}
+h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+.part1 p{
+    margin-bottom: 30px;
+}
+.button-div{
+    text-align: left;
+}
+.button-div button{
+    width: 250px;
+    height: 50px;
+    background: #5E1BF3;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+}
+.part2{
+    width: 45%;
+    margin-left: 5%;
+}
+.part2 img{
+    width: 400px;
+    height: 300px;
+    border-radius: 12px;
+}
+.container{
+    display: flex;
+}
