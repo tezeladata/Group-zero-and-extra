@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(Images/Background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#calculator{
+    font-family: Arial, sans-serif;
+    background: transparent;
+    border: 4px solid #EDF1D6;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background: transparent;
+    border-bottom: 4px solid hsl(0, 0%, 30%);
+    overflow: hidden;
+    color: white;
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+button{
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #1B4016;
+}
+button:active{
+    background-color: hsl(0, 0%, 50%);
+}
+.operator-btn{
+    background-color: #1B4016;
+}
+.operator-btn:hover{
+    background-color: hsl(0, 0%, 30%);
+}
+.operator-btn:active{
+    background-color: hsl(0, 0%, 50%);
+}
+@media (max-width: 600px){
+    #calculator{
+        width: 75%;
+        height: 70%;
+    }
+    button{
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    #display{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 450px){
+    #calculator{
+        width: 75%;
+        height: 55%;
+    }
+    button{
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    #display{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 350px){
+    #calculator{
+        width: 75%;
+        height: 45%;
+        border: 2px solid #EDF1D6;
+    }
+    button{
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    #display{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 250px){
+    #calculator{
+        width: 75%;
+        height: 35%;
+    }
+    button{
+        width: 20px;
+        height: 20px;
+        font-size: 0.75rem;
+    }
+    #display{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 200px){
+    #calculator{
+        width: 75%;
+        height: 35%;
+    }
+    button{
+        width: 16px;
+        height: 16px;
+        font-size: 0.5rem;
+    }
+    #display{
+        font-size: 0.75rem;
+    }
+}
