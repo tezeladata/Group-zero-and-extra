@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+}
+div{
+    margin-top: 20px;
+}
+#minus button{
+    background-image: linear-gradient(to top, #ce1313, #ed5476, #f094c2, #eccdf0, #ffffff);
+}
+#plus button{
+    background-image: linear-gradient(to top, #13ce21, #00e5bc, #00eeff, #c4f0ff, #ffffff);
+}
+#reset button{
+    background-color: black;
+    color: white;
+}
