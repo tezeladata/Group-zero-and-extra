@@ -3,76 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="icon" type="image/x-icon" href="Images/GOA background.png">
+    <title>Join Us</title>
     <link rel="stylesheet" href="join.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Images/GOA background.png">
 </head>
 <body>
     <header>
-        <h2 id="h2_1">About</h2>
-        <p id="p1">In the academy, students will learn the technologies and programming required for modern business, and at the same time, they will strengthen themselves personally and develop many soft skills.</p>
-        <h2 id="h2_2">Links</h2>
-        <div class="container">
-            <div class="div1">
-                <img src="images/facebook.png" id="img1">
+        <a href="https://www.facebook.com/nika11keshelava" target="_blank" class="brand">Goal Oriented Academy</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
             </div>
-            <div class="div2">
-                <p id="p1">დამფუძნებლის FB პროფილი</p>
-                <p id="p2"><a href="https://www.facebook.com/keshka11/" target="_blank">facebook.com/keshka11</a></p>
-            </div>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="join.html">Join GOA</a>
+            <a href="media.html">Media</a>
         </div>
-        <div class="container">
-            <div class="div3">
-                <img src="images/facebook.png" id="img2">
+            <div class="btn">
+                <i class="fas fa-bars menu-btn"></i>
             </div>
-            <div class="div4">
-                <p id="p1">აკადემიის FB გვერდი</p>
-                <p id="p2"><a href="https://www.facebook.com/nika11keshelava" target="_blank">facebook.com/nika11keshelava</a></p>
-            </div>
-        </div>
-        <!-- Register -->
-        <h2 id="h2_3">Register</h2>
-        <div class="main_div3">
-            <div class="div5">
-                <p id="p2">Join best educational academy</p>
-            </div>
-            <div class="div6">
-                <form>
-                    <label for="input1">First name: </label>
-                    <div class="for_input">
-                        <input type="text" required id="input1" name="first_name" placeholder="Enter your first name">
-                    </div>
-                    <br>
-                    <label for="input2">Last name: </label>
-                    <div class="for_input">
-                        <input type="text" required id="input2" name="last_name" placeholder="Enter your last name"> 
-                    </div>
-                    <br>
-                    <label for="input3">Email: </label>
-                    <div class="for_input">
-                        <input type="email" required id="input3" name="email" placeholder="It should contain @"> 
-                    </div>
-                    <br>
-                    <label for="input4">Age: </label>
-                    <div class="for_input">
-                        <input type="number" required id="input4" name="age" placeholder="Enter your age"> 
-                    </div>
-                    <br>
-                    <label for="textarea1">Any Comment:</label>
-                    <div class="for_input">
-                        <textarea id="textarea1"></textarea>
-                    </div>
-                    <br>
-                    <div class="submit_div">
-                        <input type="submit" id="input5">
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="button_div">
-            <a href="index.html"><button type="button">Back To Main Page</button></a>
-        </div>
     </header>
+    <main>
+        <section class="wrapper">
+            <h2>Registration</h2>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <input type="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <input type="password" placeholder="Create password" required>
+              </div>
+              <div class="input-box">
+                <input type="password" placeholder="Confirm password" required>
+              </div>
+              <div class="policy">
+                <input type="checkbox">
+                <h3>I accept all terms & condition</h3>
+              </div>
+              <div class="input-box button">
+                <input type="Submit" value="Register Now">
+              </div>
+            </form>
+        </section>
+        <div class="p_div">
+            <p>
+                💚Goal-Oriented Academy • GOA is a place where children are formed into successful and worthy people.
+                🧠They gain a lot of value in addition to learning programming and technical skills and easily apply them on their way to success.
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2024 Data Tezelashvili</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

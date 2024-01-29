@@ -32,7 +32,7 @@ header{
     box-sizing: border-box;
 }
 header.sticky{
-    background: #5C5C5C;
+    background: #5c5c5c;
     padding: 15px 100px;
 }
 header .brand{
@@ -63,7 +63,7 @@ header a{
     position: relative;
     text-decoration: none;
 }
-a::before {
+header a::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -76,11 +76,11 @@ a::before {
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
 }  
-a:hover::before {
+header a:hover::before{
     transform-origin: left;
     transform: scaleX(1);
 }
-a:active{
+header a:active{
     background-color: gray;
 }
 header .btn{
@@ -89,74 +89,89 @@ header .btn{
     cursor: pointer;
     display: none;
 }
-.p_div{
-    width: 50%;
-    margin-left: 25%;
+h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
     text-align: center;
-    margin-top: 50px;
-    padding: 25px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+#span2{
+    color: white;
+    font-size: 20px;
+}
+.span3{
+    color: white;
+    font-size: 40px;
+    padding: 5px;
+}
+.about_div{
+    display: flex;
+    justify-content: space-between;
+}
+.about h2{
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+.div1, .div2, .div1 p, .left, .right{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.div1, .div2{
+    width: 40%;
+    border-radius: 12px;
+}
+.div1{
+    background-color: #052607;
     color: white;
 }
-.wrapper{
-    position: relative;
-    max-width: 40%;
-    width: 100%;
-    background-color: #052607;
-    background-image: linear-gradient(135deg, #052607 22%, #5c5c5c 64%);
-    padding: 34px;
-    margin-top: 200px;
-    margin-left: 30%;
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-.wrapper h2{
-    position: relative;
-    font-size: 22px;
-    font-weight: 600;
-    color: black;
-}
-.wrapper form{
-    margin-top: 30px;
-}
-.wrapper form .input-box{
-    height: 52px;
-    margin: 18px 0;
-}
-form .input-box input{
-    height: 100%;
-    width: 90%;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-weight: 400;
-    color: #333;
-    border: 1.5px solid #C7BEBE;
-    border-bottom-width: 2.5px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-form .policy{
-    display: flex;
-    align-items: center;
-}
-form h3{
-    color: black;
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: 10px;
-}
-.input-box.button input{
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-    background: #052607;
+.div1 p, .div2 p{
     cursor: pointer;
-    margin-left: 20px;
 }
-.input-box.button input:hover{
-    background: black;
+.div2 h3, .div1{
+    text-align: center;
 }
-
+.container1{
+    display: flex;
+    justify-content: space-between;
+}
+.div2{
+    background: url(Images/Goa\ Banner.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #FFEE00;
+}
+.button1, #button2{
+    margin-top: 20px;
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    color: black;
+    background-color: #FFEE00;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+.button1:hover, #button2:hover {
+    background-color: black;
+    color: white;
+    box-shadow: white 0px 7px 29px 0px;
+}
+.button1:active, #button2:active{
+    background-color: white;
+    color: black;
+    box-shadow: black 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 100ms;
+}
 @media (max-width: 1060px){
     header .btn{
         display: block;
@@ -189,17 +204,23 @@ form h3{
         margin: 20px;
         padding: 0 15px;
     }
+    .about_div{
+        display: block;
+    }
+    .div1, .div2{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .div1 p, .div2 p{
+        padding: 20px;
+    }
+    .div2{
+        font-size: 20px;
+    }
 }
 @media (max-width: 630px){
-    .wrapper{
-        margin-left: 25%;
-    }
-    .p_div{
-        margin-top: 20px;
-        padding: 5px;
-    }
-    form{
-        font-size: 14px;
+    .div2 p, .div1 p, .div1 button{
+        font-size: 10px;
     }
 }
 footer{

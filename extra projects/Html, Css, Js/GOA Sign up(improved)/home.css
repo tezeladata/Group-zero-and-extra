@@ -18,6 +18,21 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: black;
 }
+header, .background{
+    box-sizing: border-box;
+}
+.background{
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+    background: url(Images/GOA\ background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
 header{
     z-index: 999;
     position: fixed;
@@ -29,10 +44,9 @@ header{
     align-items: center;
     padding: 20px 100px;
     transition: 0.6s;
-    box-sizing: border-box;
 }
 header.sticky{
-    background: #5C5C5C;
+    background: #5c5c5c;
     padding: 15px 100px;
 }
 header .brand{
@@ -89,81 +103,82 @@ header .btn{
     cursor: pointer;
     display: none;
 }
-.p_div{
-    width: 50%;
-    margin-left: 25%;
+h1{
+    color: #052607;
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
     text-align: center;
-    margin-top: 50px;
-    padding: 25px;
-    color: white;
 }
-.wrapper{
-    position: relative;
-    max-width: 40%;
-    width: 100%;
-    background-color: #052607;
-    background-image: linear-gradient(135deg, #052607 22%, #5c5c5c 64%);
-    padding: 34px;
-    margin-top: 200px;
-    margin-left: 30%;
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+.section1 p{
+    font-size: 18px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
 }
-.wrapper h2{
-    position: relative;
-    font-size: 22px;
-    font-weight: 600;
-    color: black;
+.span1{
+    color: #052607;
 }
-.wrapper form{
-    margin-top: 30px;
+.section1{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
 }
-.wrapper form .input-box{
-    height: 52px;
-    margin: 18px 0;
+.section1 div{
+    width: 30%;
 }
-form .input-box input{
-    height: 100%;
-    width: 90%;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-weight: 400;
-    color: #333;
-    border: 1.5px solid #C7BEBE;
-    border-bottom-width: 2.5px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+.p1, .p3 {
+  background-color: black;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+  transition: 300ms;
+  height: 300px;
+  align-items: center;
 }
-form .policy{
+.p1{
+    box-shadow:  -4px 4px 6px #5c5c5c;
+}
+.p1:hover, .p3:hover{
+  box-shadow: rgba(255, 255, 255, 0.25) 0 8px 15px;
+}
+.p2 {
+  background-color: white;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 5px rgba(92,92,92,1);
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+.p2:hover {
+  color: #fff;
+  background-color: black;
+}
+.p3{
     display: flex;
     align-items: center;
+    box-shadow:  4px 4px 6px #5c5c5c;
 }
-form h3{
-    color: black;
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: 10px;
-}
-.input-box.button input{
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-    background: #052607;
-    cursor: pointer;
-    margin-left: 20px;
-}
-.input-box.button input:hover{
-    background: black;
-}
-
 @media (max-width: 1060px){
     header .btn{
         display: block;
     }
     header .menu{
         position: fixed;
-        background: #052607;
+        background-color: #052607;
         flex-direction: column;
         min-width: 20%;
         height: 100vh;
@@ -189,17 +204,30 @@ form h3{
         margin: 20px;
         padding: 0 15px;
     }
-}
-@media (max-width: 630px){
-    .wrapper{
-        margin-left: 25%;
+    #main_head{
+        font-size: 30px;
     }
-    .p_div{
-        margin-top: 20px;
-        padding: 5px;
+    .section1{
+        display: block;
+        padding: 0;
+        margin: 0;
     }
-    form{
-        font-size: 14px;
+    .section1 div{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    .background{
+        position: relative;
+        max-width: 100%;
+        min-height: 100vh;
+        background: url(Images/background2.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 100px;
     }
 }
 footer{

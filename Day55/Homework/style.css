@@ -1,0 +1,31 @@
+form{
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+    text-align: center;
+    background-image: linear-gradient(to right top, #44ff7a, #66fb65, #7ff64e, #95f136, #a8eb12);
+}
+h1{
+    font-size: 40px;
+}
+input{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 60%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+}
+#label1{
+    font-size: 30px;
+}
+#input2{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    height: 50px;
+    width: 30%;
+}

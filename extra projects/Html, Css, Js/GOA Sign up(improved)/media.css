@@ -32,7 +32,7 @@ header{
     box-sizing: border-box;
 }
 header.sticky{
-    background: #5C5C5C;
+    background: #5c5c5c;
     padding: 15px 100px;
 }
 header .brand{
@@ -89,72 +89,32 @@ header .btn{
     cursor: pointer;
     display: none;
 }
-.p_div{
-    width: 50%;
-    margin-left: 25%;
-    text-align: center;
-    margin-top: 50px;
-    padding: 25px;
-    color: white;
-}
-.wrapper{
-    position: relative;
-    max-width: 40%;
-    width: 100%;
-    background-color: #052607;
-    background-image: linear-gradient(135deg, #052607 22%, #5c5c5c 64%);
-    padding: 34px;
+.wrapper {
+    box-sizing: border-box;
     margin-top: 200px;
-    margin-left: 30%;
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-.wrapper h2{
-    position: relative;
-    font-size: 22px;
-    font-weight: 600;
-    color: black;
-}
-.wrapper form{
-    margin-top: 30px;
-}
-.wrapper form .input-box{
-    height: 52px;
-    margin: 18px 0;
-}
-form .input-box input{
-    height: 100%;
     width: 90%;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-weight: 400;
-    color: #333;
-    border: 1.5px solid #C7BEBE;
-    border-bottom-width: 2.5px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-form .policy{
+._1, ._2, ._3, ._4, ._5{
+    margin-bottom: 30px;
+}
+._1, ._2, ._3, ._4, ._5{
     display: flex;
     align-items: center;
-}
-form h3{
-    color: black;
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: 10px;
-}
-.input-box.button input{
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-    background: #052607;
     cursor: pointer;
-    margin-left: 20px;
+    justify-content: space-between;
 }
-.input-box.button input:hover{
-    background: black;
+._1 img, ._2 img, ._3 img, ._4 img, ._5 img {
+    width: 90%;
+    height: 250px; 
+    border: 4px solid #052607;
+}
+._3 img, ._4 img, ._5 img{
+    height: 300px;
+}
+img {
+    border-radius: 50px;
 }
 
 @media (max-width: 1060px){
@@ -189,17 +149,34 @@ form h3{
         margin: 20px;
         padding: 0 15px;
     }
+    ._1 img, ._2 img, ._3 img, ._4 img, ._5 img {
+        width: 70%;
+        height: 150px; 
+        border: 4px solid #052607;
+    }
+    ._3 img, ._4 img, ._5 img{
+        height: 200px;
+    }
+    img {
+        border-radius: 30px;
+    }
 }
 @media (max-width: 630px){
+    ._1, ._2, ._3, ._4, ._5{
+        display: block;
+    }
     .wrapper{
-        margin-left: 25%;
+        text-align: center;
     }
-    .p_div{
-        margin-top: 20px;
-        padding: 5px;
+    ._1 img, ._2 img, ._3 img, ._4 img, ._5 img{
+        height: 300px;
+        margin-bottom: 30px;
     }
-    form{
-        font-size: 14px;
+}
+@media (max-width: 330px){
+    ._1 img, ._2 img, ._3 img, ._4 img, ._5 img{
+        height: 200px;
+        margin-bottom: 20px;
     }
 }
 footer{
