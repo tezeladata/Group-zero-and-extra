@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+}
+#main-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin-top: 100px;
+}
+#candle{
+    margin-top: 10rem;
+    width: 15rem;
+    height: 30rem;
+    position: relative;
+    display: grid;
+}
+#flame,#thread,#blue-part,#glow,#candle-bottom{
+    position: absolute;
+    justify-content: center;
+}
+#blue-part::after, #wax::before{
+    content: "";
+    display: block;
+}
+#flame{
+    margin-left: 80px;
+    bottom: 104%;
+    border-radius: 50% 50% 20% 20%;
+    height: 30%;
+    z-index: 3;
+    background: linear-gradient(white, 80%, transparent);
+    width: 30%;
+    box-shadow: 0px -5px 7px 0px orange;
+    transform-origin: bottom;
+    animation: flame_animation 4s linear infinite, grow_flame 4s linear infinite;
+}
+#blue-part{
+    margin-left: 85px;
+    width: 25%;
+    height: 15%;
+    background: rgba(0, 133, 255,.7);
+    z-index: 2;
+    bottom: 101%;
+    border-radius: 50% 50% 35% 35%;
+}
+#blue-part::after{
+    width: 75%;
+    border-radius: 50%;
+    background: rgba(0 0 0 / 39%);
+    position: relative;
+    height: 70%;
+    margin: 0 auto;
+    top: 30%;
+}
+#wax{
+    width: 100%;
+    height: 70%;
+    z-index: 1;
+    position: absolute;
+    background: linear-gradient(100deg, #a7a7a7, #212121);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: inset 20px -30px 50px 0 rgba(0, 0, 0, 0.4), inset -20px 0px 50px 0 rgba(0, 0, 0, 0.4);
+}
+#wax::before{
+    width: 100%;
+    height: 10%;
+    bottom: 95%;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(#d1c3ac, #6f6f6f 46%, #817e7c 67%);
+}
+#candle-bottom{
+    margin-left: -17.5px;
+    top: 67%;
+    height: 8%;
+    width: 115%;
+    border-radius: 50%;
+    background: radial-gradient(#121212, #101010);
+}
+#glow{
+    border-radius: 100%;
+    width: 15rem;
+    filter: blur(2.25rem);
+    background: #ff6000;
+    height: 10rem;
+    bottom: 100%;
+    z-index: 2;
+    animation: flicker_animation .1s infinite;
+}
+@keyframes flicker_animation{
+    50%{
+        opacity: 0.8;
+    }
+} 
+@keyframes flame_animation{
+    0%, 100%{
+        transform: rotate(-2deg);
+    }
+    50%{
+        transform: rotate(2deg);
+    }
+} 
+@keyframes grow_flame{
+    0%, 100%{
+        height: 30%;
+    }
+    50%{
+        height: 33%;
+    }
+}
