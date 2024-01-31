@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #6E07F3;
+}
+::-webkit-scrollbar-thumb {
+    background: #888888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Roboto Slab";
+    box-sizing: border-box;
+}
+.navbar-content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 25px 0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+.navbar .navbar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu-list{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.menu-list{
+    width: 90%;
+}
+.menu-list li{
+    list-style-type: none;
+}
+.menu-list li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: #6E07F3;
+}
+.navbar .logo img{
+    width: 75px;
+}
+#login-a{
+    color: #888888;
+}
+#login-a:hover{
+    color: white;
+}
+#signup-a{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #02C2FA;
+}
+#signup-a:hover{
+    color: black;
+}
+main{
+    text-align: center;
+    padding-top: 150px;
+}
+h1{
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+#input1{
+    width: 35%;
+    margin-top: 50px;
+    height: 75px;
+    border-radius: 15px;
+    border: none;
+    border: 10px solid #806790;
+    font-size: 18px;
+    padding: 20px;
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+img{
+    width: 30px;
+}
+p{
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
