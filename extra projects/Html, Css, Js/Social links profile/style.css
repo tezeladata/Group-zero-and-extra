@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body{
+    font-family: "Inter";
+    background: url(./images/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 60%;
+    height: 570px;
+    margin-top: 10px;
+    background-color: #141414;
+}
+.container{
+    width: 30%;
+    text-align: center;
+    margin: 50px 35% 0 35%;
+    height: 450px;
+    border-radius: 10px;
+    background-color: #1F1F1F;
+}
+#img1{
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+h1{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+h2{
+    margin-bottom: 20px;
+    color: hsl(75, 94%, 57%);
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: 300;
+}
+h3{
+    font-size: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.p-style{
+    width: 80%;
+    margin: 10px 0 5px 10%;
+    height: 32px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 300;
+    transition: 0.3s all ease-in-out;
+}
+.p-style:hover{
+    background-color: hsl(75, 94%, 57%);
+    color: #333333;
+}
+.attribution{
+    margin-top: 20px;
+}
+.attribution p{
+    font-size: 10px;
+}
+.attribution a{
+    text-decoration: none;
+    color: hsl(75, 94%, 57%);
+    font-size: 12px;
+}
+@media (max-width: 1100px){
+    body{
+        background: none;
+        background-color: #0E0E0E;
+    }
+    .container{
+        width: 50%;
+        margin: 50px 25% 0 25%;
+    }
+}
+@media (max-width: 768px){
+    main{
+        background-color: #0E0E0E;
+        height: 90%;
+        width: 100%;
+    }
+    .container{
+        height: 85%;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+    #img1{
+        width: 150px;
+    }
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3, .p-style{
+        font-size: 20px;
+    }
+    .p-style{
+        height: 60px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .attribution p{
+        font-size: 18px;
+    }
+    .attribution a{
+        font-size: 20px;
+    }
+}
+@media (max-width: 500px){
+    .container{
+        height: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+    #img1{
+        width: 125px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3, .p-style{
+        font-size: 18px;
+    }
+    .p-style{
+        height: 40px;
+        margin-bottom: 15px;
+    }
+    .attribution p{
+        font-size: 16px;
+    }
+    .attribution a{
+        font-size: 18px;
+    }
+}

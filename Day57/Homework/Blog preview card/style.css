@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+body{
+    font-family: "Figtree";
+    background-color: hsl(47, 88%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 400px;
+    height: 500px;
+    margin-top: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow:  5px 5px 0px black;
+}
+.for-style{
+    width: 90%;
+    margin-left: 5%;
+    height: 90%;
+}
+#img1{
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.p-div{
+    width: 25%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(47, 88%, 63%);
+    border-radius: 5px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 5px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+.p-div:hover{
+    background-color: black;
+    color: hsl(47, 88%, 63%);
+}
+#p2{
+    color: #888888;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+h1{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+h1:hover{
+    color: hsl(47, 88%, 63%);
+}
+#p3{
+    color: #888888;
+    cursor: pointer;
+}
+.image-div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#img2{
+    width: 40px;
+    cursor: pointer;
+}
+#p4{
+    margin-left: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+@media (max-width: 600px){
+    .container{
+        width: 75%;
+        margin: 50px 0 0 12.5%;
+        height: max-content;
+        box-shadow:  10px 10px 0px black;
+    }
+    .p-div{
+        margin: 20px 0 20px 0;
+        height: 40px;
+        font-size: 18px;
+        width: 100px;
+    }
+    h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    #p3{
+        font-size: 18px;
+    }
+    #img2{
+        width: 60px;
+    }
+    #p4{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+}
