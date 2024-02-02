@@ -208,3 +208,103 @@ personName=newArr[0][0].toUpperCase();
 personLastName=newArr[1][0].toUpperCase();
 return `${personName}.${personLastName}`
 }
+
+// Simple multiplication
+function simpleMultiplication(number) {
+  if (number%2==0){
+    return number*8
+  } else{
+    return number*9
+  }
+}
+
+// Sum Arrays
+function sum (numbers) {
+  if (numbers.length===0){
+    return 0
+  } else{
+    let sum=0;
+    for (let i=0; i<numbers.length; i++){
+      sum+=numbers[i]
+    }
+    return sum
+  }
+};
+
+// MakeUpperCase
+function makeUpperCase(str) {
+  res=""
+  for (let i=0; i<str.length; i++){
+    res+=str[i].toUpperCase()
+  }
+  return res
+}
+
+// A Needle in the Haystack
+function findNeedle(haystack) {
+  const pos=haystack.indexOf("needle");
+  return `found the needle at position ${pos}`;
+}
+
+// Are You Playing Banjo?
+function areYouPlayingBanjo(name) {
+  if (name[0]=="R" || name[0]=="r"){
+    return `${name} plays banjo`
+  } else{
+    return `${name} does not play banjo`
+  }
+}
+
+// Invert values
+function invert(array) {
+  if (array.length==0){
+    return []
+  } else {
+    let newArr=[]
+    for (let i=0; i<array.length; i++){
+      newArr.push(array[i] * -1)
+    }
+    return newArr
+  }
+}
+
+// Calculate average
+function findAverage(array) {
+  if (array.length==0){
+    return 0
+  } else{
+    let sum=0
+    for (let i=0; i<array.length; i++){
+      sum+=array[i]
+    }
+    return sum/array.length
+  }
+}
+
+// Is he gonna survive?
+function hero(bullets, dragons){
+  return bullets>=dragons*2
+}
+
+// Count of positives / sum of negatives
+function countPositivesSumNegatives(input) {
+  if (input==[] || !input){
+    return []
+  } else{
+    let countOfPos=0;
+    let sumOfNegative=0;
+    for (let i=0; i<input.length; i++){
+      if (input[i]>0){
+        countOfPos+=1
+      } else{
+        sumOfNegative+=input[i]
+      }
+    }
+    if (countOfPos!=0 || sumOfNegative!=0){
+      res=[countOfPos, sumOfNegative]
+      return res
+    } else{
+      return []
+    }
+  }
+}
