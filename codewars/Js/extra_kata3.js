@@ -244,4 +244,55 @@ function printerError(s) {
   return counter + "/" + length;
 }
 
-// 
+// Ones and Zeros
+const binaryArrayToNumber = arr => {
+  let binaryString=""
+  for (let i=0; i<arr.length; i++){
+    binaryString+=String(arr[i])
+  }
+  let decimalNumber = 0;
+    for (let i = 0; i < binaryString.length; i++) {
+        if (binaryString[i] === '1') {
+            decimalNumber = decimalNumber * 2 + 1;
+        } else if (binaryString[i] === '0') {
+            decimalNumber = decimalNumber * 2;
+        } 
+    }
+    return decimalNumber;
+};
+
+// Number of People in the Bus
+var number = function(busStops){
+  let counter=0;
+  for (let i=0; i<busStops.length; i++){
+    counter+=busStops[i][0]-busStops[i][1]
+  }
+  return counter
+}
+
+// Reverse words
+function reverseWords(str) {
+  let words = str.split(" ");
+  let reversedWords = [];
+  for (let i = 0; i < words.length; i++) {
+      let reversed = "";
+      for (let j = words[i].length - 1; j >= 0; j--) {
+          reversed += words[i][j];
+      }
+      reversedWords.push(reversed);
+  }
+  return reversedWords.join(" ");
+}
+
+// Odd or Even?
+function oddOrEven(array) {
+  let sum=0;
+  for (let i=0; i<array.length; i++){
+    sum+=array[i]
+  }
+  if (sum%2==0){
+    return "even"
+  } else{
+    return "odd"
+  }
+}
