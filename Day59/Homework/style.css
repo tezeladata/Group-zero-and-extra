@@ -1,0 +1,90 @@
+body{
+    display: flex;
+    justify-content: center;
+    background: url(5651978.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 35%;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+.title{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+}
+.title::before,
+.title::after{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
+}
+.message, 
+.signin{
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.message{
+    margin: -10px 0 0 5%;
+}
+.signin{
+    text-align: center;
+}
+.signin a{
+    color: #00bfff;
+}
+.input{
+    background-color: #333;
+    color: #fff;
+    width: 90%;
+    margin-left: 5%;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+#submit{
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    transform: .3s ease;
+    background-color: #00bfff;
+}
+#submit:hover{
+    background-color: #00bfff96;
+}
+@media (max-width: 1550px){
+    body{
+        background: url(v856-kul-07a.jpg) no-repeat;
+    }
+}
+@media (max-width: 900px){
+    .form{
+        width: 60%;
+
+    }
+}
