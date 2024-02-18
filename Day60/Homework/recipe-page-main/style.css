@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Young Serif";
+}
+body{
+    background-color: #F3E5D8;
+}
+.container{
+    width: 60%;
+    margin: 100px 0 100px 20%;
+    background-color: #FDFDFD;
+    border-radius: 10px;
+}
+.container img{
+    width: 80%;
+    margin: 40px 0 0 10%;
+    border-radius: 10px;
+}
+.bold-span{
+    font-weight: bolder;
+}
+h1, #p1{
+    margin: 20px 0 0 10%;
+}
+#h2_1{
+    margin: 50px 0 0 12.5%;
+    color: #7A4555;
+}
+#ul1{
+    margin: 10px 0 0 15%;
+    width: 80%;
+}
+#ul1 li::marker, #ul2 li::marker, #ol1 li::marker{
+    color: #7A4555;
+}
+#h2_2, #h2_3, #h2_4{
+    margin: 50px 0 20px 10%;
+    color: #7A4555;
+    font-size: 30px;
+}
+#p2{
+    margin: 0 0 20px 10%;
+}
+#ul2, #ol1{
+    margin: 10px 0 0 10%;
+    width: 80%;
+}
+#ol1, #ul2{
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+}
+.nutritions-container{
+    width: 80%;
+    margin: 0 0 10% 100px;
+}
+.parts{
+    display: flex;
+    width: 100%;
+}
+.nutritions-div{
+    width: 50%;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+    padding-bottom: 20px;
+}

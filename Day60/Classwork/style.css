@@ -1,0 +1,16 @@
+.parent{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    border: 10px solid blue;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin: 0;
+}
+.child{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+}
+/* Position: static; is automatic */
+/* An element with position: fixed always stays in the same place even if the page is scrolled.  */
