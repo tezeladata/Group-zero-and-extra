@@ -59,7 +59,3 @@ div:hover {
     margin-top: 100px;
     transform: scale(150%);
 }
-.container:active{
-    transform: rotate(90deg);
-    transform-origin: top right;
-}
