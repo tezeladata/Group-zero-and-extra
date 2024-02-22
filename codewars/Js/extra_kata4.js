@@ -95,3 +95,127 @@ function nbDig(n, d) {
   }
   return counter
 }
+
+// Two to One
+function longest(s1, s2) {
+  return [...new Set(s1+s2)].sort().join("")
+}
+
+// Factorial
+function factorial(n){
+  let res=1;
+  if (n>0 && n<=12){
+    for (let i=1; i<=n; i++){
+      res*=i
+    }
+    return res
+  } else{
+    if (n==0){
+      return 1
+    } else if (n<0){
+      throw new Error('Negative number');
+    } else{
+      throw new Error('Number too large');
+    }
+  }
+}
+
+// Remove anchor from URL
+function removeUrlAnchor(url){
+  let pos=url.indexOf("#");
+  if (pos !== -1){
+    return url.slice(0, pos)
+  } else{
+    return url
+  }
+}
+
+// Leap Years
+function isLeapYear(year) {
+  if (year%4==0){
+    if (year%100==0){
+      if (year%400==0){
+        return true
+      } else{
+        return false
+      }
+    } else{
+      return true
+    }
+  } else{
+    return false
+  }
+}
+
+// Find the capitals
+var capitals = function (word) {
+	let resArr=[]
+  for (let i=0; i<word.length; i++){
+    if (word[i]==word[i].toUpperCase()){
+      resArr.push(word.indexOf(word[i]))
+    }
+  }
+  return resArr
+};
+
+// Sum of a sequence
+const sequenceSum = (begin, end, step) => {
+  let sum=0;
+  for (let i=begin; i<=end; i+=step){
+    sum+=i
+  }
+  return sum
+};
+
+// Don't give me five!
+function dontGiveMeFive(start, end){
+  let counter=0;
+  for (let i=start; i<=end; i++){
+    if (!String(i).includes("5")){
+      counter++
+    }
+  }
+  return counter
+}
+
+// Small enough? - Beginner
+function smallEnough(a, limit){
+  for (let i=0; i<a.length; i++){
+    if (Math.max(...a)<=limit){
+      return true
+    } else{
+      return false
+    }
+  }
+}
+
+// Summing a number's digits
+function sumDigits(number) {
+  let num=String(Math.abs(number));
+  let counter=0;
+  for (let i=0; i<num.length; i++){
+    counter+=Number(num[i])
+  }
+  return counter
+}
+
+// Sum of angles
+function angle(n) {
+  return 180*(n-2)
+}
+
+// Round up to the next multiple of 5
+function roundToNext5(n) {
+  return Math.ceil(n / 5) * 5;
+}
+
+// Maximum Multiple
+function maxMultiple(divisor, bound){
+  let resArr=[];
+  for (let i=divisor; i<=bound; i++){
+    if (i%divisor==0){
+      resArr.push(i)
+    }
+  }
+  return Math.max(...resArr)
+}
