@@ -122,5 +122,3 @@ rl.question("Choose an operation (addition, subtraction, multiplication, divisio
         });
     });
 });
-
-
