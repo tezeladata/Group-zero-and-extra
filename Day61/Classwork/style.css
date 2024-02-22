@@ -36,7 +36,7 @@ div:hover {
   width: 300px;
 } */
 
-.container{
+/* .container{
     width: 200px;
     height: 200px;
     transition: linear 0.75s;
@@ -48,14 +48,55 @@ div:hover {
     border-radius: 15px;
     color: white;
     transition-delay: .1s;
-}
+} */
 /* .container:hover{
     width: 250px;
     height: 250px;
     transform: rotate(360deg);
     margin-top: 100px;
 } */
-.container:hover{
+/* .container:hover{
     margin-top: 100px;
     transform: scale(150%);
+} */
+
+.container{
+    /* width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: example;
+    animation-duration: 1.5s; */
+    /* animation-delay: 1s; */
+    /* animation-timing-function: ease-in;
+    animation-iteration-count: infinite; counts how many times animation is occured within 15s */
+
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(254, 254, 59, 0.552);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    /* animation-name: example;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite; */
+    /* Better way: */
+    animation: example 1.5s ease 0s infinite;
+}
+@keyframes example {
+    /* 0% { background-color: #7B41EA; border: 1px solid #F91583;}
+    33% { background-color: #CCB4FB; border: 2px solid #C833FD;}
+    66% { background-color: #C833FD; border: 3px solid #CCB4FB;}
+    100% { background-color: #F91583; border: 4px solid #7B41EA;} */
+    /* Using from, to for only two transitions */
+    /* from {background-color: rgb(39, 189, 46); scale: 1; transform: rotate(30deg);}
+    to {background-color: rgb(153, 37, 21); scale: 2; transform: rotate(60deg);} */
+
+    0% {transform: scale(1);}
+    33% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+
 }
