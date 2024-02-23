@@ -219,3 +219,87 @@ function maxMultiple(divisor, bound){
   }
   return Math.max(...resArr)
 }
+
+// Anagram Detection
+var isAnagram = function(test, original) {
+  let testStr=test.toLowerCase().split("").sort().join("");
+  let originalStr=original.toLowerCase().split("").sort().join("");
+  return testStr===originalStr
+};
+
+// Simple Fun #176: Reverse Letter
+function reverseLetter(str) {
+  let newStr="";
+  let letters="abcdefghijklmnopqrstuvwxyz";
+  for (let i=0; i<str.length; i++){
+    if (letters.includes(str[i])){
+      newStr+=str[i]
+    }
+  }
+  let resStr="";
+  for (let i=newStr.length-1; i>=0; i--){
+    resStr+=newStr[i]
+  }
+  return resStr
+}
+
+// No oddities here
+function noOdds( values ){
+  let resArr=[];
+  for (let i=0; i<values.length; i++){
+    if ((values[i])%2==0){
+      resArr.push(values[i])
+    }
+  }
+  return resArr
+}
+
+// Alternate capitalization
+function capitalize(s){
+  let evenStr="";
+  let oddStr="";
+  for (let i = 0; i < s.length; i++) {
+    if (i % 2 === 0) {
+      evenStr += s[i].toUpperCase();
+      oddStr += s[i].toLowerCase();
+    } else {
+      evenStr += s[i].toLowerCase();
+      oddStr += s[i].toUpperCase();
+    }
+  }
+  return [evenStr, oddStr]
+};
+
+// Maximum Length Difference
+function mxdiflg(a1, a2) {
+  let max=-1;
+for (let i=0; i<a1.length; i++){
+  for (let x=0; x<a2.length; x++){
+    let c=Math.abs(a1[i].length - a2[x].length)
+    if (c>max){
+      max=c
+    }
+  }
+}
+return max
+}
+
+// Fix string case
+function solve(s){
+  let countOfLower=0;
+  let countOfUpper=0;
+  for (let i=0; i<s.length; i++){
+    if (s[i]===s[i].toUpperCase()){
+      countOfUpper++;
+    } else{
+      countOfLower++;
+    }
+  }
+  if (countOfLower === countOfUpper){
+    return s.toLowerCase()
+  } else if (countOfLower > countOfUpper){
+    return s.toLowerCase()
+  } else if (countOfLower < countOfUpper){
+    return s.toUpperCase()
+  }
+}
