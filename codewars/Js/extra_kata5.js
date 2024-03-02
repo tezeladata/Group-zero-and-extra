@@ -81,3 +81,120 @@ function sumStr(a,b) {
     return String(0);
   }
 }
+
+// Triangular Treasure
+function triangular( n ) {
+  if (n<0){
+    return 0
+  } else{
+    return n*(n+1)/2
+  }
+}
+
+
+// Two Oldest Ages
+function twoOldestAges(ages) {
+  let newAges = [];
+  newAges.push(Math.max(...ages));
+  ages.splice(ages.indexOf(Math.max(...ages)), 1);
+  newAges.push(Math.max(...ages));
+  
+  if (newAges[0] > newAges[1]) {
+    let a = newAges[1];
+    newAges[1] = newAges[0];
+    newAges[0] = a;
+  }
+  
+  return newAges;
+}
+
+// Power of two
+function isPowerOfTwo(n) {
+  let currentNumber = 1;
+  while (currentNumber < n) {
+    currentNumber *= 2;
+  }
+  return currentNumber === n;
+}
+
+// Factorial
+function factorial(n){
+  let factorial=1;
+  for (let i=1; i<=n; i++){
+    factorial*=i
+  }
+  return factorial
+}
+
+// Predict your age!
+function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+  let newArr=[age1, age2, age3, age4, age5, age6, age7, age8];
+  let newArr2=[];
+  for (let i=0; i<newArr.length; i++){
+    let num=newArr[i];
+    num**=2;
+    newArr2.push(num);
+  }
+  let arrSum=0;
+  for (let i=0; i<newArr2.length; i++){
+    arrSum+=newArr2[i]
+  }
+  let square=arrSum**0.5;
+  square/=2;
+  return Math.floor(square)
+}
+
+// Sum of Cubes
+function sumCubes(n){
+  let sum=0;
+  for (let i=0; i<=n; i++){
+    sum+=i**3
+  }
+  return sum
+}
+
+// Find the vowels
+function vowelIndices(word){
+  word=word.toLowerCase();
+  let vowels=["a", "e", "i", "o", "u", "y"];
+  let resArr=[];
+  for (let i=0; i<word.length; i++){
+    if (vowels.includes(word[i])){
+      resArr.push(i+1)
+    }
+  }
+  return resArr
+}
+
+// Even numbers in an array
+function evenNumbers(array, number) {
+  let newArr=[];
+  for (let i=0; i<array.length; i++){
+    if (array[i]%2==0){
+      newArr.push(array[i])
+    }
+  }
+  return newArr.splice(-number)
+}
+
+// Sum of Minimums!
+function sumOfMinimums(arr) {
+  let sum=0;
+  for (let i=0; i<arr.length; i++){
+    let array=arr[i];
+    sum+=Math.min(...array)
+  }
+  return sum
+}
+
+// Remove duplicate words
+function removeDuplicateWords (s) {
+  s=s.split(" ");
+  let sentence=[];
+  for (let i=0; i<s.length; i++){
+    if (! sentence.includes(s[i])){
+      sentence.push(s[i])
+    }
+  }
+  return sentence.join(" ")
+}
