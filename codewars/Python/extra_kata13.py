@@ -114,3 +114,82 @@ def list_squared(m, n):
             res_arr.append([i, squared_divisors_sum])
     
     return res_arr
+
+# Beeramid
+def beeramid(bonus, price):
+    total = bonus // price
+    levels = 0
+    cans_to_build_level = 1
+
+    while total >= cans_to_build_level:
+        total -= cans_to_build_level
+        levels += 1
+        cans_to_build_level = (levels + 1) ** 2
+
+    return levels
+
+
+# Convert PascalCase string into snake_case
+def to_underscore(string):
+    if type(string)==int:
+        return str(string)
+    else:
+        snake_case=string[0].lower()
+        string=string[1:]
+        numbers="0123456789"
+        for char in string:
+            if char!=char.upper():
+                snake_case+=char
+            else:
+                if char in numbers:
+                    snake_case+=char
+                else:
+                    snake_case+=f"_{char.lower()}"
+        return snake_case
+    
+# (Ready for) Prime Time
+def prime(n):
+    primes = []
+    for i in range(2, n + 1):  
+        is_prime = True  
+        for x in range(2, int(i ** 0.5) + 1):  
+            if i % x == 0: 
+                is_prime = False
+                break 
+        if is_prime:  
+            primes.append(i)
+    return primes
+
+# Guess The Gifts!
+def guess_gifts(wishlist, presents): 
+    items=[]
+    for present in presents:
+        for gift in wishlist:
+            if present["size"]==gift["size"] and present['clatters'] == gift['clatters'] and present['weight'] == gift['weight']:
+                items.append(gift["name"])
+    return set(items)
+
+# Greed is Good
+def score(dice):
+    count=0
+    ones = dice.count(1)
+    fives = dice.count(5)
+    if ones >= 3:
+        count += 1000
+        ones -= 3
+    count += ones * 100
+
+    if fives >= 3:
+        count += 500
+        fives -= 3
+    count += fives * 50
+    if dice.count(2) >= 3:
+        count += 200
+    if dice.count(3) >= 3:
+        count += 300
+    if dice.count(4) >= 3:
+        count += 400
+    if dice.count(6) >= 3:
+        count += 600
+
+    return count
