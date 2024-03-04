@@ -193,3 +193,63 @@ def score(dice):
         count += 600
 
     return count
+
+# Human Readable Time
+def make_readable(seconds):
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    seconds = seconds % 60
+    return "{:02d}:{:02d}:{:02d}".format(hours, minutes, seconds)
+
+# Mean Square Error
+def solution(array_a, array_b):
+    squared_diff_sum = 0
+    n = len(array_a)
+    for i in range(n):
+        squared_diff_sum += (abs(array_a[i] - array_b[i])) ** 2
+    return squared_diff_sum / n
+
+
+# ISBN-10 Validation
+def valid_ISBN10(isbn): 
+    valid_chars = '0123456789X'
+    is_valid = True
+    if len(isbn) != 10 or 'X' in isbn[:9]:
+        is_valid = False
+    total = 0
+    index = 1
+    for char in isbn:
+        if char not in valid_chars:
+            is_valid = False
+            break
+        total += valid_chars.find(char) * index
+        index += 1
+    if total % 11 != 0:
+        is_valid = False
+    return is_valid
+
+# ROT13
+def rot13(message):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    result = ""
+    for char in message:
+        if char.lower() in alphabet:
+            idx = (alphabet.index(char.lower()) + 13) % 26
+            if char.islower():
+                result += alphabet[idx]
+            else:
+                result += alphabet[idx].upper()
+        else:
+            result += char
+    return result
+
+# Calculate Variance
+# import numpy as np
+# def variance(numbers):
+#     arr = np.array(numbers)
+#     return np.var(arr)
+# # or
+# def variance(numbers):
+#     mean = sum(numbers) / len(numbers)
+#     variance = sum((num - mean) ** 2 for num in numbers) / len(numbers)
+#     return variance
