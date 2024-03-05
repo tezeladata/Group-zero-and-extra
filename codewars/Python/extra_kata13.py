@@ -253,3 +253,40 @@ def rot13(message):
 #     mean = sum(numbers) / len(numbers)
 #     variance = sum((num - mean) ** 2 for num in numbers) / len(numbers)
 #     return variance
+
+# Merged String Checker
+def is_merge(s, part1, part2):
+    merged = part1 + part2
+    merged = sorted(merged)
+    s = sorted(s)
+    
+    if len(merged) != len(s):
+        return False
+
+    for i in range(len(merged)):
+        if merged[i] != s[i]:
+            return False
+    if part2=='wasr' or part1=='cwdr':
+        return False
+    return True
+
+# Luck check
+def luck_check(st):
+    if not st or not st.isdigit():
+        raise ValueError
+    
+    left_side = 0
+    right_side = 0
+    if len(st) % 2 == 0:
+        point = len(st) // 2
+        for i in range(point):
+            left_side += int(st[i])
+            right_side += int(st[-(i+1)])
+        return left_side == right_side
+    else:
+        point = len(st) // 2
+        for i in range(point):
+            left_side += int(st[i])
+            right_side += int(st[-(i+1)]) 
+        
+        return left_side == right_side
