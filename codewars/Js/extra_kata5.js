@@ -198,3 +198,40 @@ function removeDuplicateWords (s) {
   }
   return sentence.join(" ")
 }
+
+// Row Weights
+function rowWeights(array){
+  let team1=0;
+    let team2=0;
+    for (let i=0; i<array.length; i++){
+        if (i%2==0){
+            team2+=array[i]
+        } else{
+            team1+=array[i]
+        }
+    }
+  return [team2, team1]
+}
+
+// Largest pair sum in array
+function largestPairSum(numbers) {
+  let num1 = Math.max(...numbers);
+  let index1 = numbers.indexOf(num1);
+  numbers.splice(index1, 1); 
+  let num2 = Math.max(...numbers); 
+  return num1 + num2;
+}
+
+// Number of Decimal Digits
+function digits(n) {
+  return String(n).length
+}
+
+// Sum of Triangular Numbers
+function sumTriangularNumbers(n) {
+  if (n<0){
+    return 0
+  } else{
+    return (n*(n+1)*(n+2))/6
+  }
+}
