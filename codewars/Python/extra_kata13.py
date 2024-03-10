@@ -290,3 +290,35 @@ def luck_check(st):
             right_side += int(st[-(i+1)]) 
         
         return left_side == right_side
+    
+# Kebabize
+def kebabize(st):
+    new_str = ""
+    numbers = "0123456789"
+    for i in st:
+        if i != i.upper():
+            new_str+=i
+        elif i not in numbers and i==i.upper():
+            new_str += "-{}".format(i.lower())
+    if new_str!="":
+        if new_str[0]=="-":
+            new_str=new_str[1:]
+        return new_str
+    else:
+        return ""
+    
+# Run-length encoding
+def run_length_encoding(s):
+    res_arr = []
+    count = 1
+    if s!="":
+        for i in range(1, len(s)):
+            if s[i] == s[i - 1]:
+                count += 1
+            else:
+                res_arr.append([count, s[i - 1]])
+                count = 1
+        res_arr.append([count, s[-1]])
+        return res_arr
+    else:
+        return []
