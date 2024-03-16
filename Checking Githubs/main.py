@@ -1,20 +1,3 @@
-# def calculate_work(work_coefficient, salary):
-#     if salary < 100:
-#         if salary < 50:
-#             return work_coefficient / salary * 0.0833
-#         else:
-#             return work_coefficient / salary * 1.125
-#     elif 100 <= salary < 200:
-#         return work_coefficient / salary * 0.75
-#     elif 200 <= salary < 300:
-#         return work_coefficient / salary
-#     elif 300 <= salary < 400:
-#         return work_coefficient / salary
-#     elif 400 <= salary < 500:
-#         return work_coefficient / salary * 1.25
-#     elif 500 <= salary < 600:
-#         return work_coefficient / salary * 1.5
-
 def calculate_work(work_coefficient, salary, name):
     if salary > 250:
         salary_range = "high_salary"
