@@ -78,9 +78,9 @@ calculate_work(46.6, 7.5, 'Tkeshelashvili')
 
 calculate_work(31.3, 75, 'Amonashvili')
 calculate_work(95.3, 182.5, 'Navrozashvili')
-calculate_work(0, 0, 'Sazandrishvili')
-calculate_work(0, 0, 'Leverashvili')
-calculate_work(0, 0, 'Janashia')
+calculate_work(92.1, 300, 'Sazandrishvili')
+calculate_work(73.8, 177.5, 'Leverashvili')
+calculate_work(90.6, 90.6, 'Janashia')
 
 high_salary_high_eff.sort(key=lambda x: x[1], reverse=True)
 mid_salary_high_eff.sort(key=lambda x: x[1], reverse=True)
