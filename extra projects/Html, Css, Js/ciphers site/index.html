@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/0e8e964837.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo" id="cipher">CIPHER <span><i class="fa-solid fa-user-secret"></i></span></a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#keyboard-shift">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <h1 id="welcome">Welcome to <span class="desc-span">CipherVerse</span></h1>
+
+    <div id="description-content">
+        <p id="description">Welcome to our <span class="desc-span" id="about">Cipher</span> website, where ancient and modern encryption techniques await!<br> Explore classics like <span class="desc-span">ROT13</span>, <span class="desc-span">Caesar</span>, and <span class="desc-span">Atbash ciphers</span>.<br> Delve into keyboard shift and <span class="desc-span">Morse</span> code, or tackle the complex <span class="desc-span">Polybius square</span>.<br> Whether you're a novice or expert, unlock the secrets of cryptography, <a class="desc-span" href="#atbash-button">With US!</a></p>
+    </div>
+
+
+    <div id="squares">
+        <div class="square-content rot13">
+            <p class="code-name">ROT13<br>‎ </p>
+            <form>
+                <input type="text" class="text-area" placeholder="Your Text" id="rot13-input"><br>
+                <p id="output1" class="output"></p>
+                <button class="btn" type="button" id="button1">
+                    <strong>GENERATE</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>                 
+            </form>
+        </div>
+        
+        <div class="square-content atbash">
+            <p class="code-name">Atbash<br>Cipher</p>
+            <form>
+                <input type="text" class="text-area" placeholder="Your Text" id="atbash-input"><br>
+                <p id="output2" class="output"></p>
+                <button class="btn" type="button" id="button2">
+                    <strong>GENERATE</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+            </form>
+        </div>
+        
+        <div class="square-content polybius">
+          <p class="code-name">Polybius<br>Square</p>
+          <form>
+            <input type="text" class="text-area" placeholder="Your Text" id="polybius-input"><br>
+            <p id="output6" class="output"></p>
+            <button class="btn" type="button" id="button3">
+                  <strong>GENERATE</strong>
+                  <div id="container-stars">
+                    <div id="stars"></div>
+                  </div>
+                
+                  <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
+                </button>                 
+              </form>
+            </div>
+        
+        <div class="square-content" id="keyboard-shift">
+          <p class="code-name">Keyboard<br>Shift</p>
+            <form>
+              <input type="text" class="text-area" placeholder="Your Text" id="keyboard-shift-input1"><br>
+              <input type="text" class="text-area" placeholder="Shift: 'Right' or 'Left'" id="keyboard-shift-input2"><br>
+              <p id="output4" class="output"></p>
+              <button class="btn" type="button" id="button4">
+                    <strong>GENERATE</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>                 
+            </form>
+          </div>
+        
+          <div class="square-content morse">
+            <p class="code-name">Morse<br>Code</p>
+            <form>
+              <input type="text" class="text-area" placeholder="Your Text" id="morse-code-input"><br>
+              <p id="output5" class="output"></p>
+              <button class="btn" type="button" id="button5">
+                <strong>GENERATE</strong>
+                <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                    
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>                 
+            </form>
+          </div>
+              
+          <div class="square-content caesar-cipher">
+            <p class="code-name">Caesar<br>Cipher</p>
+            <form>
+              <input type="text" class="text-area" placeholder="Your Text" id="caesar-cipher-input1"><br>
+              <input type="text" class="text-area" placeholder="Shift number: " id="caesar-cipher-input2"><br>
+              <p id="output3" class="output"></p>
+                <button class="btn" type="button" id="button6">
+                    <strong>GENERATE</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>                 
+            </form>
+        </div>                     
+    </div>
+
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#" id="form">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" id="sumbit-input1" required name="fullname">
+                <input type="email" placeholder="Email Address" id="sumbit-input2" required name="email-adress">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Phone Number" id="sumbit-input3" required name="phone-number">
+                <input type="text" placeholder="Email Subject" id="sumbit-input4" required name="email-subjects">
+            </div>
+            <textarea name="" id="text" cols="30" rows="10" placeholder="Your Message" required name="message"></textarea>
+            <!-- <input type="submit" value="Send Message" class="btn2">  -->
+            <button type="submit" id="submit-button" class="btn2">Button submit</button>
+        </form>
+    </section>
+
+    <footer class="footer" id="portfolio">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Vano Motiashvili, Data Tezelashvili | All Rights Reserved.</p>
+        </div>
+        
+                <div id="contact-footer">
+                    <a href="https://discord.gg/rkgazudKth" target="_blank">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://www.facebook.com/nika11keshelava" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://github.com/tezeladata" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+    </footer>
+
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
