@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 3fr 4fr;
+    background-color: blue;
+    width: 700px;
+    height: 700px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.grid-div{
+    background-color: green;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+/* .grid-container {
+    background-color: #2196F3;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 1000px;
+    height: 500px;
+    gap: 10px;
+} */
+
+ /* > is only choosing child elements */
+/* .grid-container > div {
+    background-color: green;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.item2{
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.item3{
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.item9{
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.item10{
+    grid-column-start: 1;
+    grid-column-end: 4;
+} */
+
+
+
+.grid-container {
+    background-color: black;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 2fr 4fr 1fr;
+    width: 1000px;
+    height: 800px;
+    gap: 10px;
+}
+
+.grid-container > div {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.class1{
+    background-color: #F55AA2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.class2{
+    background-color: #82D7E1;
+    grid-column-end: 3;
+}
+.class3{
+    background-color: #90CC47;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.class4{
+    background-color: #F5E84D;
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .class1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .class3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+}

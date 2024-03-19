@@ -322,3 +322,17 @@ def run_length_encoding(s):
         return res_arr
     else:
         return []
+
+# Detect Pangram
+def is_pangram(s):
+    s=s.upper()
+    new_arr = [i for i in s]
+    s=list(set(s))
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    count = 0
+    for i in s:
+        if i in alphabet:
+            count += 1
+    if count >= 26:
+        return True
+    return False
