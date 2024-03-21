@@ -367,3 +367,146 @@ def delete_nth(order, max_e):
         if counts[num] <= max_e:
             new_arr.append(num)
     return new_arr
+
+#Write Number in Expanded Form
+def expanded_form(num):
+    original_num=str(num)
+    new_str = ""
+    num = str(num)
+    while len(num) != 1:
+        remaining_len = len(num[1:])
+        if f"{num[0]}{'0' * remaining_len}"[0] != "0":
+            new_str += f"{num[0]}{'0' * remaining_len} + "
+        num=num[1:]
+    if original_num[-1] != "0":
+        new_str += original_num[-1]
+    new_str = new_str.strip()
+    if new_str[-1] == "+":
+        new_str = new_str[0:-2]
+    return new_str
+# or:
+def expanded_form(num):
+    num_str = str(num)
+    expanded = []
+    length = len(num_str)
+    for i in range(length):
+        digit = num_str[i]
+        if digit != '0':
+            expanded.append(digit + '0' * (length - i - 1))
+    return ' + '.join(expanded)
+
+#Data Reverse
+def data_reverse(data):
+    new_arr = []
+    for i in range(0, len(data), 8):
+        new_arr.append(data[i:i+8])
+    new_arr = new_arr[::-1]
+    res_arr = []
+    for array in new_arr:
+        for num in array:
+            res_arr.append(num)
+    return res_arr
+
+# Two Sum
+def two_sum(numbers, target):
+    res = []
+    
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] + numbers[j] == target:
+                res.append((i, j))
+    second_res=res[::-1]
+    
+    if res:
+        return res[0]
+    else:
+        return tuple(reversed(res[0]))
+
+# Multiplication table
+def multiplication_table(size):
+    res_arr = []
+    for i in range(1, size+1):
+        new_arr = []
+        for j in range(1, size+1):
+            new_arr.append(i*j)
+        res_arr.append(new_arr)
+    return res_arr
+
+#N-th Fibonacci
+def nth_fib(n):
+    sequence=[0,1]
+    n1=0
+    n2=1
+    for i in range(2, n):
+        n3=n1+n2
+        n1=n2
+        n2=n3
+        sequence.append(n3)
+    if n==0:
+        return 0
+    elif n==1:
+        return 0
+    else:
+        return sequence[-1]
+    
+# Consonant value
+def solve(s):
+    numerical_values = {
+        "b": 2, "c": 3, "d": 4, 
+        "f": 6, "g": 7, "h": 8,  "j": 10,
+        "k": 11, "l": 12, "m": 13, "n": 14, 
+        "p": 16, "q": 17, "r": 18, "s": 19, "t": 20,
+        "v": 22, "w": 23, "x": 24, "y": 25,
+        "z": 26
+    }
+    
+    # Part1:
+    
+    consonants = set("bcdfghjklmnpqrstvwxyz")
+    new_arr = []
+    substring=""
+    for char in s:
+        if char in consonants:
+            substring+=char
+        else:
+            if substring:
+                new_arr.append(substring)
+            substring = ""
+    if substring:
+        new_arr.append(substring)
+    
+    # Part2:
+    final_arr = []
+    for part in new_arr:
+        count = 0
+        for char in part:
+            if char in numerical_values:
+                count += numerical_values[char]
+        final_arr.append(count)
+        
+    # Result:
+    result = max(final_arr)
+    return result
+
+# Reverse every other word in the string
+def reverse_alternate(st):
+    st = st.split()
+    res_arr = []
+    for i in range(len(st)):
+        if i % 2 != 0:
+            word = st[i][::-1]
+        else:
+            word = st[i]
+        res_arr.append(word)
+    return ' '.join(res_arr)
+
+# String array duplicates
+def dup(array):
+    res_arr = []
+    for word in array:
+        new_word = ""
+        for i in range(len(word)):
+            if i == len(word) - 1 or word[i] != word[i + 1]:
+                new_word += word[i]
+        res_arr.append(new_word)
+    return res_arr
