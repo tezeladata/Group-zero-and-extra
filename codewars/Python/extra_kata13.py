@@ -336,3 +336,34 @@ def is_pangram(s):
     if count >= 26:
         return True
     return False
+
+# Tribonacci Sequence
+def tribonacci(signature, n):
+    if n==0:
+        return []
+    elif n==1:
+        return [signature[0]]
+    elif n==2:
+        return signature[:2]
+    else:
+        res_arr=signature
+        num1=signature[0]
+        num2=signature[1]
+        num3=signature[2]
+        for i in range(1, n-2):
+            num4 = num1 + num2 + num3
+            num1 = num2
+            num2 = num3
+            num3 = num4
+            res_arr.append(num4)
+        return res_arr
+
+#Delete occurrences of an element if it occurs more than n times
+def delete_nth(order, max_e):
+    counts = {}
+    new_arr = []
+    for num in order:
+        counts[num] = counts.get(num, 0) + 1
+        if counts[num] <= max_e:
+            new_arr.append(num)
+    return new_arr
