@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list | Data Tezelashvili</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b5998aa8b2.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+    <main>
+        <div class="container1">
+            <div class="cont1-part1">
+                <i class="fa-regular fa-rectangle-list" id="list-i"></i>
+                <h1>To Do List</h1>
+            </div>
+            <div class="cont1-part2">
+                <p id="date-p">Date: <span id="date-span"></span></p>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="cont2-part1">
+                <h2>Tasks</h2>
+            </div>
+            <div class="cont2-part2">
+                <p id="task-p">Add a new task:</p>
+                <form id="form1">
+                    <input type="text" name="name" required placeholder="Task name" class="form-input">
+                    <input type="text" name="description" required placeholder="Task description" class="form-input">
+                    <button>Submit your task</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container3"></div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

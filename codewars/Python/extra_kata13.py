@@ -510,3 +510,27 @@ def dup(array):
                 new_word += word[i]
         res_arr.append(new_word)
     return res_arr
+
+# Pyramid Array
+def pyramid(n):
+    res_arr = []
+    for i in range(n):
+        new_arr = [1]
+        for j in range(i):
+            new_arr.append(1)
+        res_arr.append(new_arr)
+    return res_arr
+
+# Sum consecutives
+def sum_consecutives(lst):
+    res_arr = []
+    i = 0
+    while i < len(lst):
+        current_sum = lst[i]
+        j = i + 1
+        while j < len(lst) and lst[j] == lst[i]:
+            current_sum += lst[j]
+            j += 1
+        res_arr.append(current_sum)
+        i = j
+    return res_arr
