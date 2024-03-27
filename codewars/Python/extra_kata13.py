@@ -534,3 +534,70 @@ def sum_consecutives(lst):
         res_arr.append(current_sum)
         i = j
     return res_arr
+
+#Moves in squared strings (I)
+def vert_mirror(strng):
+    new_list = strng.split("\n")
+    res_list = [word[::-1] for word in new_list]
+    new_str=""
+    for word in res_list:
+        new_str+=f"{word}\n"
+    return new_str[:-1]
+    
+    
+    
+def hor_mirror(strng):
+    new_list = strng.split("\n")
+    res_list = []
+    for i in range(len(new_list)-1, -1, -1):
+        res_list.append(new_list[i])
+    new_str = ""
+    for word in res_list:
+        new_str+=f"{word}\n"
+    return new_str[:-1]
+    
+def oper(fct, s):
+    if fct == hor_mirror:
+        return hor_mirror(s)
+    else:
+        return vert_mirror(s)
+    
+
+# Last digit of a large number
+def last_digit(n1, n2):
+    n1 = str(n1)
+    ld = n1[-1]
+    if n2 == 0:
+        return 1
+    elif int(n1)%10==0:
+        return 0
+    elif ld == "1":
+        return 1
+    elif ld == "2":
+        seq = [2, 4, 8, 6]
+        remainder = n2%4 -1
+        return seq[remainder]
+    elif ld == "3":
+        seq = [3, 9, 7, 1]
+        remainder = n2%4 -1
+        return seq[remainder]
+    elif ld == "4":
+        seq = [4, 6]
+        remainder = n2%2 -1
+        return seq[remainder]
+    elif ld == "5":
+        return 5
+    elif ld == "6":
+        return 6
+    elif ld == "7":
+        seq = [7, 9, 3, 1]
+        remainder = n2%4 -1
+        return seq[remainder]
+    elif ld == "8":
+        seq = [8, 4, 2, 6]
+        remainder = n2%4 -1
+        return seq[remainder]
+    elif ld == "9":
+        seq = [9, 1]
+        remainder = n2%2 -1
+        return seq[remainder]
