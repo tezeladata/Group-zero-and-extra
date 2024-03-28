@@ -100,3 +100,30 @@ function isDivisible(n, x, y) {
     return false
   }
 }
+
+// Sum of Digits / Digital Root
+function digitalRoot(n) {
+  let sum = 0;
+  n = String(n)
+  for (let i=0; i<n.length; i++){
+    sum += Number(n[i]) 
+  }
+  if (sum >= 10) {
+    return digitalRoot(sum);
+  }
+  return sum;
+}
+
+// Array.diff
+function arrayDiff(a, b) {
+  let resArr = []
+  for (let i=0; i<a.length; i++){
+    let numb = a[i];
+    
+    if (!b.includes(numb)){
+      resArr.push(numb)
+    }
+  }
+  return resArr
+}
+
