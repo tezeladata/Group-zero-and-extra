@@ -50,10 +50,10 @@ mid_salary_low_eff = []
 low_salary_low_eff = []
 
 calculate_work(39.31034483, 217.5, 'Beridze')
-calculate_work(59.49579832, 297.5, 'Razmadze')
-calculate_work(67.72727273, 220, 'Janashia')
+calculate_work(79.83193277, 297.5, 'Razmadze')
+calculate_work(84.09090909, 220, 'Janashia')
 calculate_work(55.25423729, 147.5, 'Tirkia')
-calculate_work(62.81690141, 177.5, 'Tarieladze')
+calculate_work(88.16901408, 177.5, 'Tarieladze')
 calculate_work(79.36507937, 315, 'Janezashvili')
 calculate_work(64.78873239, 177.5, 'Leverashvili')
 calculate_work(81.12903226, 310, 'Motiashvili')
@@ -82,8 +82,6 @@ calculate_work(100, 7.5, 'Sikharulidze')
 calculate_work(100, 15, 'Bakuradze')
 calculate_work(100, 60, 'Berkacashvili')
 calculate_work(100, 320, 'Diasamidze')
-
-
 
 high_salary_high_eff.sort(key=lambda x: x[1], reverse=True)
 mid_salary_high_eff.sort(key=lambda x: x[1], reverse=True)
