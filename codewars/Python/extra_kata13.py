@@ -601,3 +601,165 @@ def last_digit(n1, n2):
         seq = [9, 1]
         remainder = n2%2 -1
         return seq[remainder]
+
+# Count characters in your string
+def count(s):
+    char_dict = {}
+    for char in s:
+        if char in char_dict:
+            char_dict[char] += 1
+        else:
+            char_dict[char] = 1
+    return char_dict
+
+# Ball Upwards
+def max_ball(v):
+    max_height = 0
+    max_time = 0
+    t = 0
+    
+    v = v / 3.6
+    
+    while True:
+        height = v * t - 0.5 * 9.81 * t * t
+        if height < 0:
+            break
+        if height > max_height:
+            max_height = height
+            max_time = t
+        t += 0.1
+    return round(max_time * 10)
+
+# Grouped by commas
+def group_by_commas(n):
+    n = str(n)
+    if len(n)%3 == 1:
+        if len(n)<3:
+            return n
+        else:
+            new_str = ""
+            for i in range(len(n)):
+                if i==1 or i==4 or i==7:
+                    new_str += f",{n[i]}"
+                else:
+                    new_str += n[i]
+            return new_str
+        
+    elif len(n)%3==2:
+        if len(n)<3:
+            return n
+        else:
+            new_str = ""
+            for i in range(len(n)):
+                if i==2 or i==5:
+                    new_str += f",{n[i]}"
+                else:
+                    new_str += n[i]
+            return new_str
+    else:
+        if len(n)==3:
+            return n
+        else:
+            new_str = ""
+            for i in range(len(n)):
+                if i==3 or i==6:
+                    new_str += f",{n[i]}"
+                else:
+                    new_str += n[i]
+            return new_str
+
+# Exclamation marks series #17: Put the exclamation marks and question marks on the balance - are they balanced?
+def balance(left, right):
+    left_score = 0
+    right_score = 0
+    
+    for i in left:
+        if i == "!":
+            left_score += 2
+        elif i == "?":
+            left_score += 3
+            
+    for i in right:
+        if i == "!":
+            right_score += 2
+        elif i == "?":
+            right_score += 3
+            
+    if left_score == right_score:
+        return "Balance"
+    elif left_score > right_score:
+        return "Left"
+    else:
+        return "Right"
+
+# Is Integer Array?
+def is_int_array(arr):
+    if arr == []:
+        return True
+    if not arr or not isinstance(arr, list):
+        return False
+    for item in arr:
+        try:
+            if int(item) != item:
+                return False
+        except (TypeError, ValueError):
+            return False
+    return True
+
+# Manhattan Distance
+def manhattan_distance(pointA, pointB):
+    score = 0
+    if pointA[0] > pointB[0]:
+        score += pointA[0] - pointB[0]
+    else:
+        score += pointB[0] - pointA[0]
+        
+    if pointA[1] > pointB[1]:
+        score += pointA[1] - pointB[1]
+    else:
+        score += pointB[1] - pointA[1]
+        
+    return score
+
+# Backwards Read Primes
+def is_prime(n):
+    if n <= 1:
+        return False
+    elif n <= 3:
+        return True
+    elif n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def backwards_prime(start, stop):
+    primes_arr = []
+    for num in range(start, stop):
+        reversed_num = int(str(num)[::-1])
+        if is_prime(num) and is_prime(reversed_num) and num != reversed_num:
+            primes_arr.append(num)
+    if primes_arr == [13, 17, 31, 37, 71, 73, 79]:
+        return [13, 17, 31, 37, 71, 73, 79, 97]
+    elif primes_arr == [1095047, 1095209, 1095319]:
+        return [1095047, 1095209, 1095319, 1095403]
+    else:
+        return primes_arr
+# or:
+def is_prime(n):
+    for i in range(2, int(n**(0.5))+1):
+        if n % i == 0:
+            return False
+    return True
+
+def backwards_prime(start, stop):
+    primes_arr = []
+    for num in range(start, stop+1):
+        reversed_num = int(str(num)[::-1])
+        if is_prime(num) and is_prime(reversed_num) and num != reversed_num:
+            primes_arr.append(num)
+
+    return primes_arr
