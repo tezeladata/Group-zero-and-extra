@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    position: relative;
+    background-color: red;
+    width: 400px;
+    height: 400px;
+}
+
+#box{
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
