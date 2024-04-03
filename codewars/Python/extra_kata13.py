@@ -799,3 +799,26 @@ def is_triangle_number(number):
         return number in res_arr
     else:
         return False
+
+# Twisted Sum
+def compute_sum(n):
+    sum = 0
+    for i in range(n+1):
+        num = str(i)
+        num_score = 0
+        for x in num:
+            num_score += int(x)
+        sum += num_score
+    return sum
+
+# Collatz
+def collatz(num):
+    sequence = [num]
+    while num >1:
+        if ((num % 2) == 0):
+            num = num // 2
+        else:
+            num = num *3 +1
+        sequence.append(num)
+    sequence = [str(x) for x in sequence]
+    return "->".join(sequence)
