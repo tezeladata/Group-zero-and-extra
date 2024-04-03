@@ -763,3 +763,39 @@ def backwards_prime(start, stop):
             primes_arr.append(num)
 
     return primes_arr
+
+# Primorial Of a Number
+def num_primorial(n):
+    prim_arr = []
+    start_num = 2 
+    while len(prim_arr) != n:
+        if prime_check(start_num):
+            prim_arr.append(start_num)
+        start_num += 1
+        
+    product = 1
+    for num in prim_arr:
+        product *= num
+    return product
+
+        
+def prime_check(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**(0.5))+1):
+        if n % i == 0:
+            return False
+    return True
+
+# Triangle number check
+def is_triangle_number(number):
+    if type(number) == int:
+        triangle_arr = [0]
+        for n in range(1, number+1):
+            result = n * (n + 1) / 2
+            triangle_arr.append(result)
+        
+        res_arr = [int(x) for x in triangle_arr]
+        return number in res_arr
+    else:
+        return False
