@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", "Roboto Slab";
+    box-sizing: border-box;
+}
+body{
+    background-color: #FFFFFF;
+}
+.navbar-content{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0px 30px;
+}
+.navbar{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 25px 0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    background: white;
+    padding: 10px 0;
+}
+.navbar .navbar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu-list{
+    display: inline-flex;
+}
+.menu-list li{
+    list-style-type: none;
+}
+.menu-list li a{
+    color: #141C3A;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: #6E07F3;
+}
+.icon{
+    color: #6E07F3;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.navbar img{
+    width: 50px;
+}
+main{
+    padding-top: 100px;
+    text-align: center;
+}
+main img{
+    width: 150px;
+    border-radius: 50%;
+}
+h1{
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 25px;
+}
+form{
+    width: 50%;
+    margin-left: 25%;
+}
+form input{
+    width: 45%;
+    margin-top: 20px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #888888;
+    border-radius: 15px;
+}
+#input1{
+    width: 75%;
+}
+#submit{
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 3px solid #6E07F3;
+    font-size: 22px;
+    font-weight: 700;
+    color: #6E07F3;
+}
+#submit:hover{
+    background-color: #6E07F3;
+    color: #fff;
+}
+@media(max-width: 700px){
+    #img1{
+        width: 100px;
+    }
+    h1{
+        font-size: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    form{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
