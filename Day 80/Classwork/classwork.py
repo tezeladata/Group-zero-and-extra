@@ -114,3 +114,84 @@ def pig_it(text):
             res.append(word)
         
     return " ".join(res)
+
+# Convert PascalCase string into snake_case
+def to_underscore(string):
+    if type(string) == int:
+        return str(string)
+    else:
+        
+        res_str = ""
+    
+        for i in string:
+            if i == i.upper() and i.isalpha():
+                res_str += f"_{i.lower()}"
+            else:
+                res_str += i
+            
+        return res_str[1:]
+    
+# Sort the odd
+def sort_array(source_array):
+    if source_array == []:
+        return []
+    else:
+        odd = sorted(x for x in source_array if x%2!=0)
+        
+        for i in range(len(source_array)):
+            if source_array[i]%2!=0:
+                source_array[i]=odd.pop(0)
+                
+        return source_array        
+    
+# Collatz
+def collatz(n):
+    res = [n]
+    
+    while n>1:
+        if n%2==0:
+            n //= 2
+        else:
+            n = n*3 + 1
+        res.append(n)
+        
+    if len(res) == 1:
+        return str(res[0])
+    else:
+        return "->".join([str(x) for x in res])
+    
+# WeIrD StRiNg CaSe
+def to_weird_case(words):
+    res_list = []
+    
+    words = words.split(" ")
+    
+    for word in words:
+        word_list = []
+        for char in range(len(word)):
+            if char%2==0:
+                word_list.append(word[char].upper())
+            else:
+                word_list.append(word[char].lower())
+        
+        res_list.append("".join(word_list))
+    return " ".join(res_list)
+
+# Play with two Strings
+def work_on_strings(a,b):
+    list1 = list(a)
+    list2 = list(b)
+    
+#   part1
+    for i in range(len(list1)):
+        for x in range(len(list2)):
+            if list1[i].upper() == list2[x] or list1[i].lower() == list2[x]:
+                list2[x] = list2[x].swapcase()
+                
+#   part2
+    for x in range(len(list2)):
+        for i in range(len(list1)):
+            if list2[x].upper() == list1[i] or list2[x].lower() == list1[i]:
+                list1[i] = list1[i].swapcase()
+
+    return "".join(list1 + list2)
