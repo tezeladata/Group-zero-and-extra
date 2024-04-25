@@ -195,3 +195,25 @@ def work_on_strings(a,b):
                 list1[i] = list1[i].swapcase()
 
     return "".join(list1 + list2)
+
+# divisors
+def min_divisors(collection):
+    divisors = list(map(get_divisor_count, collection))
+
+    res_dict = dict()
+
+    for i in range(len(collection)):
+        res_dict[collection[i]] = divisors[i] 
+
+    for key, value in res_dict.items():
+        if value == min(res_dict.values()):
+            return key
+
+def get_divisor_count(element):
+    count = 0
+    for i in range(1, element+1):
+        if element%i==0:
+            count += 1
+    return count
+
+print(min_divisors([10, 11, 12, 13, 14, 15]))
