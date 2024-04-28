@@ -822,3 +822,43 @@ def collatz(num):
         sequence.append(num)
     sequence = [str(x) for x in sequence]
     return "->".join(sequence)
+
+# Unique In Order
+def unique_in_order(sequence):
+    if not sequence:
+        return []
+    elif len(sequence) == 1 or type(sequence) == tuple and len(sequence) == 1:
+        return list(sequence)
+    else:
+        res_seq = []
+
+        for i in range(len(sequence)-1):
+            if sequence[i] != sequence[i+1]:
+                res_seq.append(sequence[i])
+
+        res_seq.append(sequence[-1])
+
+        return res_seq
+    
+# Find the unique number
+def find_uniq(arr):
+    res = []
+    for i in arr:
+        if i not in res:
+            res.append(i)
+    
+    for i in res:
+        if arr.count(i) == 1:
+            return i
+        
+# Equal Sides Of An Array
+def find_even_index(arr):
+    for i in range(len(arr)):
+        current_pos = i
+        left_arr = arr[:current_pos]
+        right_arr = arr[current_pos+1:]
+        
+        if sum(left_arr) == sum(right_arr):
+            return current_pos
+        
+    return -1
