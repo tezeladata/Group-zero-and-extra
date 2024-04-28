@@ -862,3 +862,77 @@ def find_even_index(arr):
             return current_pos
         
     return -1
+
+# Find the missing letter
+def find_missing_letter(chars):
+    chars_str = ''.join(chars)
+    
+    chars_lower = chars_str.lower()
+    
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    
+    starting = chars_lower[0]
+    ending = chars_lower[-1]
+
+    st_ind = alphabet.index(starting)
+    nd_ind = alphabet.index(ending)
+    
+    res_list = []
+    
+    if chars_str[0] == chars_str[0].upper():
+        for i in range(st_ind, nd_ind + 1):
+            if alphabet[i] not in chars_lower:
+                res_list.append(alphabet[i].upper())
+    else:
+        for i in range(st_ind, nd_ind + 1):
+            if alphabet[i] not in chars_lower:
+                res_list.append(alphabet[i])
+            
+    return res_list[0]
+
+# Highest Scoring Word
+def high(x):
+    char_scores = {
+        "a": 1,
+        "b": 2,
+        "c": 3,
+        "d": 4,
+        "e": 5,
+        "f": 6,
+        "g": 7,
+        "h": 8,
+        "i": 9,
+        "j": 10,
+        "k": 11,
+        "l": 12,
+        "m": 13,
+        "n": 14,
+        "o": 15,
+        "p": 16,
+        "q": 17,
+        "r": 18,
+        "s": 19,
+        "t": 20,
+        "u": 21,
+        "v": 22,
+        "w": 23,
+        "x": 24,
+        "y": 25,
+        "z": 26
+    }
+    
+    x=x.strip()
+    x=x.split(" ")
+    
+    res_dict = dict()
+    
+    for word in x:
+        score = 0
+        for character in word:
+            score += char_scores[character]
+        
+        res_dict[word] = score
+        
+    for key, value in res_dict.items():
+        if value == max(res_dict.values()):
+            return key
