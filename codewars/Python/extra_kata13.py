@@ -936,3 +936,54 @@ def high(x):
     for key, value in res_dict.items():
         if value == max(res_dict.values()):
             return key
+
+# Which are in?
+def in_array(array1, array2):
+    res = []
+    
+    for i in array1:
+        for x in range(len(array2)):
+            word = array2[x]
+            
+            if i in word:
+                res.append(i)
+                
+    res = list(set(res))
+    
+    return sorted(res)
+
+# Reverse or rotate?
+def rev_rot(strng, sz):
+    if sz <= 0 or strng == "":
+        return ""
+    elif sz > len(strng):
+        return ""
+    else:
+        strng = [i for i in strng]
+        res = [strng[i:i+sz] for i in range(0, len(strng), sz)]
+        
+        updated = []
+        
+        for sublist in res:
+            updated_sublist = []
+            for i in sublist:
+                updated_sublist.append(int(i))
+            updated.append(updated_sublist)
+            
+        # Reverse or rotate
+        last_list = []
+        
+        for sublist in updated[:-1]:
+            if sum(sublist) % 2 == 0:
+                last_list.append(list(reversed(sublist)))
+            else:
+                new_list = sublist[1:] + [sublist[0]]
+                last_list.append(new_list)
+        
+        last_sublist = updated[-1]
+        last_list.append(list(reversed(last_sublist))) 
+        
+        flattened = [str(i) for sublist in last_list for i in sublist]
+        last_str = "".join(flattened)
+        
+        return last_str[:-len(last_sublist)]
