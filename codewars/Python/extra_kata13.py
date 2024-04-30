@@ -987,3 +987,52 @@ def rev_rot(strng, sz):
         last_str = "".join(flattened)
         
         return last_str[:-len(last_sublist)]
+    
+# Consecutive strings
+def longest_consec(strarr, k):
+    if len(strarr) == 0 or k > len(strarr) or k <= 0:
+        return ""
+
+    longest = ""
+    max_length = 0
+
+    for i in range(len(strarr) - k + 1):
+        current_concatenation = ''.join(strarr[i:i+k])
+        current_length = len(current_concatenation)
+        if current_length > max_length:
+            longest = current_concatenation
+            max_length = current_length
+
+    return longest
+
+# RGB To Hex Conversion
+def rgb(r, g, b):
+    
+    def convert_to_hex(num):
+        hex_digits = "0123456789ABCDEF"
+        if num < 0:
+            num = 0
+        elif num > 255:
+            num = 255
+        
+        hex_nums = []
+        
+        while num > 0:
+            remainder = num % 16
+            hex_nums.append(hex_digits[remainder])
+            num //= 16
+            
+        hex_nums.reverse()
+        return ''.join(hex_nums).zfill(2)
+
+    converted = [convert_to_hex(i) for i in [r, g, b]]
+    
+    res = []
+    
+    for i in converted:
+        if i == "":
+            res.append("00")
+        else:
+            res.append(i)
+            
+    return "".join(res)
