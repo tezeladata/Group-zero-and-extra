@@ -1036,3 +1036,12 @@ def rgb(r, g, b):
             res.append(i)
             
     return "".join(res)
+
+# First non-repeating character
+def first_non_repeating_letter(s):
+    if s == "":
+        return ""
+    res = [i for i in s if s.lower().count(i.lower()) == 1]
+    if res == []:
+        return ""
+    return res[0]
