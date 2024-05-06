@@ -1,9 +1,18 @@
 def to_do_list():
     # Main functions
-    def add_or_edit_items(user_dict):
+    def add_items(user_dict):
         name = input("Enter name of your task: ")
         data = input("Enter description of your task: ")
         user_dict[name] = data
+
+    def edit_items(user_dict):
+        name = input("Enter name of your task: ")
+        data = input("Enter description of your task: ")
+
+        if name in user_dict.keys():
+            user_dict[name] = data
+        else:
+            print("Incorrect name")
 
     def delete_items(user_dict):
         name = input("Enter name of the task you want to delete: ")
@@ -19,12 +28,12 @@ def to_do_list():
         choice = input("Select operation: ")
 
         if choice.lower() == "add":
-            add_or_edit_items(user_dict)
+            add_items(user_dict)
             print("")
             print(user_dict)
             print("")
         elif choice.lower() == "edit":
-            add_or_edit_items(user_dict)
+            edit_items(user_dict)
             print("")
             print(user_dict)
             print("")
