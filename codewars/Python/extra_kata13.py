@@ -1104,3 +1104,109 @@ def two_sum(numbers, target):
             if numbers[i] + numbers[x] == target:
                 res = (i, x)
     return res
+
+# Bouncing Balls
+def bouncing_ball(h, bounce, window):
+    if h > 0 and bounce > 0 and bounce < 1 and window < h:
+        count = 0
+        while h > window:
+            count +=1
+            h *= bounce
+            if h > window: 
+                count += 1
+        return count
+    else:
+        return -1
+    
+# New Cashier Does Not Know About Space or Shift
+def get_order(order):
+    all_items = ["Burger", "Fries", "Chicken", "Pizza", "Sandwich", "Onionrings", "Milkshake", "Coke"]
+    result = []
+    for item in all_items:
+        result.extend([item for _ in range(order.count(item.lower()))])
+    return " ".join(result)
+
+# Validate Credit Card Number
+def validate(n):
+    first_list = [int(i) for i in str(n)]
+    
+    if len(first_list) % 2 == 0:
+        renewed = [first_list[i] * 2 if i % 2 == 0 else first_list[i] for i in range(len(first_list))]
+    else:
+        renewed = [first_list[i] * 2 if i % 2 != 0 else first_list[i] for i in range(len(first_list))]
+        
+    for i in range(len(renewed)):
+        num = renewed[i]
+        
+        while num > 9:
+            num = num - 9 if num > 9 else num
+        renewed[i] = num
+            
+    return sum(renewed) % 10 == 0
+
+# +1 Array
+def up_array(arr):
+    if not arr or any(i < 0 or i > 9 for i in arr):
+        return None
+        
+    num = str(int("".join([str(i) for i in arr])) + 1)
+    
+    if len([int(i) for i in num]) < len(arr):
+        return [0] + [int(i) for i in num]
+    return [int(i) for i in num]
+
+# longest_palindrome
+def longest_palindrome(s):
+    def is_palindrome(sub):
+        return sub == sub[::-1]
+
+    longest_length = 0
+    for i in range(len(s)):
+        for j in range(i + 1, len(s) + 1):
+            if is_palindrome(s[i:j]):
+                longest_length = max(longest_length, j - i)
+    return longest_length
+
+# Triple trouble
+def triple_double(num1, num2):
+    for num in [int(i) for i in str(num1)]:
+        if [int(i) for i in str(num1)].count(num) >= 3 and [int(i) for i in str(num2)].count(num) >= 2:
+            return 1
+    return 0
+
+# Pascal's Triangle
+def pascals_triangle(n):
+    a=[]
+    for i in range(n):
+        a.append([])
+        a[i].append(1)
+        for j in range(1, i):
+            a[i].append(a[i-1][j-1]+a[i-1][j])
+        if n!=0:
+            a[i].append(1)
+    res = []
+    for _ in a:
+        res += _
+    return res[1:]
+# or:
+def pascals_triangle(n):
+    a = [[1] * (i + 1) for i in range(n)]
+    for i in range(2, n):
+        for j in range(1, i):
+            a[i][j] = a[i - 1][j - 1] + a[i - 1][j]
+    return [num for row in a for num in row]
+
+# What century is it?
+def what_century(year):
+    century = str((int(year) + 99) // 100)
+
+    if century.endswith("1") and century != "11":
+        return century + "st"
+    
+    if century.endswith("2") and century != "12":
+        return century + "nd"
+    
+    if century.endswith("3") and century != "13":
+        return century + "rd"
+    
+    return century + "th"

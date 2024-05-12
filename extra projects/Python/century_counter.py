@@ -1,6 +1,13 @@
-print("Hello, this code calculates century from year!")
-def century_counter(year):
-    century=(year+99) // 100 # // operator is used for floor division
-    print("Century for year", year, "is {}.".format(century))
-century_counter(year=int(input("Enter year to calculate century: ")))
-print("Thanks for attention!")
+def what_century(year):
+    century = str((int(year) + 99) // 100)
+
+    if century.endswith("1") and century != "11":
+        return century + "st"
+    
+    if century.endswith("2") and century != "12":
+        return century + "nd"
+    
+    if century.endswith("3") and century != "13":
+        return century + "rd"
+    
+    return century + "th"
