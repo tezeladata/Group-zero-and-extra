@@ -1210,3 +1210,68 @@ def what_century(year):
         return century + "rd"
     
     return century + "th"
+
+# Character with longest consecutive repetition
+def longest_repetition(s):
+    if not s:
+        return ("", 0)
+
+    max_char = s[0]
+    max_count = 1
+    current_char = s[0]
+    current_count = 1
+
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            current_count += 1
+            if current_count > max_count:
+                max_count = current_count
+                max_char = current_char
+        else:
+            current_char = s[i]
+            current_count = 1
+
+    return (max_char, max_count)
+
+# Remove the parentheses
+def remove_parentheses(s):
+  result = ''
+  count = 0
+  for char in s:
+    if char == '(':
+      count += 1
+    if char == ')':
+      count -= 1
+    if not count and not char in '()':
+      result += char
+
+  return result
+
+# Clocky Mc Clock-Face
+from math import floor
+
+def what_time_is_it(angle):
+    mins = floor(angle * 2)
+    h = mins // 60
+    m = mins % 60
+    if h == 0:
+        h = "12"
+    if int(h) < 10:
+        h = "0" + str(int(h))
+    if m < 10:
+        m = "0" + str(m)
+    return str(h) + ":" + str(m)
+
+# Format words into a sentence
+def format_words(words):
+    if words == [] or words is None or words == [""]:
+        return ""
+    
+    words = [i for i in words if i.isalnum()]
+    
+    if len(words) == 1:
+        return words[0]
+    elif len(words) == 2:
+        return " and ".join(words)
+    else:
+        return ", ".join(words[:-1]) + " and " + words[-1]
