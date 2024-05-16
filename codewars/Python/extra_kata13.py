@@ -1275,3 +1275,12 @@ def format_words(words):
         return " and ".join(words)
     else:
         return ", ".join(words[:-1]) + " and " + words[-1]
+    
+# Sort Arrays (Ignoring Case)
+def sortme(words):
+    words.sort(key = lambda x: x.lower())
+    return words
+
+# String transformer
+def string_transformer(s):
+    return " ".join(reversed([i.swapcase() for i in s.split(" ")]))

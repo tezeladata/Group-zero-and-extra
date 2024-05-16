@@ -1,0 +1,19 @@
+Internet was first created for communication but it has come a long way.
+It still develops and we use it for many tasks.
+
+When we use routers, we can connect multiple pcs.
+
+The web of computers is called Internet.
+
+Internet providers are companies which allow us to use internet.
+
+Routers spread signals that are called wifi.
+
+Computers which are connected to internet, also have their specifical ip adresses (ip is internet protocol).
+
+
+Server:
+Server is just a computer which is always on.
+Websites which are hosted, are connected to servers and they have ip - domain
+
+domain is human readable site address
