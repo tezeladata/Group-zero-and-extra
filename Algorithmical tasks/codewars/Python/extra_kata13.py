@@ -1284,3 +1284,113 @@ def sortme(words):
 # String transformer
 def string_transformer(s):
     return " ".join(reversed([i.swapcase() for i in s.split(" ")]))
+
+# Help the bookseller !
+def stock_list(list1, list2):
+    updated = [i.split(" ") for i in list1]
+    
+    score = []
+    
+    for char in list2:
+        score.append(calculate(list1, char))
+        
+    if all(i[1] == 0 for i in score):
+        return ""
+    
+    for i in range(len(score)): 
+        score[i] = f"({score[i][0]} : {score[i][1]})" 
+        
+    return " - ".join(score)
+    
+def calculate(main_ls, char):
+    score = 0
+    
+    for ls in main_ls:
+        symbol, quantity = ls.split()
+        if symbol[0] == char:
+            score += int(quantity)
+            
+    return (char, score)
+
+# Simple Encryption #1 - Alternating Split
+def decrypt(encrypted_text, n):
+    if not encrypted_text or n <= 0:
+        return encrypted_text
+    
+    mid = len(encrypted_text) // 2
+    
+    for _ in range(n):
+        odd = encrypted_text[mid:]
+        even = encrypted_text[:mid]
+        
+        decrypted_text = ""
+        for i in range(len(odd)):
+            if i < len(even):
+                decrypted_text += odd[i] + even[i]
+            else:
+                decrypted_text += odd[i]
+        
+        encrypted_text = decrypted_text
+    
+    return decrypted_text
+
+def encrypt(text, n):
+    if not text or n <= 0:
+        return text
+    
+    for _ in range(n):
+        text = text[1::2] + text[::2]
+    
+    return text
+
+# Good vs Evil
+def good_vs_evil(good, evil):
+    good, evil = [int(i) for i in good.split(" ")], [int(i) for i in evil.split(" ")]
+    
+    good[1], good[2], good[3], good[4], good[5] = good[1] * 2, good[2] * 3, good[3] * 3, good[4] * 4, good[5] * 10
+    evil[1], evil[2], evil[3], evil[4], evil[5], evil[6] = evil[1] * 2, evil[2] * 2, evil[3] * 2, evil[4] * 3, evil[5] * 5, evil[6] * 10
+    
+    good_count = 0
+    for i in good:
+        good_count += i
+        
+    evil_count = 0
+    for i in evil:
+        evil_count += i
+        
+    if good_count > evil_count:
+        return "Battle Result: Good triumphs over Evil"
+    elif evil_count > good_count:
+        return "Battle Result: Evil eradicates all trace of Good"
+    return "Battle Result: No victor on this battle field"
+
+# Matrix Addition
+def matrix_addition(a, b):
+    res = []
+    
+    for i in range(len(a)):
+        row = []
+        
+        for j in range(len(a[0])):
+            row.append(a[i][j] + b[i][j])
+        
+        res.append(row)
+        
+    return res
+
+# Tortoise racing
+def race(v1, v2, g):
+    if v1 >= v2:
+        return None
+
+    time_sec = g * 3600 / (v2 - v1)
+    
+    hours = int(time_sec / 3600)
+    time_sec %= 3600
+    minutes = int(time_sec / 60)
+    seconds = int(time_sec % 60)
+
+    return [hours, minutes, seconds]
+# or:
+def race(v1, v2, g):
+    return [int((g * 3600 / (v2 - v1) / 3600)), int((g * 3600 / (v2 - v1) % 3600) / 60), int((g * 3600 / (v2 - v1) % 3600) % 60)] if v1 <=v2 else None
