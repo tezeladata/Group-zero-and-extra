@@ -41,6 +41,8 @@ def victory(icon):
         if all(list(icon in board[i] for i in arr)):
             return True
     return False
+
+
 def tic_tac_toe():
     icon = "X"
 
