@@ -1,0 +1,11 @@
+"Hello" -> 185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969
+input -> fingerprint (256bit output)
+
+Hash: scramble data, fixed size output, irreversible
+Sha256: 256bits, secure, fast
+
+website sha256:
+4c83894c00aa9f55f7e0f70807210896ba32e1222d4ff1d0b9487af81f328f36
+
+My sha256:
+4C83894C00AA9F55F7E0F70807210896BA32E1222D4FF1D0B9487AF81F328F36
