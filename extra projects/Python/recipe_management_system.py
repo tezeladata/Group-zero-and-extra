@@ -158,8 +158,3 @@ def rms():
     main(recipe_dict)
 
 rms()
-
-
-# Enable users to categorize recipes into different types such as breakfast, lunch, dinner, snacks, desserts, etc.
-
-# Allow users to rate recipes on a scale (e.g., 1 to 5 stars) and leave detailed reviews and comments.
