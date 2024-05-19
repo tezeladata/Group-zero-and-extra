@@ -91,3 +91,76 @@ class Solution(object):
 class Solution(object):
     def mySqrt(self, x):
         return int(x**0.5)
+    
+# Search Insert Position
+class Solution(object):
+    def searchInsert(self, nums, target):
+        if target in nums:
+            return nums.index(target)
+
+        nums.append(target)
+        nums.sort()
+
+        return nums.index(target)
+    
+# Find the Index of the First Occurrence in a String
+class Solution(object):
+    def strStr(self, haystack, needle):
+        if needle == "":
+            return 0
+    
+        len_haystack = len(haystack)
+        len_needle = len(needle)
+        
+        for i in range(len_haystack - len_needle + 1):
+            if haystack[i:i+len_needle] == needle:
+                return i
+        
+        return -1
+    
+# Climbing Stairs
+class Solution(object):
+    def climbStairs(self, n):
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
+
+        first = 1
+        second = 2
+
+        for i in range(3, n + 1):
+            current = first + second
+            first = second
+            second = current
+        
+        return second
+    
+# Valid Palindrome
+class Solution(object):
+    def isPalindrome(self, s):
+        s = "".join([i for i in s.lower() if i.isalnum()])
+        return s == s[::-1]
+    
+# Single Number
+class Solution(object):
+    def singleNumber(self, nums):
+        return [i for i in nums if nums.count(i) == 1][0]
+    
+# Best Time to Buy and Sell Stock
+class Solution(object):
+    def maxProfit(self, prices):
+        min_price = float('inf')
+        max_profit = 0
+        
+        for price in prices:
+            if price < min_price:
+                min_price = price
+            
+            potential_profit = price - min_price
+            
+            if potential_profit > max_profit:
+                max_profit = potential_profit
+        
+        return max_profit
+    
