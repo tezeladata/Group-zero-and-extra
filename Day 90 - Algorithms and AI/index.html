@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        table, tr, td, th{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            padding: 15px 10px 15px 10px;
+            text-align: center;
+        }
+
+        th{
+            font-size: 1.5rem;
+        }
+
+        .first{
+            background-color: #808080;
+            color: white;
+        }
+        .second{
+            background-color: #666666;
+            color: white;
+        }
+        .third{
+            background-color: #4c4c4c;
+            color: white;
+        }
+        .fourth{
+            background-color: #333333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Two elements</caption>
+
+        <thead>
+            <tr>
+                <th>a</th>
+                <th>b</th>
+                <th>a & b</th>
+                <th>a || b</th>
+                <th>a ⇒ b</th>
+                <th>b ⇒ a</th>
+                <th>!a</th>
+                <th>!b</th>
+                <th>a^b</th>
+                <th class="first">!(a&b)</th>
+                <th class="first">!a || !b</th>
+                <th class="second">!(a || b)</th>
+                <th class="second">!a & !b</th>
+                <th class="third">a ⇒ (a || b)</th>
+                <th class="third">!a || (a || b)</th>
+                <th class="third">(!a || a) || b</th>
+                <th class="fourth">a & b ⇒ a</th>
+                <th class="fourth">!(a & b) || a</th>
+                <th class="fourth">(!a || !b) || a</th>
+                <th class="fourth">!a || (!b || a)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">1</td>
+                <td class="second">1</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="first">0</td>
+                <td class="first">0</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="third">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+                <td class="fourth">1</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <table>
+        <caption>Three elements</caption>
+        
+        <thead>
+            <tr>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+                <th class="first">(a & b) || c</th>
+                <th class="first">(a || c) & (b || c)</th>
+                <th class="second">(a || b) & c</th>
+                <th class="second">(a & c) || (b & c)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="first">0</td>
+                <td class="first">0</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+            </tr>
+
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+            </tr>
+            
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">1</td>
+                <td class="second">1</td>
+            </tr>
+            
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="first">0</td>
+                <td class="first">0</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="first">0</td>
+                <td class="first">0</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">0</td>
+                <td class="second">0</td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">1</td>
+                <td class="second">1</td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td class="first">1</td>
+                <td class="first">1</td>
+                <td class="second">1</td>
+                <td class="second">1</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
