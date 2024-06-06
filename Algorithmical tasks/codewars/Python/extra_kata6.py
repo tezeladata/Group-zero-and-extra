@@ -232,4 +232,32 @@ def prime_factors(n):
                 
                 return res_str
             
-# 
+# Pick peaks
+def pick_peaks(arr):
+    pos = []
+    peaks = []
+    peak_candidate = None
+
+    for i in range(1, len(arr) - 1):
+        if arr[i] > arr[i - 1]:
+            peak_candidate = i
+        elif arr[i] < arr[i - 1] and peak_candidate is not None:
+            pos.append(peak_candidate)
+            peaks.append(arr[peak_candidate])
+            peak_candidate = None
+
+    if peak_candidate is not None and arr[-1] < arr[peak_candidate]:
+        pos.append(peak_candidate)
+        peaks.append(arr[peak_candidate])
+
+    return {'pos': pos, 'peaks': peaks}
+
+# Count IP Addresses
+def ips_between(start, end):
+    start, end = [int(i) for i in start.split(".")], [int(i) for i in end.split(".")]
+    
+    total = 0
+    for i in range(4):
+        total += (end[i] - start[i]) * (256 ** (3 - i))
+    
+    return total
