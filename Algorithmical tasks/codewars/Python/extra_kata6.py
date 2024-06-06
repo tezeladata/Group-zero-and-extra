@@ -208,3 +208,28 @@ def scramble(s1, s2):
         if char not in res1 or res1[char] < count: return False
     
     return True
+
+# Primes in numbers
+from math import floor
+
+def prime_factors(n):
+    result = []
+    for i in range(2,n+1):
+        s = 0;
+        while n/i == floor(n/float(i)): # if n/i an integer
+            n = n/float(i)
+            s += 1
+        if s > 0:
+            for k in range(s):
+                result.append(i)
+            if n == 1:          
+                res_str = ""
+                for num in sorted(list(set(result))):
+                    if result.count(num) > 1:
+                        res_str += f"({num}**{result.count(num)})"
+                    else:
+                        res_str += f"({num})"
+                
+                return res_str
+            
+# 
