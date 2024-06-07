@@ -261,3 +261,44 @@ def ips_between(start, end):
         total += (end[i] - start[i]) * (256 ** (3 - i))
     
     return total
+
+# Sum by Factors
+import math
+
+def sum_for_list(lst):
+    def is_prime(n):
+        if n % 2 == 0 or n % 3 == 0:
+            return False
+        for i in range(5, n**0.5, 2):
+            if n % i == 0:
+                return False
+        return True
+
+    def prime_factors(n):
+        n = abs(n)
+        factors = set()
+        
+        if n % 2 == 0:
+            factors.add(2)
+            while n % 2 == 0:
+                n //= 2
+        for i in range(3, int(n**0.5) + 1, 2):
+            if n % i == 0:
+                factors.add(i)
+                while n % i == 0:
+                    n //= i
+        if n > 2:
+            factors.add(n)
+        return factors
+
+    prime_sum = {}
+    for num in lst:
+        factors = prime_factors(num)
+        for factor in factors:
+            if factor in prime_sum:
+                prime_sum[factor] += num
+            else:
+                prime_sum[factor] = num
+
+    result = [[prime, prime_sum[prime]] for prime in sorted(prime_sum)]
+    return result
