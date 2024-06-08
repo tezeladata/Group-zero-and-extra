@@ -150,7 +150,3 @@ const checkFunc = function(arr1, arr2) {
 
 // person1.password = "12345678"
 // console.log(person1)
-
-
-
-// 10 დავალება კლასებზე. 

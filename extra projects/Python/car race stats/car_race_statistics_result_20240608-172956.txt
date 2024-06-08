@@ -1,0 +1,7 @@
+With input: 02|15|59, 2|47|16, 02|17|20, 2|32|34, 2|32|34, 2|17|17
+Your results are:
+
+Range: 00|31|17 
+Average: 02|27|10 
+Median: 02|24|57 
+Standart deviation: 00|11|24
