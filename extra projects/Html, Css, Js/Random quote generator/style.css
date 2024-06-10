@@ -167,3 +167,54 @@ body{
     font-size: 30px;
     cursor: pointer;
 }
+
+
+
+/* Responsive */
+@media screen and (max-width: 1000px){
+    .quote-box h2 {
+        font-size: 16px;
+    }
+
+    .quote-box blockquote,
+    .quote-box span,
+    .quote-box div button,
+    #list-div p,
+    #already-saved-div p {
+        font-size: 12px; 
+    }
+
+    #div2 button {
+        font-size: 14px;
+    }
+
+    .quote-box span::before{
+        width: 15px;
+        padding: 0;
+        left: -15px;
+    }
+    
+    #reset-div i {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .quote-box h2 {
+        font-size: 12px;
+    }
+
+    .quote-box blockquote,
+    .quote-box span,
+    .quote-box div button,
+    #list-div p,
+    #already-saved-div p {
+        font-size: 6px; 
+        padding: 5px 10px 5px 10px;
+    }
+
+    #div2 button {
+        font-size: 6px;
+        padding: 5px 10px 5px 10px;
+    }
+}
