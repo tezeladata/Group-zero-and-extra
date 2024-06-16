@@ -302,3 +302,14 @@ def sum_for_list(lst):
 
     result = [[prime, prime_sum[prime]] for prime in sorted(prime_sum)]
     return result
+
+# Josephus Permutation
+def josephus(items, k):
+    index = 0
+    res = []
+    
+    while len(items) > 0:
+        index = (index + k - 1) % len(items)
+        res.append(items.pop(index))
+        
+    return res  
