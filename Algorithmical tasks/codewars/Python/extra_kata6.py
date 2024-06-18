@@ -808,3 +808,34 @@ def xbonacci(signature, n):
         res.append(sum(res[-x:]))
         
     return res
+
+# Title Case
+def title_case(title, minor_words=""):
+    if not title or title == "": return ""
+    res_list = [title.split(" ")[0].capitalize()]
+    
+    for word in title.split(" ")[1:]:
+        if word.lower() in [word.lower() for word in minor_words.split(" ")]:
+            res_list.append(word.lower())
+        else:
+            res_list.append(word.capitalize())
+            
+    return " ".join(res_list)
+# or
+def title_case(title, minor_words=""):
+    if not title or title == "": return ""
+    return " ".join([title.split(" ")[0].capitalize()] + [word.lower() if word.lower() in [word.lower() for word in minor_words.split(" ")] else word.capitalize() for word in title.split(" ")[1:]])
+
+# Sum of Pairs
+def sum_pairs(ints, s):
+    if not isinstance(ints, list) or not ints:
+        return []
+
+    seen = set()
+    for num in ints:
+        target = s - num
+        if target in seen:
+            return [target, num]
+        seen.add(num)
+    
+    return None
