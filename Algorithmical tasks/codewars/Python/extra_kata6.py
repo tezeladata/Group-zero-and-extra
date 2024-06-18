@@ -839,3 +839,110 @@ def sum_pairs(ints, s):
         seen.add(num)
     
     return None
+
+# Josephus Survivor
+def josephus_survivor(n, k):
+    people = list(range(1, n + 1))
+    index = 0
+    
+    while len(people) > 1:
+        index = (index + k - 1) % len(people)
+        people.pop(index)
+    
+    return people[0]
+
+# Best travel
+def choose_best_sum(t, k, main_list):
+    result = []
+    stack = [(0, [])]
+
+    while stack:
+        start, comb = stack.pop()
+    
+        if len(comb) == k:
+            result.append(comb)
+            continue
+
+        for i in range(start, len(main_list)):
+            new_comb = comb + [main_list[i]]
+            stack.append((i + 1, new_comb))
+    
+    if len(sorted([sum(i) for i in [i for i in result if sum(i) <= t]])) >= 1: return sorted([sum(i) for i in [i for i in result if sum(i) <= t]])[-1]
+    return None
+
+# Roman Numerals Encoder
+def solution(n):
+    roman_pieces = [
+        (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"),
+        (100, "C"), (90, "XC"), (50, "L"), (40, "XL"),
+        (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")
+    ]
+    
+    result = []
+    
+    for value, symbol in roman_pieces:
+        while n >= value:
+            result.append(symbol)
+            n -= value
+    
+    return "".join(result)
+
+# Roman Numerals Decoder
+def solution(s):
+    roman_values = {
+        'I': 1, 'V': 5, 'X': 10, 'L': 50,
+        'C': 100, 'D': 500, 'M': 1000
+    }
+    
+    total = 0
+    prev_value = 0
+    
+    for char in s:
+        current_value = roman_values[char]
+        total += current_value
+        
+        if current_value > prev_value:
+            total -= 2 * prev_value
+        
+        prev_value = current_value
+    
+    return total
+
+# Encrypt this!
+def encrypt_this(text):
+    words = text.split(" ")
+    res = []
+    for character in words:
+        new = ""
+        temp = ""
+        for j in range(len(character)):
+            if j == 0:
+                new += str(ord(character[j]))
+            elif j == 1:
+                temp = character[j]
+                new += character[-1]
+            elif j == len(character) - 1:
+                new += temp
+            else:
+                new += character[j]  
+                
+        res.append(new)
+        
+        
+    return " ".join(list(res)) 
+
+# A disguised sequence (I)
+def fcn (n):
+    return 2**(n)
+
+# A Rule of Divisibility by 13
+def thirt(n):
+    seq = [1, 10, 9, 12, 3, 4]
+    digits = [int(d) for d in reversed(str(n))]
+    
+    while True:
+        next_n = sum(d * seq[i % len(seq)] for i, d in enumerate(digits))
+        if next_n == n:
+            return next_n
+        n = next_n
+        digits = [int(d) for d in reversed(str(n))]
