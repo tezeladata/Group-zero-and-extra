@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            max-width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading"></h1>
+    <p id="p1"></p>
+
+    <select id="myDropdown">
+        <option value="">Select an option...</option>
+    </select>
+
+    <div class="product-container" id="productContainer">
+        <!-- Product cards will be dynamically added here -->
+    </div>
+
+    <script>
+        // 22 $ 23
+        const h1 = document.getElementById("main-heading");
+        const p = document.getElementById("p1");
+        fetch('https://jsonplaceholder.typicode.com/todos/1').then(res => res.json()).then(res => {
+            h1.innerHTML = res.title;
+            p.innerHTML = res.userId
+        })
+
+
+        // 24
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.getElementById('myDropdown');
+
+            // Replace with your API endpoint
+            const apiUrl = 'https://fakestoreapi.com/products/1';
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                let option = document.createElement('option');
+                option.value = data.id; 
+                option.textContent = data.title; 
+                dropdown.appendChild(option);
+                })
+                .catch(error => {
+                console.error('Error fetching data:', error);
+                });
+        });
+
+
+        // 25
+        document.addEventListener('DOMContentLoaded', function() {
+            const productContainer = document.getElementById('productContainer');
+            const apiUrl = 'https://fakestoreapi.com/products';
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                data.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('product-card');
+
+                    const img = document.createElement('img');
+                    img.src = product.image;
+                    img.alt = product.title; 
+                    productCard.appendChild(img);
+
+                    productContainer.appendChild(productCard);
+                });
+                })
+                .catch(error => {
+                console.error('Error fetching and displaying products:', error);
+                });
+        });
+    </script>
+</body>
+</html>

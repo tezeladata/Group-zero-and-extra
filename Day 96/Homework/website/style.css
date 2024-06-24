@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+:root{
+    --blue-background: #1992D4;
+    --orange-border: #F0B429;
+    --gray-background: #E2E8F0;
+}
+
+main{
+    display: flex;
+}
+
+
+/* Aside */
+aside{
+    width: 15%;
+    background-color: var(--blue-background);
+    height: 100vh;
+}
+.aside-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0 0 10%;
+}
+.aside-div h2, .aside-div h3{
+    margin-left: 30px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.aside-div h2{
+    font-size: 2rem;
+}
+.aside-div i{
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#main-logo{
+    font-size: 2.5rem;
+}
+
+/* Right part of whole webpage */
+.main-section{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* Header part */
+.header-div{
+    padding: 20px 2.5% 0 2.5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 20%;
+}
+
+/* Part 1 of heading */
+.header-div1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-part1{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-part1 i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#input1{
+    width: 90%;
+    height: 2.5rem;
+    border: none;
+    background-color: var(--gray-background);
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header-part2{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-part2 img{
+    width: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-part2 i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.header-part2 p{
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Part 2 of heading */
+.header-div2{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-part3{
+    display: flex;
+    align-items: center;
+}
+.header-part3 img{
+    width: 6rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.text-div{
+    margin-left: 20px;
+}
+h1{
+    font-size: 2.5rem;
+}
+
+.header-part4{
+    width: 30%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.header-part4 p{
+    color: #fff;
+    padding: 20px 50px 20px 50px;
+    background-color: var(--blue-background);
+    border-radius: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* grids */
+.grid-container{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: var(--gray-background);
+    height: 80%;
+    padding: 50px 1.5% 50px 1.5%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.grid1{
+    grid-area: 1 / 1 / 3 / 2;
+}
+.grid1 h2{
+    padding: 20px 0 20px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.grid1-container{
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+.grid1-container > div{
+    background-color: white;
+    border-left: 15px var(--orange-border) solid;
+    border-radius: 15px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.grid1-container > div h3{
+    padding: 20px 0 0 20px;
+    font-size: 1.5rem;
+}
+.grid1-container > div p{
+    padding: 20px 0 0 20px;
+    font-size: 1.25rem;
+    max-width: 60%;
+}
+.grid1-part2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.grid1-part2 i{
+    padding: 25px; 
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.grid2 h2{
+    padding: 20px 0 40px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.grid2-container{
+    background-color: #fff;
+    border-radius: 15px;
+    height: 85%;
+}
+.grid2-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+.grid2-div > div{
+    width: 80%;
+}
+.grid2-div > div h3{
+    font-size: 1.5rem;
+}
+.grid2-part1, .grid2-part2{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #797c808c;
+}
+
+.grid3 h2{
+    padding: 20px 0 20px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.grid3 img{
+    width: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.grid3-container{
+    background-color: #fff;
+    border-radius: 15px;
+    height: 80%;
+}
+.grid3-container > div{
+    display: flex;
+    padding: 20px 0 10px 50px;
+    align-items: center;
+}
