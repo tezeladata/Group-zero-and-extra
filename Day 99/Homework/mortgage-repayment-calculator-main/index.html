@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/b5998aa8b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <div id="main-div">
+      <!-- Part1 -->
+      <div id="part1">
+        <div id="header-div">
+          <h1>Mortgage Calculator</h1>
+          <span id="clear-all">Clear All</span>
+        </div>
+
+        <form id="form1">
+          <div id="input-div1">
+            <label for="input1">Mortgage Amount</label>
+            <div id="container1">
+              <span>£</span>
+              <input type="number" name="amount" id="input1" min="0" required>
+            </div>
+          </div>
+
+          <div id="input-div2">
+            <div class="container2">
+              <label for="input2">Mortgage Term</label>
+              <div class="container3">
+                <input type="number" name="years" id="input2" min="0" required>
+                <span>years</span>
+              </div>
+            </div>
+            <div class="container2">
+              <label for="input3">Interest Rate</label>
+              <div class="container3">
+                <input type="number" name="rate" id="input3" min="0" required>
+                <span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="input-div3">
+            <p>Mortgage Type</p>
+            <label>
+              <input type="radio" name="repayment" checked><span>Repayment</span>
+            </label><br>
+            <label>
+              <input type="radio" name="repayment"><span>Interest Only</span>
+            </label>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Calculate Repayments</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Part2 -->
+      <div id="part2">
+        <h2>Monthly Repayment:</h2>
+        <p id="monthly-repayment">£0.00</p>
+        <h2>Total Repayment:</h2>
+        <p id="total-repayment">£0.00</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function calculateRepayments() {
+      // Get form values
+      const amount = parseFloat(document.getElementById('input1').value);
+      const years = parseInt(document.getElementById('input2').value);
+      const rate = parseFloat(document.getElementById('input3').value);
+  
+      if (isNaN(amount) || isNaN(years) || isNaN(rate)) {
+        alert('Please enter valid numbers for all fields.');
+        return;
+      }
+  
+      // Calculate monthly interest rate and number of payments
+      const monthlyRate = rate / 100 / 12;
+      const numberOfPayments = years * 12;
+  
+      const monthlyRepayment = amount * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+  
+      // total repayment
+      const totalRepayment = monthlyRepayment * numberOfPayments;
+  
+      // Display 
+      document.getElementById('monthly-repayment').textContent = `£${monthlyRepayment.toFixed(2)}`;
+      document.getElementById('total-repayment').textContent = `£${totalRepayment.toFixed(2)}`;
+    }
+  
+    // Event listener
+    document.getElementById('form1').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      calculateRepayments(); 
+    });
+  
+    // Clear all 
+    document.getElementById('clear-all').addEventListener('click', function() {
+      document.getElementById('form1').reset();
+      document.getElementById('monthly-repayment').textContent = '£0.00';
+      document.getElementById('total-repayment').textContent = '£0.00';
+    });
+  </script>
+</body>
+</html>
