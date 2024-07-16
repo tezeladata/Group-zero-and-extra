@@ -1,0 +1,47 @@
+if checks statement placed in it's parentheses
+
+goto: goto, space, label-identificator
+label is written somewhere with colon
+when goto is found, we then find label + : above and loop starts again
+
+goto is more related to flowchart than for loop, because we checks many statements during the start of for loop
+
+linear search looks at every "member", more like every item in array
+
+we create f(n) function
+worst case is n*2, when element is on last index
+best case i 0, when element's index is 0
+
+average f:  Ef = x1p1 + x2p2 + xnpn
+
+One of best way to see how algorithm works is to see how many if statements are done
+index -> if statement counter:
+0 -> 1
+1 -> 3
+2 -> 5
+k -> 2k + 1
+n-1 -> 2n + 1
+
+Ef შედარება = 1 * (a / (n+1)) + 3 * (a / (n + 1)) + (2k + 1) * (1 / (n + 1)) + (2n - 1) * (1 / (n + 1)) + 2n * (1 / (n + 1))
+= (1 / (n+1)) * (1 + 3 + (2k + 1) + (2n * 1) + 2n)
+
+1 + 2 + ... + n = ((1 + n) * n) / 2
+but for every odd number?
+
+first of all, we find for every even number, in sequence: 1 + 2 + 3 + 4 + 5 + 6 + 7 + ... + 98 + 99 
+count of even numbers = 50
+n = 50
+Sn = n/2 * (a1 + an)
+S50 = 25 * (2 + 100)
+#           2 is first even
+S50 = 25 * 102 = 2550
+
+Now for odd
+n = 50, there are 50 odd numbers in sequence
+Sn = n/2 * (a1 + an)
+S50 = 25 * (1 + 99)
+1 and 99 are first and last numbers of sequence
+S50 = 25 * 100 = 2500
+
+
+Sigma big - ∑
