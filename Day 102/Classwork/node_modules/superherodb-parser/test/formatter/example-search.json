@@ -1,0 +1,55 @@
+{
+  "total": " Found 10 results",
+  "results": [
+    {
+      "heroPath": "/hulk/10-83/",
+      "match": "Hulk --- Bruce Banner",
+      "type": "fa fa-male fa-fw"
+    },
+    {
+      "heroPath": "/hulkbusters/20-325/",
+      "match": "Hulkbusters",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/x-men/20-2/",
+      "match": "X-Men",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/x-men-2099/20-89/",
+      "match": "X-Men 2099",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/new-x-men/20-80/",
+      "match": "New X-Men",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/dark-x-men/20-223/",
+      "match": "Dark X-Men",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/young-x-men/20-591/",
+      "match": "Young X-Men",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/x-treme-x-men/20-105/",
+      "match": "X-Treme X-Men",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/ultimate-x-men/20-540/",
+      "match": "Ultimate X-Men",
+      "type": "fa fa-users fa-fw"
+    },
+    {
+      "heroPath": "/cerebros-x-men/20-186/",
+      "match": "Cerebro's X-Men",
+      "type": "fa fa-users fa-fw"
+    }
+  ]
+}

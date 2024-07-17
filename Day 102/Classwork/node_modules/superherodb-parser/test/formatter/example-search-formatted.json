@@ -1,0 +1,66 @@
+{
+  "total": 10,
+  "results": [
+    {
+      "heroPath": "/hulk/10-83/",
+      "heroName": "Hulk",
+      "realName": "Bruce Banner",
+      "isAlias": false,
+      "isGroup": false
+    },
+    {
+      "groupPath": "/hulkbusters/20-325/",
+      "groupName": "Hulkbusters",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/x-men/20-2/",
+      "groupName": "X-Men",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/x-men-2099/20-89/",
+      "groupName": "X-Men 2099",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/new-x-men/20-80/",
+      "groupName": "New X-Men",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/dark-x-men/20-223/",
+      "groupName": "Dark X-Men",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/young-x-men/20-591/",
+      "groupName": "Young X-Men",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/x-treme-x-men/20-105/",
+      "groupName": "X-Treme X-Men",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/ultimate-x-men/20-540/",
+      "groupName": "Ultimate X-Men",
+      "isAlias": false,
+      "isGroup": true
+    },
+    {
+      "groupPath": "/cerebros-x-men/20-186/",
+      "groupName": "Cerebro's X-Men",
+      "isAlias": false,
+      "isGroup": true
+    }
+  ]
+}

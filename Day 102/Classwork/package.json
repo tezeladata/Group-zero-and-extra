@@ -1,0 +1,16 @@
+{
+  "name": "my-first-package",
+  "version": "1.0.0",
+  "description": "we are trying to learn npm",
+  "main": "script.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Tezelashvili",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "superherodb-parser": "^1.0.1"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "Iron Man",
+  "real": "Tony Stark",
+  "level": "14",
+  "stats": [
+    {
+      "skill": [
+        "Intelligence",
+        "Strength",
+        "Speed",
+        "Durability",
+        "Power",
+        "Combat"
+      ],
+      "val": [
+        "100",
+        "85",
+        "58",
+        "85",
+        "100",
+        "64"
+      ]
+    }
+  ],
+  "bio": [
+    {
+      "label": [
+        "Full name",
+        "Aliases",
+        "Nicknames",
+        "Place of birth",
+        "First appearance",
+        "Publisher",
+        "Alignment"
+      ],
+      "val": [
+        "Anthony Edward Stark",
+        "Iron Knight, Hogan Potts, Spare Parts Man, Cobalt Man II, Crimson Dynamo, Ironman ",
+        "Tony Stark, Shellhead, The Golden Avenger, Tetsujin, Tin Man",
+        "Long Island, New York",
+        "Tales of Suspence #39 (March, 1963)",
+        "Marvel Comics",
+        "good"
+      ]
+    },
+    {
+      "label": [
+        "Gender",
+        "Race",
+        "Height",
+        "Weight",
+        "Eye color",
+        "Hair color"
+      ],
+      "val": [
+        "male",
+        "Human",
+        "6'6 // 198 cm",
+        "425 lb // 191 kg",
+        "Blue",
+        "Black"
+      ]
+    },
+    {
+      "label": [
+        "Occupation",
+        "Base"
+      ],
+      "val": [
+        "Inventor, Industrialist; former United States Secretary of Defense",
+        "Seattle, Washington"
+      ]
+    },
+    {
+      "label": [
+        "Group Affiliation",
+        "Relatives"
+      ],
+      "val": [
+        "Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense.",
+        "\n                                    Howard Anthony Stark (father, deceased), Maria Stark (mother, deceased), Morgan Stark (cousin), Isaac Stark (ancestor)                                "
+      ]
+    }
+  ]
+}

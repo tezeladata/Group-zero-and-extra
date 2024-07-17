@@ -1,0 +1,1 @@
+// const printInfo = (personObj) => console.log(personObj.name)
