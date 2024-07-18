@@ -1,0 +1,9 @@
+Part1 
+
+Ef = n + 1 - (1 / (n + 1)) = n + (1 - (1 / (n + 1)))
+
+part2
+Ef = (1/n * 1) + (1/n * 3) + ... + (1/n * (2n - 1)) = 1/n * (2 * ((n*(n-1)) / 2) + n)
+   = 1/n * (n**2 - n + n) = n
+
+Ef = n, when element is in array
