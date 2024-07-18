@@ -1,0 +1,13 @@
+Node.js is a powerful runtime environment that enables the execution of JavaScript on the server side. Built on Chrome's V8 JavaScript engine, Node.js provides an event-driven, non-blocking I/O model that makes it lightweight and efficient. This architecture is particularly suitable for building scalable network applications.
+
+One of the core concepts in Node.js is the use of modules. Modules are reusable pieces of code that can be easily incorporated into various applications. They help in organizing code into manageable sections, making development more efficient and code maintenance easier.
+
+In Node.js, each file is considered a module. To create a module, you simply write JavaScript code in a file and export the parts you want to make available to other files. 
+
+Node.js comes with several built-in modules that provide essential functionalities. Here are a few examples:
+
+http: Used to create an HTTP server and handle HTTP requests and responses.
+fs: Provides an API to interact with the file system, allowing you to read and write files.
+path: Provides utilities for working with file and directory paths.
+os: Provides operating system-related utility methods and properties.
+crypto: Provides cryptographic functionality, including encryption and hashing.
