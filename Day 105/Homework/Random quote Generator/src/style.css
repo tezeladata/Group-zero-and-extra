@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+}
+
+body{
+    background: #bbc6fa;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Already saved notification */
+#already-saved-div{
+    background-color: #b20000;
+    border-radius: 30px;
+    transition: 0.2s all;
+    animation-name: top-to-bottom;
+    animation-duration: 2s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: none;
+}
+#already-saved-div p{
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+
+/* Keyframe for red box */
+@keyframes top-to-bottom{
+    0% {
+        transform: translateY(-200px);
+        background-color: #ca9898;
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Quote box */
+.quote-box{
+    background: #fff;
+    width: 50%;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.quote-box h2{
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+.quote-box h2::after{
+    content: "";
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+
+}
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
+}
+
+/* Simple lines */
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+.quote-box span::before{
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    top: 50%;
+    left: -25px;
+}
+
+/* main buttons */
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.quote-box button{
+    background: rgb(23, 124, 229);
+    color: white;
+    border-radius: 35px;
+    border: 1px solid rgb(23, 124, 229);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* List button div */
+#div2{
+    margin-top: 30px;
+}
+#div2 button{
+    background-color: #333333;
+    border: black;
+    font-size: 20px;
+}
+
+/* List div */
+#list-div {
+    background-color: white;
+    max-width: 50%;
+    min-width: 50%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+    animation-name: bottom-to-top;
+    animation-duration: 2s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#list-div p {
+    font-size: 20px;
+    padding: 10px 0;
+}
+#list-div span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Keyframe for list-div animation */
+@keyframes bottom-to-top{
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* For reset button */
+#reset-div{
+    display: flex;
+    justify-content: flex-end;
+}
+#reset-div i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 1000px){
+    .quote-box h2 {
+        font-size: 16px;
+    }
+
+    .quote-box blockquote,
+    .quote-box span,
+    .quote-box div button,
+    #list-div p,
+    #already-saved-div p {
+        font-size: 12px; 
+    }
+
+    #div2 button {
+        font-size: 14px;
+    }
+
+    .quote-box span::before{
+        width: 15px;
+        padding: 0;
+        left: -15px;
+    }
+    
+    #reset-div i {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .quote-box h2 {
+        font-size: 12px;
+    }
+
+    .quote-box blockquote,
+    .quote-box span,
+    .quote-box div button,
+    #list-div p,
+    #already-saved-div p {
+        font-size: 6px; 
+        padding: 5px 10px 5px 10px;
+    }
+
+    #div2 button {
+        font-size: 6px;
+        padding: 5px 10px 5px 10px;
+    }
+}

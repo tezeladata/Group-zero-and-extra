@@ -1,0 +1,20 @@
+React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on components by Facebook Inc. 
+It is maintained by Meta (formerly Facebook) and a community of individual developers and companies.
+
+React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js.  Because React is only concerned with the user interface and rendering components to the DOM, 
+React applications often rely on libraries for routing and other client-side functionality. 
+A key advantage of React is that it only rerenders those parts of the page that have changed, avoiding unnecessary rerendering of unchanged DOM elements. We call that virtual DOM
+
+React code is made of entities called components. These components are modular and reusable.
+React applications typically consist of many layers of components. The components are rendered to a root element in the DOM using the React DOM library. 
+When rendering a component, values are passed between components through props (short for "properties"). Values internal to a component are called its state.
+
+
+Vite (French: vit) is a local development server written by Evan You, the creator of Vue.js, and used by default by Vue and for React project templates. 
+It has support for TypeScript and JSX. It uses Rollup and esbuild internally for bundling.
+
+It monitors files as they're being edited and upon file save the web browser reloads the code being edited through a process called Hot Module Replacement 
+which works by just reloading the specific file being changed using ES6 modules (ESM) instead of recompiling the entire application.
+
+Vite provides built-in support for server-side rendering (SSR). By default, it listens on TCP port 5173. 
+It is possible to configure Vite to serve content over HTTPS and proxy requests (including WebSocket) to a back-end web server (such as Apache HTTP Server or lighttpd).

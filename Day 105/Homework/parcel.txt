@@ -1,0 +1,9 @@
+Parcel is a web application bundler that offers a fast and zero-configuration setup. It aims to provide a streamlined and efficient experience for developers. 
+
+Key Features:
+1. Zero Configuration: Parcel works out of the box with no configuration required, simplifying the setup process for developers.
+2. Fast Performance: Uses multi-core processing and file system caching to deliver fast build times.
+3. Hot Module Replacement (HMR): Automatically updates modules in the browser at runtime without needing a full refresh.
+4. Supports Many File Types: Handles JavaScript, CSS, HTML, image files, and more.
+5. Tree Shaking: Optimizes the final bundle by removing unused code, resulting in smaller file sizes.
+6. Code Splitting: Automatically splits your code into smaller chunks for better performance and faster load times.

@@ -1,0 +1,26 @@
+If we have not finished writing command, we can double tab and it will give us possible commands
+
+bash commands:
+
+whoami
+pwd
+ls
+ls -ah
+ls -ahl
+ls --help
+ls --help | more
+q                             exit
+df -h
+top
+h
+
+We have 6 consoles min. in debian
+
+
+Shutting down machine reuqires to be root:
+Su
+root
+/sbin/shutdown
+/sbin/shutdown --help
+/sbin/shutdown -r
+/sbin/shutdown -r now

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- react scripts are placed here -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- We can use cdn link to connect online files to our code -->
+    <script type="text/babel">
+        // When we connect react to html file, we can access React and ReactDOM objects
+        console.log(React)
+        console.log(ReactDOM)
+
+        // creating component, name has to start with capital letter
+        function App(){
+            let count = 0
+            return (
+                // React.createElement('div', {id: "Data", class: "Data"}, React.createElement("p", null, "Hello React"))
+                // createElement is old method
+
+                // We use jsx to write in easier way
+                <div>
+                    <p>Count: {count}</p>
+                    <button onClick = {() => {
+                        count ++;
+                        console.log(count)
+                    }}>+1</button>
+                    <button onClick = {() => {
+                        count --;
+                        console.log(count)
+                    }}>-1</button>
+                </div>
+            )
+        }
+
+        console.log(App())
+
+        // If we want to render that part, we have to use reactDOM
+        ReactDOM.render(App(), document.getElementById("root"))
+        // function, then where to render
+        // render is method to render/appear some elements
+
+        // react to create elements
+        // reactDOM to work on virtualdom
+
+        
+        // Vite is building tool that provides us fast and lean development process
+        // vite also helps us on build, same as parcel
+        // vite helps us to intall react
+    </script>
+</body>
+</html>

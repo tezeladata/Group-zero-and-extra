@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random quote generator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- For icons -->
+    <script src="https://kit.fontawesome.com/b5998aa8b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Notification -->
+    <div id="already-saved-div">
+        <p>Your quote is already saved!</p>
+    </div>
+
+    <!-- Quotes -->
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">Loading...</span>
+
+        <div>
+            <button id="generate-button">New Quote</button>
+            <button id="save-button">Save this quote</button> <br>
+        </div>
+        <div id="div2">
+            <button id="list-button">Show saved list</button>
+            <button id="clear-list">Clear whole list</button>
+        </div>
+    </div>
+
+    <!-- List -->
+    <div id="list-div">
+        <div id="reset-div"><i class="fa-solid fa-circle-xmark" id="reset-button"></i></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

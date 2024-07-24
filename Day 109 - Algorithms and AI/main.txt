@@ -1,0 +1,40 @@
+If we have not finished writing command, we can double tab and it will give us possible commands
+
+bash commands:
+
+whoami
+pwd
+ls
+ls -ah
+ls -ahl
+ls --help
+ls --help | more
+q
+df -h
+top
+h
+free -h
+htop
+top
+
+
+Shutting down machine reuqires to be root:
+Su
+root
+/sbin/shutdown
+/sbin/shutdown --help
+/sbin/shutdown -r
+/sbin/shutdown -r now
+
+
+ctrl + r  to find ols command
+double g  to move on first line
+shift + g  to move on last line
+lineNumber + shift+G on specified line
+dd - delete line
+yy - copy line
+whereis + command, for example: "whereis reboot" to find command for reboot
+
+
+apt install is main command
+installing graphical interface:

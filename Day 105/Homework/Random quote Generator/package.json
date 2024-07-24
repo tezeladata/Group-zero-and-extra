@@ -1,0 +1,16 @@
+{
+  "name": "random-quote-generator",
+  "version": "1.0.0",
+  "description": "Random quote generator",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "keywords": [],
+  "author": "David Tezelashvili",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
