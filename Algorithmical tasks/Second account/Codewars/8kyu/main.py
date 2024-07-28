@@ -432,3 +432,125 @@ def first_non_consecutive(arr):
             return arr[i]
         i += 1
     return None
+
+
+# Powers of 2
+def powers_of_two(n):
+    return [2**i for i in range(n+1)]
+
+# Cat years, Dog years
+def human_years_cat_years_dog_years(human_years):
+    year_dict = {
+        1: [1, 15, 15],
+        2: [2, 24, 24]
+    }
+    
+    if human_years in year_dict:
+        return year_dict[human_years]
+    
+    cat, dog = 24, 24
+    for i in range(human_years - 2):
+        cat += 4
+        dog += 5
+    return [human_years, cat, dog]
+
+# altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+def to_alternating_case(string):
+    return " ".join([word.swapcase() for word in string.split(" ")])
+
+# Correct the mistakes of the character recognition software
+def correct(s):
+    return s.replace("5", "S").replace("0", "O").replace("1", "I")
+
+# Is it a palindrome?
+def is_palindrome(s):
+    return s.lower() == s.lower()[::-1]
+
+# Do I get a bonus?
+def bonus_time(salary, bonus):
+    return f"${salary * 10}" if bonus else f"${salary}"
+
+# Student's Final Grade
+def final_grade(exam, projects):
+    if exam > 90 or projects > 10: return 100
+    elif exam > 75 and projects >= 5: return 90
+    elif exam > 50 and projects >= 2: return 75
+    return 0
+
+# Sum The Strings
+def sum_str(a, b):
+    if a and b: return str(int(a) + int(b))
+    elif a and not b: return a
+    elif b and not a: return b
+    return "0"
+
+# Expressions Matter
+def expression_matter(a, b, c):
+    return max([(a * (b + c)), (a * b * c), (a + b * c), ((a + b) * c), (a + b + c)])
+
+# Difference of Volumes of Cuboids
+def find_difference(a, b):
+    return a[0]*a[1]*a[2] - b[0]*b[1]*b[2] if a[0]*a[1]*a[2] > b[0]*b[1]*b[2] else b[0]*b[1]*b[2] - a[0]*a[1]*a[2]
+
+# I love you, a little , a lot, passionately ... not at all
+def how_much_i_love_you(nb_petals):
+    user_dict = {
+        0: "not at all",
+        1: "I love you",
+        2: "a little",
+        3: "a lot",
+        4: "passionately",
+        5: "madly",
+        6: "not at all"
+    }
+    return user_dict[nb_petals % 6]
+
+# Reverse List Order
+def reverse_list(l):
+    return list(reversed(l))
+
+# Welcome!
+def greet(language):
+    if language=="english":
+        return "Welcome"
+    if language=="czech":
+        return "Vitejte"
+    if language=="danish":
+        return "Velkomst"
+    if language=="dutch":
+        return "Welkom"
+    if language=="estonian":
+        return "Tere tulemast"
+    if language=="finnish":
+        return "Tervetuloa"
+    if language=="flemish":
+        return "Welgekomen"
+    if language=="french":
+        return "Bienvenue"
+    if language=="german":
+        return "Willkommen"
+    if language=="irish":
+        return "Failte"
+    if language=="italian":
+        return "Benvenuto"
+    if language=="latvian":
+        return "Gaidits"
+    if language=="lithuanian":
+        return "Laukiamas"
+    if language=="polish":
+        return "Witamy"
+    if language=="spanish":
+        return "Bienvenido"
+    if language=="swedish":
+        return "Valkommen"
+    if language=="welsh":
+        return "Croeso"
+    else:
+        return "Welcome"
+    
+# Grasshopper - Messi Goals
+la_liga_goals = 43
+champions_league_goals = 10
+copa_del_rey_goals = 5
+
+total_goals = la_liga_goals + champions_league_goals + copa_del_rey_goals
