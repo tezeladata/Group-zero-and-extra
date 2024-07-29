@@ -554,3 +554,155 @@ champions_league_goals = 10
 copa_del_rey_goals = 5
 
 total_goals = la_liga_goals + champions_league_goals + copa_del_rey_goals
+
+# Count Odd Numbers below n
+def odd_count(n):
+    return int(n/2)
+
+# Short Long Short
+def solution(a, b):
+    return a + b + a if len(a) < len(b) else b + a + b
+
+# My head is at the wrong end!
+def fix_the_meerkat(arr):
+    return list(reversed(arr))
+
+# Sort and Star
+def two_sort(array):
+    return "".join([i+"***" for i in sorted(array)[0]])[:-3]
+
+# Find Multiples of a Number
+def find_multiples(integer, limit):
+    return [i for i in range(integer, limit+1) if i%integer == 0]
+
+# Drink about
+def people_with_age_drink(age):
+    if age < 14: return "drink toddy"
+    elif age < 18: return "drink coke"
+    elif age < 21: return "drink beer"
+    return "drink whisky"
+
+# Vowel remover
+def shortcut( s ):
+    return "".join([i for i in s if i not in "aeiou"])
+
+# Unfinished Loop - Bug Fixing #1
+def create_array(n):
+    res=[]
+    i=1
+    while i<=n: 
+        res+=[i]
+        i += 1
+    return res
+
+# get character from ASCII Value
+def get_char(c):
+    return chr(c)
+
+# What's the real floor?
+def get_real_floor(n):
+    if n <= 0: return n
+    elif n >= 13: return n-2
+    return n - 1
+
+# Filter out the geese
+geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+def goose_filter(birds):
+    return [i for i in birds if i not in geese]
+
+# Exclusive "or" (xor) Logical Operator
+def xor(a,b):
+    return True if a != b else False
+
+# Find numbers which are divisible by given number
+def divisible_by(numbers, divisor):
+    return [i for i in numbers if i%divisor == 0]
+
+# Name Shuffler
+def name_shuffler(str):
+    return str.split(" ")[1] + " " + str.split(" ")[0]
+
+# Capitalization and Mutability
+def capitalize_word (word):
+    return word[0].upper() + word[1:]
+
+# Training JS #7: if..else and ternary operator
+def sale_hotdogs(n):
+    if n < 5: return n*100
+    elif n >= 5 and n < 10: return n*95
+    return n*90
+
+# Lario and Muigi Pipe Problem
+def pipe_fix(nums):
+    return [i for i in range(nums[0], nums[-1] + 1)]
+
+# Grasshopper - If/else syntax debug
+def check_alive(health):
+    return health > 0
+
+# Plural
+def plural(n):
+    return n > 1 or n == 0
+
+# How many lightsabers do you own?
+def how_many_light_sabers_do_you_own(*args):
+    if args: return 18 if args[0] == "Zach" else 0
+    return 0
+
+# Stringy Strings
+def stringy(size):
+    return "".join(["1" if i%2 != 0 else "0" for i in range(1,size+1)])
+
+# Grasshopper - Basic Function Fixer
+def add_five(num):
+    return num + 5
+
+# Super Duper Easy
+def problem(a):
+    try:
+        return a * 50 + 6
+    except:
+        return "Error"
+    
+# Multiplication table for number
+def multi_table(number):
+    return "\n".join([f"{i} * {number} = {i*number}" for i in range(1, 11)])
+
+# Merge two sorted arrays into one
+def merge_arrays(arr1, arr2):
+    return sorted(list(set(arr1 + arr2)))
+
+# Well of Ideas - Easy Version
+def well(x):
+    if x.count("good") == 0: return "Fail!"
+    elif x.count("good") <= 2: return "Publish!"
+    return "I smell a series!"
+
+# 5 without numbers !!
+def unusual_five():
+    return len("hello")
+
+# Get Nth Even Number
+def nth_even(n):
+    return n*2 -2
+
+# A wolf in sheep's clothing
+def warn_the_sheep(queue):
+    return f"Oi! Sheep number {len(queue) - queue.index('wolf') - 1}! You are about to be eaten by a wolf!" if queue[-1] != "wolf" else 'Pls go away and stop eating my sheep'
+
+# Gravity Flip
+def flip(d, a):
+    return sorted(a) if d == "R" else list(reversed(sorted(a)))
+
+# Regular Ball Super Ball
+class Ball:
+    def __init__(self, ball_type="regular"):
+        self.ball_type = ball_type
+
+# Remove duplicates from list
+def distinct(seq):
+    res = []
+    for i in seq:
+        if i not in res:
+            res.append(i)
+    return res
