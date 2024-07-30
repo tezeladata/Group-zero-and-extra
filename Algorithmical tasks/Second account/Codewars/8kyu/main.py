@@ -874,3 +874,40 @@ def array(string):
 def format_money(amount):
     if type(amount) == int: return f"${amount}.00"
     return f"${amount}0" if len(f"${amount}".split(".")[-1]) == 1 else f"${amount}"
+
+# String cleaning
+def string_clean(s):
+    return "".join([i for i in s if i not in "0123456789"])
+
+# Enumerable Magic - Does My List Include This?
+def include(arr, item):
+    return item in arr
+
+# Check same case
+def same_case(a, b): 
+    if a.isupper() and b.isupper(): return 1
+    elif a.islower() and b.islower(): return 1
+    elif (a.islower() and b.isupper()) or (a.isupper() and b.islower()): return 0
+    return -1
+
+# Find Nearest square number
+def nearest_sq(n):
+    return min([int(n**0.5)**2, (int(n**0.5) + 1)**2], key=lambda x: abs(n - x))
+
+# Swap Values
+def swap_values(args): 
+    args[0], args[1] = args[1], args[0]
+
+# Simple validation of a username with regex
+def validate_usr(username):
+    return len([i for i in username if i in "abcdefghijklmnopqrstuvwxyz0123456789_"]) == len(username) and len(username) >= 4 and len(username) <= 16
+
+# Sum of Multiples
+def sum_mul(n, m):
+    if n <= 0 or m <= 0: return "INVALID"
+    if n >= m: return 0
+    return sum(i for i in range(n, m, n))
+
+# Simple Fun #1: Seats in Theater
+def seats_in_theater(tot_cols, tot_rows, col, row):
+    return (tot_cols - col + 1) * (tot_rows - row)
