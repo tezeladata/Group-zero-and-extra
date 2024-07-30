@@ -706,3 +706,171 @@ def distinct(seq):
         if i not in res:
             res.append(i)
     return res
+
+# Grasshopper - Terminal game combat function
+def combat(health, damage):
+    return health - damage if health - damage > 0 else 0
+
+# Determine offspring sex based on genes XX and XY chromosomes
+def chromosome_check(chromosome):
+    return 'Congratulations! You\'re going to have a son.' if chromosome == "XY" else 'Congratulations! You\'re going to have a daughter.'
+
+# The Wide-Mouthed frog!
+def mouth_size(animal): 
+    return "small" if animal.lower() == "alligator" else "wide"
+
+# Add Length
+def add_length(str):
+    return [f"{i} {len(i)}" for i in str.split(" ")]
+
+# To square(root) or not to square(root)
+def square_or_square_root(arr):
+    return [int(i**0.5) if int(i**0.5)**2 == i else i * i for i in arr]
+
+# Convert to Binary
+def to_binary(n):
+    return int(bin(n)[2:])
+
+# Bin to Decimal
+def bin_to_decimal(inp):
+    return int(inp, 2)
+
+# Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+def replace_exclamation(st):
+    return "".join(["!" if i.lower() in "aeiou" else i for i in st])
+
+# The 'if' function
+def _if(bool, func1, func2):
+    if bool: func1()
+    else: func2()
+
+# Hello, Name or World!
+def hello(*args):
+    if not args or args[0] == "": return "Hello, World!"
+    return f"Hello, {args[0].capitalize()}!"
+
+# Holiday VIII - Duty Free
+def duty_free(price, discount, holiday_cost):
+    return int(holiday_cost / (price * discount/100))
+
+# FIXME: Replace all dots
+def replace_dots(s):
+    return s.replace(".", "-")
+
+# No zeros for heros
+def no_boring_zeros(n):
+    if not n or n == "": return 0
+    while str(n)[-1] == "0": n = int(str(n)[:-1])
+    return n
+
+# Grasshopper - Function syntax debugging
+def main(verb, noun): return verb + noun
+
+# Exclamation marks series #1: Remove an exclamation mark from the end of string
+def remove(n):
+    if not n or n == "": return ""
+    return n[:-1] if n[-1] == "!" else n
+
+# Hex to Decimal
+def hex_to_dec(s):
+    return int(s, 16)
+
+# Welcome to the City
+def say_hello(name, city, state):
+    return f"Hello, {' '.join(name)}! Welcome to {city}, {state}!"
+
+# Enumerable Magic #25 - Take the First N Elements
+def take(arr,n):
+    return arr[:n]
+
+# Find the position!
+def position(alphabet):
+    return f'Position of alphabet: {"abcdefghijklmnopqrstuvwxyz".index(alphabet.lower()) + 1}'
+
+# Is this my tail?
+def correct_tail(body, tail):
+    return body[-1] == tail
+
+# Price of Mangoes
+def mango(quantity, price):
+    return (quantity - quantity//3) * price
+
+# Surface Area and Volume of a Box
+def get_size(w,h,d):
+    return [2*(w*d + w*h + d*h), w*h*d]
+
+# Find the Remainder
+def remainder(a,b):
+    maximum = max(a, b)
+    minimum = min(a, b)
+    
+    if minimum == 0: return None
+    return maximum % minimum
+
+# Pillars
+def pillars(num_pill, dist, width):
+    return 0 if num_pill == 1 else (num_pill - 1) * (dist * 100) + (num_pill - 2) * width
+
+# 101 Dalmatians - squash the bugs, not the dogs!
+def how_many_dalmatians(n):
+    dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"]
+    
+    if n <= 10:
+        respond = dogs[0]
+    elif n <= 50:
+        respond = dogs[1]
+    elif n == 101:
+        respond = dogs[3]
+    else:
+        respond = dogs[2]
+  
+    return respond
+
+# Find out whether the shape is a cube
+def cube_checker(volume, side):
+    return volume == side ** 3 if side > 0 else 0
+
+# Alan Partridge II - Apple Turnover
+def apple(x):
+    return "It's hotter than the sun!!" if int(x) ** 2 > 1000 else "Help yourself to a honeycomb Yorkie for the glovebox."
+
+# Grasshopper - Array Mean
+def find_average(nums):
+    return sum(nums) / len(nums)
+
+# Printing Array elements with Comma delimiters
+def print_array(arr):
+    return ",".join([str(i) for i in arr])
+
+# Sum of differences in array
+def sum_of_differences(arr):
+    return sum([i*-1 for i in [list(reversed(sorted(arr)))[i+1] - list(reversed(sorted(arr)))[i] for i in range(len(arr) - 1)]])
+
+# Reversing Words in a String
+def reverse(st):
+    return " ".join(reversed(st.split()))
+
+# Generate range of integers
+def generate_range(start, stop, step):
+    return list(range(start, stop+1, step))
+
+# Grasshopper - Debug
+def weather_info (temp):
+    c = convert_to_celsius(temp)
+    if (c < 0):
+        return (str(c) + " is freezing temperature")
+    else:
+        return (str(c) + " is above freezing temperature")
+    
+def convert_to_celsius (temperature):
+    celsius = (temperature - 32) * (5/9)
+    return celsius
+
+# Remove First and Last Character Part Two
+def array(string):
+    return " ".join(string.split(",")[1:-1]) if len(string.split(",")) > 2 else None
+
+# Dollars and Cents
+def format_money(amount):
+    if type(amount) == int: return f"${amount}.00"
+    return f"${amount}0" if len(f"${amount}".split(".")[-1]) == 1 else f"${amount}"
