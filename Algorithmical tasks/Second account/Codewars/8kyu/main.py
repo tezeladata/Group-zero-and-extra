@@ -911,3 +911,154 @@ def sum_mul(n, m):
 # Simple Fun #1: Seats in Theater
 def seats_in_theater(tot_cols, tot_rows, col, row):
     return (tot_cols - col + 1) * (tot_rows - row)
+
+# Multiple of index
+def multiple_of_index(arr):
+    return [arr[i] for i in range(1, len(arr)) if arr[i]%i == 0] if arr[0] != 0 else [0] + [arr[i] for i in range(1, len(arr)) if arr[i]%i == 0]
+
+# Return the day
+def whatday(num):
+    match num:
+        case 1: return "Sunday"
+        case 2: return "Monday"
+        case 3: return "Tuesday"
+        case 4: return "Wednesday"
+        case 5: return "Thursday"
+        case 6: return "Friday"
+        case 7: return "Saturday"
+    return "Wrong, please enter a number between 1 and 7"
+
+# Fundamentals: Return
+def add(a, b):
+    return a+b
+
+def multiply(a, b):
+    return a*b
+
+def divide(a, b):
+    return a/b
+
+def mod(a, b):
+    return a%b
+
+def exponent(a, b):
+    return a**b
+
+def subt(a, b):
+    return a-b
+
+# Return to Sanity
+def mystery():
+    results = {'sanity': 'Hello'}
+    return results
+
+# Sleigh Authentication
+class Sleigh(object):
+    def authenticate(self, name, password):
+        self.name = name
+        self.password = password
+    
+        return True if self.name == "Santa Claus" and self.password == "Ho Ho Ho!" else False
+    
+# Take the Derivative
+def derive(coefficient, exponent): 
+    return f"{coefficient * exponent}x^{exponent-1}"
+
+# L1: Bartender, drinks!
+def get_drink_by_profession(param):
+    all = {
+        "Jabroni": "Patron Tequila",
+        "School Counselor": "Anything with Alcohol",
+        "Programmer": "Hipster Craft Beer",
+        "Bike Gang Member": "Moonshine",
+        "Politician": "Your tax dollars",
+        "Rapper": "Cristal"
+    }
+    return all[" ".join([word.capitalize() for word in param.split(" ")])] if " ".join([word.capitalize() for word in param.split(" ")]) in all else "Beer"
+
+# Kata Example Twist
+websites = ["codewars" for _ in range(1000)]
+
+# How old will I be in 2099?
+def calculate_age(year_of_birth, current_year):
+    if 2099 - (2099 - (current_year - year_of_birth)) > 0: 
+        return f"You are {2099 - (2099 - (current_year - year_of_birth))} years old." if 2099 - (2099 - (current_year - year_of_birth)) != 1 else f"You are {2099 - (2099 - (current_year - year_of_birth))} year old."
+    elif 2099 - (2099 - (current_year - year_of_birth)) == 0: return 'You were born this very year!'
+    return f"You will be born in {(2099 - (2099 - (current_year - year_of_birth))) * -1} years." if (2099 - (2099 - (current_year - year_of_birth))) * -1 != 1 else f"You will be born in {(2099 - (2099 - (current_year - year_of_birth))) * -1} year."
+
+# Basic Training: Add item to an Array
+websites.append("codewars")
+
+# Grasshopper - Combine strings
+def combine_names(f, l):
+    return f + " " + l
+
+# Regex count lowercase letters
+def lowercase_count(strng):
+    return len([i for i in strng if i in "abcdefghijklmnopqrstuvwxyz"])
+
+# String Templates - Bug Fixing #5
+def build_string(*args):
+    return "I like {}!".format(", ".join(args))
+
+# USD => CNY
+def usdcny(usd):
+    cny = usd * 6.750
+    return f"{cny:.2f} Chinese Yuan"
+
+# Triple Trouble
+def triple_trouble(one, two, three):
+    return "".join(f"{one[i]}{two[i]}{three[i]}" for i in range(len(one)))
+
+# Formatting decimal places #0
+def two_decimal_places(n):
+    return round(n, 2)
+
+# Multiply the number
+def multiply(n):
+    return n * 5**len(str(n)) if n > 0 else n * 5**(len(str(n))-1)
+
+# OOP: Object Oriented Piracy
+class Ship:
+    def __init__(self, draft, crew):
+        self.draft = draft
+        self.crew = crew
+    
+    def is_worth_it(self):
+        return self.draft - self.crew * 1.5 > 20
+    
+# Find the Difference in Age between Oldest and Youngest Family Members
+def difference_in_ages(ages):
+    return (min(ages), max(ages), max(ages) - min(ages))
+
+# Area of a Square
+import math
+def square_area(A):
+    r = A*4 / (math.pi * 2)
+    return round(r**2, 2)
+
+# Never visit a . . . !?
+def subtract_sum(number):
+    return "apple"
+
+# How many stairs will Suzuki climb in 20 years?
+def stairs_in_20(stairs):
+    return sum([sum(arr) for arr in stairs]) * 20
+
+# Color Ghost
+import random
+class Ghost(object):
+    def __init__(self): 
+        self.color = random.choice(["white", "yellow", "purple", "red"])
+
+# Name on billboard
+def billboard(name, price=30):
+    return sum([price for char in name])
+
+# CSV representation of array
+def to_csv_text(array):
+    return "\n".join([",".join([str(i) for i in arr]) for arr in array])
+
+# Define a card suit
+def define_suit(card):
+    return {"C": "clubs", "S": "spades", "D": "diamonds", "H": "hearts"}[card[-1].upper()]
