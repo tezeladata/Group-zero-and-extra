@@ -1062,3 +1062,271 @@ def to_csv_text(array):
 # Define a card suit
 def define_suit(card):
     return {"C": "clubs", "S": "spades", "D": "diamonds", "H": "hearts"}[card[-1].upper()]
+
+# Basic subclasses - Adam and Eve
+class Human:
+    def __init__(self, name):
+        self.name = name
+
+class Man(Human):
+    def __init__(self, name="Adam"):
+        super().__init__(name)
+
+class Woman(Human):
+    def __init__(self, name="Eve"):
+        super().__init__(name)
+
+def God():
+    adam = Man()
+    eve = Woman()
+    return [adam, eve]
+
+# Classic Hello World
+class Solution:
+    def main(*args):
+        print("Hello World!")
+
+# Do you speak "English"?
+def sp_eng(sentence): 
+    return "english" in sentence.lower()
+
+# Holiday VI - Shark Pontoon
+def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
+    return "Alive!" if pontoon_distance / you_speed < shark_distance / (shark_speed / 2 if dolphin else shark_speed) else "Shark Bait!"
+
+# Incorrect division method
+def divide_numbers(x,y):
+    return x / y
+
+# Fix your code before the garden dies!
+def rain_amount(mm):
+    if mm < 40:
+         return "You need to give your plant " + str(40 - mm) + "mm of water"
+    else:
+         return "Your plant has had more than enough water for today!"
+    
+# Remove the time
+def shorten_to_date(long_date):
+    return f"{long_date.split(' ')[0]} {long_date.split(' ')[1]} {long_date.split(' ')[2][:-1]}"
+
+# Quadrants
+def quadrant(x, y):
+    if x<0 and y>0: return 2
+    elif x>0 and y<0: return 4
+    return 1 if x*y > 0 and x>0 else 3
+
+# Chuck Norris VII - True or False? (Beginner)
+def if_chuck_says_so():
+    return bool(0)
+
+# No Loops 2 - You only need one
+def check(a, x): 
+    return x in a
+
+# Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+def remove(st):
+    if not st or st == "": return ""
+    while st[-1] == "!": st = st[:-1]
+    return st
+
+# Contamination #1 -String-
+def contamination(text, char):
+    if text and char: return "".join([char for _ in range(len(text))])
+    elif text and not char: return ""
+    return text
+
+# Classy Classes
+class Person:
+    def __init__(self,name,age):
+        self.info=f"{name}s age is {age}"
+
+# Pythagorean Triple
+def pythagorean_triple(integers):
+    return list(sorted(integers))[0]**2 + list(sorted(integers))[1]**2 == list(sorted(integers))[2]**2
+
+# The falling speed of petals
+def sakura_fall(v):
+    return 5*80/v if v > 0 else 0
+
+# Regexp Basics - is it a digit?
+def is_digit(n):
+    return n.isdigit() and len(n) == 1
+
+# SpeedCode #2 - Array Madness
+def array_madness(a,b):
+    return sum([i**2 for i in a]) > sum([i**3 for i in b])
+
+# Is it a number?
+def is_digit(s):
+    if not s or s.strip() == "": return False
+    try:
+        float(s)
+        return True
+    except: return False
+
+# Leonardo Dicaprio and Oscars
+def leo(oscar):
+    match oscar:
+        case 88: return "Leo finally won the oscar! Leo is happy"
+        case 86: return "Not even for Wolf of wallstreet?!"
+    return "When will you give Leo an Oscar?" if oscar < 88 else "Leo got one already!"
+
+# Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+def remove(st, n):
+    count = 0
+    while count < n:
+        ind = st.find("!")
+        if ind == -1:
+            break
+        st = st[:ind] + st[ind+1:]
+        count += 1
+    return st
+
+# get ascii value of character
+def get_ascii(ch : str) -> int:
+    return ord(ch)
+
+# Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+def remove(st):
+    return st.replace("!", "") + "!"
+
+# A Strange Trip to the Market
+def is_loch_ness_monster(string):
+    return "three fifty" in string or "3.50" in string or "three fifdy" in string or "tree fiddy" in string
+
+# Smallest unused ID
+def next_id(arr):
+    sorted_arr = sorted(arr)
+    sorted_arr = list(set(sorted_arr))
+
+    new_sorted_arr = []
+    for i in range(len(sorted_arr)):
+        if (sorted_arr[i] >= 0):
+            new_sorted_arr.append(sorted_arr[i])
+
+    for y in range(len(new_sorted_arr)):
+        if (new_sorted_arr[y] != y):
+            return y
+    return len(new_sorted_arr)
+
+# Closest elevator
+def elevator(left, right, call):
+    return 'right' if abs(call-right) <= abs(call-left) else 'left'
+
+# Compare within margin
+def close_compare(a, b, margin=0):
+    if abs(a - b) <= margin: return 0
+    elif a < b: return -1
+    return 1
+
+# Tip Calculator
+import math
+def calculate_tip(amount, rating):
+    rating = rating.lower()
+    match rating:
+        case "terrible": return 0
+        case "poor": return math.ceil(amount*.05)
+        case "good": return math.ceil(amount*.1)
+        case "great": return math.ceil(amount*.15)
+        case "excellent": return math.ceil(amount*.2)
+    return 'Rating not recognised'
+
+# Who is going to pay for the wall?
+def who_is_paying(name):
+    return [name, name[:2]] if [name, name[:2]][0] != [name, name[:2]][1] else [name]
+
+# Geometry Basics: Distance between points in 2D
+import math
+def distance_between_points(a, b):
+    return math.dist([a.x, a.y], [b.x, b.y])
+
+# Are arrow functions odd?
+def odds(value):
+    return [i for i in value if i%2 == 1]
+
+# Collatz Conjecture (3n+1)
+def hotpo(n):
+    steps = 0
+    while n != 1:
+        if n % 2 == 0:
+            n //= 2
+        else:
+            n = 3 * n + 1
+        steps += 1
+    return steps
+
+# BASIC: Making Six Toast.
+def six_toast(num):
+    return num - 6 if num >= 6 else 6 - num
+
+# simple calculator
+def calculator(x,y,op):
+    try:
+        x, y = int(x), int(y)
+    except:
+        return "unknown value"
+    
+    
+    match op:
+        case "+": return x+y
+        case "-": return x-y
+        case "*": return x*y
+        case "/": return x/y
+    return "unknown value"
+
+# Is there a vowel in there?
+def is_vow(inp):
+    return [chr(i) if chr(i) in 'aeiou' else i for i in inp]
+
+# Unexpected parsing
+def get_status(is_busy):
+    return {"status": "busy"} if is_busy else {"status": "available"}
+
+# Thinkful - Number Drills: Blue and red marbles
+def guess_blue(blue_start, red_start, blue_pulled, red_pulled):
+    return (blue_start - blue_pulled) / (blue_start - blue_pulled + red_start - red_pulled)
+
+# Find the Integral
+def integrate(coefficient, exponent):
+    return f"{int(coefficient / (exponent+1))}x^{int(coefficient / int(coefficient / (exponent+1)))}"
+
+# ASCII Total
+def uni_total(s):
+    return sum([ord(i) for i in s])
+
+# Did she say hallo?
+def validate_hello(greetings):
+    greetings = greetings.lower()
+    greetings_list = ["hello", "ciao", "salut", "hallo", "hola", "ahoj", "czesc"]  # List of greetings
+
+    for greeting in greetings_list:
+        if greeting in greetings:
+            return True
+    return False
+
+# validate code with simple regex
+def validate_code(code):
+    return str(code)[0] in "123"
+
+# For UFC Fans (Total Beginners): Conor McGregor vs George Saint Pierre
+def quote(fighter):
+    return "I'd like to take this chance to apologize.. To absolutely NOBODY!" if fighter.lower() == "conor mcgregor" else "I am not impressed by your performance."
+
+# Duck Duck Goose
+def duck_duck_goose(players, goose):
+    return players[goose%len(players)-1].name
+
+# Template Strings
+def temple_strings(obj, feature): 
+    return obj + " are " + feature
+
+# Who ate the cookie?
+def cookie(x):
+    if type(x) == str: return"Who ate the last cookie? It was Zach!"
+    if type(x) == int or type(x) == float: return "Who ate the last cookie? It was Monica!"
+    return "Who ate the last cookie? It was the dog!"
+
+# Get number from string
+def get_number_from_string(st):
+    return int("".join([i for i in st if i in "0123456789"]))
+
