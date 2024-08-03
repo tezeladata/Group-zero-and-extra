@@ -1330,3 +1330,90 @@ def cookie(x):
 def get_number_from_string(st):
     return int("".join([i for i in st if i in "0123456789"]))
 
+# Quadratic Coefficients Solver
+def quadratic(x1, x2):
+    return (1, -(x1+x2), x1*x2)
+
+# Localize The Barycenter of a Triangle
+def bar_triang(point_a, point_b, point_c): 
+    return [round((point_a[0] + point_b[0] + point_c[0]) / 3, 4), round((point_a[1] + point_b[1] + point_c[1]) / 3, 4)]
+
+# Switch/Case - Bug Fixing #6
+def eval_object(v):
+    match v["operation"]:
+        case "+":
+            return v["a"] + v["b"]
+        case "-":
+            return v["a"] - v["b"]
+        case "/":
+            return v["a"] / v["b"]
+        case "*":
+            return v["a"] * v["b"]
+        case "%":
+            return v["a"] % v["b"]
+        case "**":
+            return v["a"] ** v["b"]
+        case _:
+            return 1
+        
+# Draw stairs
+def draw_stairs(n):
+    start = 1
+    res = ""
+    
+    for i in range(n-1):
+        res+=f"I\n{''.join([' ' for _ in range(start)])}"
+        start += 1
+    res += "I"
+    return res
+# or
+def draw_stairs(n):
+    return "\n".join([f"{' ' * i}I" for i in range(n)])
+
+# Count the number of cubes with paint on
+def count_squares(n):
+    return (n + 1)**3 - (n - 1)**3
+
+# Parse float
+def parse_float(string):
+    try:
+        return float(string)
+    except:
+        return None
+    
+# Wilson primes
+def am_i_wilson(n):
+    return n in [5, 13, 563]
+
+# Power
+def number_to_pwr(number, p):
+    result = 1
+    for _ in range(p): result *= number
+    return result
+
+# Flick Switch
+def flick_switch(lst):
+    res = []
+    start = True
+    
+    for i in lst:
+        if i == "flick": 
+            start = not start  
+        res.append(start) 
+    
+    return res
+
+# Enumerable Magic #1 - True for All?
+def all(sequence, func):
+    for element in sequence:
+        if not func(element):
+            return False
+    return True
+
+# Grader
+def grader(score):
+    if score > 1 or score < 0.6: return "F"
+    elif score >= .9: return "A"
+    elif score >= .8: return "B"
+    elif score >= .7: return "C"
+    elif score >= .6: return "D"
