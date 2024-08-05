@@ -1417,3 +1417,336 @@ def grader(score):
     elif score >= .8: return "B"
     elif score >= .7: return "C"
     elif score >= .6: return "D"
+
+# Pirates!! Are the Cannons ready!??
+def cannons_ready(gunners):
+    for i in gunners.values():
+        if i.lower() == "nay": return 'Shiver me timbers!'
+    return "Fire!"
+
+# Is your period late?
+from datetime import *
+def period_is_late(last,today,cycle_length):
+    return last + timedelta(days = cycle_length) < today
+
+# 8kyu interpreters: HQ9+
+def HQ9(code):
+    if code == "H":
+        return "Hello World!"
+    if code == "Q":
+        return "Q"
+    if code == "9":
+        result = ""
+        for n in range(99,2,-1):
+            result += f"{n} bottles of beer on the wall, {n} bottles of beer.\nTake one down and pass it around, {n-1} bottles of beer on the wall.\n"
+        result += "2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n1 bottle of beer on the wall, 1 bottle of beer.\nTake one down and pass it around, no more bottles of beer on the wall.\nNo more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall."
+        return result
+    return None
+
+# UEFA EURO 2016
+def uefa_euro_2016(teams, scores):
+    if scores[0] > scores[1]: return f"At match {teams[0]} - {teams[1]}, {teams[0]} won!"
+    elif scores[1] > scores[0]: return f"At match {teams[0]} - {teams[1]}, {teams[1]} won!"
+    return f"At match {teams[0]} - {teams[1]}, teams played draw."
+
+# Classy Extentions
+# from preloaded import Animal
+
+# class Cat(Animal):
+#     def speak(self):
+#         return f"{self.name} meows."
+    
+# Barking mad
+class Dog ():
+    def __init__(self, breed):
+        self.breed = breed
+    
+    def bark(self):
+        return "Woof"
+    
+
+snoopy = Dog("Beagle")
+
+snoopy.bark = lambda: "Woof"
+
+scoobydoo = Dog("Great Dane")
+
+# They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it. This is a sadly story #1: Are they opposite?
+def is_opposite(s1,s2):
+    return "".join([i.swapcase() for i in s1]) == s2 if s1 else False
+
+# Is the date today
+from datetime import datetime
+
+def is_today(date: datetime) -> bool:
+    return date.date() == datetime.today().date()
+
+# Training JS #18: Methods of String object--concat() split() and its good friend join()
+def split_and_merge(string, sp):
+    return ' '.join(sp.join(word) for word in string.split())
+
+# Ensure question
+def ensure_question(s):
+    if not s: return "?"
+    return s+"?" if s[-1]!="?" else s
+
+# pick a set of first elements
+def first(*args):
+    if len(args) == 2: 
+        seq, n = args[0], args[1]
+        
+        if n==0: return []
+        return seq[:n] if len(seq) > n else seq
+    return [args[0][0]]
+
+# For Twins: 2. Math operations
+def ice_brick_volume(radius, bottle_length, rim_length):
+    height = bottle_length - rim_length
+    side = 2 * radius
+    volume = side * side * height
+    
+    return volume/2
+
+# Find the Slope
+def find_slope(points):
+    a, b, c, d = points
+    
+    if c - a == 0:
+        return "undefined"
+    
+    slope = (d - b) // (c - a)
+    return str(int(slope))
+
+# Fix the Bugs (Syntax) - My First Kata
+def my_first_kata(a,b):
+    if type(a) != int or type(b) != int: return False
+    else:
+        return a % b + b % a
+    
+# NBA full 48 minutes average
+def nba_extrap(ppg, mpg):
+    return round(ppg * (48 / mpg), 1)
+
+# easy logs
+import math
+
+def logs(x, a, b):
+    return (math.log(a) + math.log(b))/math.log(x);
+
+# Fuel Calculator: Total Cost
+def fuel_price(litres, price_per_litre):
+    return round(litres * (price_per_litre - min(25, (litres // 2) * 5) / 100), 2)
+
+# Online RPG: player to qualifying stage?
+def playerRankUp(pts):
+     return "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up." if pts >= 100 else False
+
+# Points of Reflection
+def symmetric_point(p, q):
+    return [2 * q[0] - p[0], 2 * q[1] - p[1]]
+
+# Freudian translator
+def to_freud(sentence):
+    return "" if not sentence or sentence == " " else " ".join(["gender" for _ in range(len(sentence.split(" ")))])
+
+# Grasshopper - Terminal Game #1
+class Hero(object):
+    def __init__(*args):
+        self = args[0]
+        if (len(args))==2: self.name = args[1]
+        else: self.name = "Hero"
+        self.position = "00"
+        self.health = 100
+        self.damage = 5
+        self.experience = 0
+
+# Finish Guess the Number Game
+# class Guesser:
+#     def __init__(self, number, lives):
+#         self.number = number
+#         self.lives = lives
+
+#     def guess(self,n):
+#         if self.lives == 0:
+#             raise Except('Omae wa mo shindeiru')
+#         elif n  == self.number:
+#             return True
+#         self.lives -= 1
+#         return False
+
+# Merging sorted integer arrays (without duplicates)
+def merge_arrays(first, second): 
+    return list(sorted(list(set(first+second))))
+
+# Return Two Highest Values in List
+def two_highest(arg1):
+    if len(arg1) >= 3: return [list(sorted(list(set(arg1))))[-1], list(sorted(list(set(arg1))))[-2]]
+    return [max(arg1)] if arg1 else []
+
+# How do I compare numbers?
+def what_is(x):
+    if x == 42: return 'everything'
+    elif x == 42 * 42: return 'everything squared'
+    return 'nothing'
+
+# Safen User Input Part I - htmlspecialchars
+def html_special_chars(data): 
+    res = ""
+    for i in data:
+        if i not in '<>"&': res+=i
+        else:
+            if i == "<": res+= "&lt;"
+            elif i == ">": res+= "&gt;"
+            elif i == '"': res+= "&quot;"
+            else: res += "&amp;"
+    return res
+
+# Evil or Odious
+def evil(n):
+    return "It's Evil!" if str(bin(n)).count("1")%2 != 1 else "It's Odious!"
+
+# Calculate Price Excluding VAT
+def excluding_vat_price(price):
+    return price/1.15 if price else -1
+
+# Name Your Python!
+class Python:
+    def __init__(self, name):
+        self.name = name
+
+# Crash Override
+first_fake_name = {
+    "A": "Alpha",
+    "B": "Beta",
+    "C": "Cache",
+    "D": "Data",
+    "E": "Energy",
+    "F": "Function",
+    "G": "Glitch",
+    "H": "Half-life",
+    "I": "Ice",
+    "J": "Java",
+    "K": "Keystroke",
+    "L": "Logic",
+    "M": "Malware",
+    "N": "Nagware",
+    "O": "OS",
+    "P": "Phishing",
+    "Q": "Quantum",
+    "R": "RAD",
+    "S": "Strike",
+    "T": "Trojan",
+    "U": "Ultraviolet",
+    "V": "Vanilla",
+    "W": "WiFi",
+    "X": "Xerox",
+    "Y": "Y",
+    "Z": "Zero"
+}
+
+sur_fake_name = {
+    "A": "Analogue",
+    "B": "Bomb",
+    "C": "Catalyst",
+    "D": "Discharge",
+    "E": "Electron",
+    "F": "Faraday",
+    "G": "Gig",
+    "H": "Hacker",
+    "I": "IP",
+    "J": "Jabber",
+    "K": "Killer",
+    "L": "Lazer",
+    "M": "Mike",
+    "N": "n00b",
+    "O": "Overclock",
+    "P": "Payload",
+    "Q": "Quark",
+    "R": "Roy",
+    "S": "Spy",
+    "T": "T-Rex",
+    "U": "Unit",
+    "V": "Virus",
+    "W": "Worm",
+    "X": "X",
+    "Y": "Yob",
+    "Z": "Zombie"
+}
+
+def alias_gen(firstname, surname):
+    first_letter_of_firstname = firstname[0].upper()
+    first_letter_of_surname = surname[0].upper()
+
+    if not first_letter_of_firstname.isdigit() and not first_letter_of_surname.isdigit():
+        name = first_fake_name.get(first_letter_of_firstname)
+        sur = sur_fake_name.get(first_letter_of_surname)
+
+        if name and sur:
+            return f"{name} {sur}"
+        else:
+            return "Your name must start with a letter from A - Z."
+    else:
+        return "Your name must start with a letter from A - Z."
+    
+# Neutralisation
+def neutralise(s1, s2):
+    res = ""
+    for i in range(len(s1)):
+        if s1[i] != s2[i]: res += "0"
+        else: res += s1[i]
+    return res
+
+# Polish alphabet
+def correct_polish_letters(st): 
+    all = {
+        "ą" : "a",
+        "ć" : "c",
+        "ę" : "e",
+        "ł" : "l",
+        "ń" : "n",
+        "ó" : "o",
+        "ś" : "s",
+        "ź" : "z",
+        "ż" :  "z"
+    }
+    res = ""
+    for i in st:
+        if i not in all.keys(): res+=i
+        else: res+=all[i]
+    return res
+
+# Semi-Optional
+def wrap(value):
+    wrapper_obj = {}
+    wrapper_obj["value"] = value
+    return wrapper_obj
+
+# Logical calculator
+def logical_calc(array, op):
+    if op == "AND": return array.count(True) == len(array)
+    elif op == "OR": return True in array
+    elif op == "XOR": return array.count(True) % 2 == 1
+
+# Grasshopper - Bug Squashing
+# from preloaded import *
+
+# health = 100
+# position = 0
+# coins = 0
+
+# def main():
+#     roll_dice()
+#     move()
+#     combat()
+#     get_coins()
+#     buy_health()
+#     print_status()
+
+# Age Range Compatibility Equation
+def dating_range(age):
+    if age <= 14: return f"{int(age - 0.10 * age)}-{int(age + 0.10 * age)}"
+    else: return f"{int(age/2 + 7)}-{int((age-7) *2)}"
+
+# Job Matching #1
+def match(candidate, job):
+    return candidate['min_salary'] * 0.9 <= job['max_salary']
