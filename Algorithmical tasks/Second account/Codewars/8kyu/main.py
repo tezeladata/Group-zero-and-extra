@@ -1750,3 +1750,124 @@ def dating_range(age):
 # Job Matching #1
 def match(candidate, job):
     return candidate['min_salary'] * 0.9 <= job['max_salary']
+
+# Grasshopper - Create the rooms
+room1 = {"name": "", "description": "", "completed": False}
+room2 = {"name": "", "description": "", "completed": False}
+room3 = {"name": "", "description": "", "completed": False}
+
+rooms = {0: room1, 1: room2, 2: room3}
+
+# Simple Fun #261: Whose Move
+def whose_move(last_player, win):
+    if win: return last_player
+    else: return "white" if last_player == "black" else "black"
+
+# Days in the year
+def year_days(year):
+    return f"{year} has 366 days" if check(year) else f"{year} has 365 days"
+    
+    
+def check(y):
+    if y%4 == 0:
+        if y%100 == 0:
+            if y%400 == 0:
+                return True
+            return False
+        return True
+    return False
+
+# Enumerable Magic #20 - Cascading Subsets
+def each_cons(lst, n):
+    return [lst[i:i+n] for i in range(len(lst) - n + 1)]
+
+# Thinkful - Dictionary drills: Order filler
+def fillable(stock, merch, n):
+    if merch in stock.keys(): return True if stock[merch] >= n else False
+    return False
+
+# Be Concise IV - Index of an element in an array
+find=lambda a,e:a.index(e) if e in a else "Not found"
+
+# Sort My Textbooks
+def sorter(textbooks):
+    return sorted(textbooks,key=str.lower)
+
+# Playing with cubes II
+class Cube(object):
+    def __init__(self, side=0):
+        self.__side = side
+    
+    def get_side(self):
+        return self.__side if self.__side > 0 else self.__side * -1
+
+    def set_side(self, new_side):
+        self.__side = new_side
+
+# Be Concise I - The Ternary Operator
+def describe_age(a): 
+    return f"You're a(n) {a<13 and 'kid' or a<18 and 'teenager' or a<65 and 'adult' or 'elderly'}"
+
+# Heads and Legs
+def animals(heads, legs):
+    if heads < 0 or legs < 0:
+        return "No solutions"
+    
+    cows = (legs - 2 * heads) / 2
+    chickens = heads - cows
+    
+    if cows.is_integer() and chickens.is_integer() and cows >= 0 and chickens >= 0:
+        return (int(chickens), int(cows))
+    else:
+        return "No solutions"
+    
+# How much water do I need?
+def how_much_water(water, load, clothes):
+    if clothes < load:
+        return 'Not enough clothes'
+    if clothes > 2 * load:
+        return 'Too much clothes'
+    
+    water_needed = water * (1.1 ** (clothes - load))
+    return round(water_needed, 2)
+
+# For Twins: 1. Types
+def type_validation(variable, _type): 
+    return _type in str(type(variable))
+
+# Grasshopper - Terminal Game Turn Function
+# def do_turn():
+#     roll_dice()
+#     move()
+#     combat()
+#     get_coins()
+#     buy_health()
+#     print_status()
+
+# Floating point comparison
+def approx_equals(a, b, tolerance=0.001):
+    return abs(a - b) <= tolerance
+
+# Collinearity
+def collinearity(x1, y1, x2, y2):
+    return x1*y2 == x2*y1
+
+# Are there any arrows left?
+def any_arrows(quiver):
+    return any(not arrow.get('damaged', False) for arrow in quiver)
+
+# Simple Fun #352: Reagent Formula
+def isValid(formula):
+    if (1 in formula and 2 in formula):
+        return False
+    
+    if (3 in formula and 4 in formula):
+        return False
+    
+    if (5 in formula) != (6 in formula):
+        return False
+    
+    if not (7 in formula or 8 in formula):
+        return False
+    
+    return True
