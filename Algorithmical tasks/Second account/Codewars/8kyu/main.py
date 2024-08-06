@@ -1871,3 +1871,154 @@ def isValid(formula):
         return False
     
     return True
+
+# What's up next?
+from itertools import count
+
+def next_item(sequence, item):
+    try:
+        iterator = iter(sequence)
+        prev_item = None
+        for current_item in iterator:
+            if prev_item == item:
+                return current_item
+            prev_item = current_item
+    except StopIteration:
+        pass
+    return None
+
+# Add new item (collections are passed by reference)
+def AddExtra(listOfNumbers):
+    return listOfNumbers + [1]
+
+# Filtering even numbers (Bug Fixes)
+def kata_13_december(lst): 
+    return [i for i in lst if i%2!=0]
+
+# Aspect Ratio Cropping - Part 1
+import math
+
+def aspect_ratio(x: int, y: int):
+    return (math.ceil(y * (16 / 9)), y)
+
+# Total pressure calculation
+def solution(M1, M2, m1, m2, V, T_C):
+    R = 0.082
+    T_K = T_C + 273.15
+    n1 = m1 / M1
+    n2 = m2 / M2
+    P_total = (n1 + n2) * R * T_K / V
+    return P_total
+
+# Geometry Basics: Circle Circumference in 2D
+import math
+
+def circle_circumference(circle):
+    circumference = (circle.radius * 2 * math.pi)
+    return circumference
+
+# Up and down, the string grows
+STRANGE_STRING = 'ß'
+
+# Fix the loop!
+def list_animals(animals):
+    lst = ''
+    for i in range(len(animals)):
+        lst += str(i + 1) + '. ' + animals[i] + '\n'
+    return lst
+
+# Byte me!
+from sys import getsizeof as total_bytes
+
+# Training JS #32: methods of Math---round() ceil() and floor()
+import math
+
+def round_it(n):
+    splitted_number = str(n).split(".")
+    if len(splitted_number[0]) > len(splitted_number[1]):
+        return math.floor(n)
+    elif len(splitted_number[0]) < len(splitted_number[1]):
+        return math.ceil(n)
+    else:
+        return round(n)
+    
+# Invalid Login - Bug Fixing #11
+# def validate(username, password):
+#     database = Database()
+#     return database.login(username, password)
+
+# Geometry Basics: Circle Area in 2D
+def circle_area(circle):
+    return circle.radius**2 * 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482
+
+# Generate user links
+from urllib.parse import quote
+
+def generate_link(user: str) -> str:
+    return f"http://www.codewars.com/users/{quote(user)}"
+
+# Pole Vault Starting Marks
+def starting_mark(height):
+    return round(9.45 + (10.67 - 9.45) / (1.83 - 1.52) * (height - 1.52), 2)
+
+# Greek Sort
+def greek_comparator(lhs, rhs):
+  greek_alphabet = (
+    'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 
+    'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 
+    'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma',
+    'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega')
+  return greek_alphabet.index(lhs) - greek_alphabet.index(rhs)
+
+# Find the force of gravity between two objects
+def solution(arr_val, arr_unit) :
+    G = 6.67e-11
+    
+
+    weight = {
+        "kg": 1,
+        "g" : 0.001,
+        "mg" : 1e-6,
+        "μg" : 1e-9,
+        "lb" : 0.453592
+    }
+    distance = {
+        "m" : 1,
+        "cm" : .01,
+        "mm" : .001,
+        "μm" : 1e-6,
+        "ft" : 0.3048
+    }
+    
+    M1 = arr_val[0] * weight[arr_unit[0]]
+    M2 = arr_val[1] * weight[arr_unit[1]]
+    D = arr_val[2] * distance[arr_unit[2]]
+    
+    return G * M1 * M2 / D**2
+    
+# Simple Change Machine
+def change_me(money): 
+    if money == "£5": return ("20p " * 25).strip()
+    elif money == "£2": return ("20p " * 10).strip()
+    elif money == "£1": return ("20p " * 5).strip()
+    elif money == "50p": return (("20p " * 2) + "10p").strip()
+    elif money == "20p": return ("10p " * 2).strip()
+    else: return money
+    
+# Enumerable Magic #30 - Split that Array!
+def partition(arr, classifier_method):
+    return ([x for x in arr if classifier_method(x)],
+           [x for x in arr if not classifier_method(x)])
+
+# Vexing Vanishing Values
+def mul_by_n(lst, n):
+    return [i*n for i in lst]
+
+# Circles in Polygons
+import math
+
+def circle_diameter(sides, side_length):
+    if sides < 3:
+        raise ValueError
+    
+    return side_length / math.tan(math.pi / sides)
