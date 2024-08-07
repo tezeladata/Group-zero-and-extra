@@ -222,3 +222,7 @@ def calculate_years(principal, interest, tax, desired):
 def factorial(n):
     if n < 0 or n > 20: raise ValueError("Factorial is not defined for negative numbers")
     return 1 if n == 0 else n * factorial(n - 1)
+
+# Find the capitals
+def capitals(word):
+    return [i for i in range(len(word)) if word[i].isupper()]
