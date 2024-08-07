@@ -226,3 +226,87 @@ def factorial(n):
 # Find the capitals
 def capitals(word):
     return [i for i in range(len(word)) if word[i].isupper()]
+
+# Small enough? - Beginner
+def small_enough(array, limit):
+    return limit >= list(sorted(array))[-1]
+
+# Don't give me five!
+def dont_give_me_five(start,end):
+    return len([i for i in range(start, end+1) if "5" not in str(i)])
+
+# Leap Years
+def is_leap_year(year):
+    if year%4 == 0:
+        if year%100 == 0:
+            if year%400 == 0:
+                return True
+            return False
+        return True
+    return False
+
+# Summing a number's digits
+def sum_digits(number):
+    return sum([int(i) for i in str(abs(number))]) 
+
+# Find the middle element
+def gimme(input_array):
+    return input_array.index(list(sorted(input_array))[1])
+
+# Simple Fun #176: Reverse Letter
+def reverse_letter(st):
+    return "".join(list(reversed([i for i in st if i.isalpha()])))
+
+# Sum of angles
+def angle(n):
+    return 180*n - 360
+
+# Round up to the next multiple of 5
+def round_to_next5(n):
+    rm = n%5
+    match rm:
+        case 0: return n
+        case 1: return n+4
+        case 2: return n+3
+        case 3: return n+2
+        case 4: return n+1
+
+# Two Oldest Ages
+def two_oldest_ages(ages):
+    return [list(sorted(ages))[-2], list(sorted(ages))[-1]]
+
+# Alternate capitalization
+def capitalize(s):
+    return ["".join([s[i].upper() if i%2==0 else s[i] for i in range(len(s))]), "".join([s[i].upper() if i%2!=0 else s[i] for i in range(len(s))])]
+
+# Maximum Multiple
+def max_multiple(divisor, bound):
+    for i in range(bound, 0, -1):
+        if i%divisor == 0: return i
+
+# No oddities here
+def no_odds(values):
+    return [i for i in values if i%2==0]
+
+# Check the exam
+def check_exam(arr1,arr2):
+    res = 0
+    for i in range(len(arr1)):
+        if arr1[i] == arr2[i]: res += 4
+        elif arr2[i] == "": pass
+        else: res -= 1
+    return res if res > 0 else 0
+
+# The Coupon Code
+from datetime import datetime
+
+def check_coupon(entered_code, correct_code, current_date, expiration_date):
+    cur_date_formatted = datetime.strptime(current_date, "%B %d, %Y")
+    expr_date_formatted = datetime.strptime(expiration_date, "%B %d, %Y")
+    if type(entered_code) != str:
+        return False
+    if entered_code != correct_code:
+        return False
+    if cur_date_formatted > expr_date_formatted:
+        return False
+    return True
