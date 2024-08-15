@@ -1,23 +1,19 @@
-import React from "react";
-import "../section1.css"
+import React, { useState } from "react";
+import "../section1.css";
 
-function Section1(){
-    let appear = true;
+function Section1() {
+    const [appear, setAppear] = useState(true);
+
     const handleClick = () => {
-        appear = !appear;
-
-        if (appear){document.getElementById("main-par").style.display = "block";}
-        else {document.getElementById("main-par").style.display = "none";}
-
-        console.log(appear)
-    }
+        setAppear(prevAppear => !prevAppear);
+    };
 
     return (
         <div>
-            <button onClick={handleClick}>Click here to show paragraph</button>
-            <p id="main-par">This was supposed to be hidden paragraph</p>
+            <button onClick={handleClick}>Click here to {appear ? "hide" : "show"} paragraph</button>
+            {appear && <p id="main-par">This was supposed to be a hidden paragraph</p>}
         </div>
-    )
+    );
 }
 
 export default Section1;
