@@ -1,0 +1,11 @@
+Talking about Ascii Table
+
+256 - 8 bit system
+type is representation of code written in memory
+
+~(0101) = 1010
+
+How to represent negative numbers in binary:
+1. sign-magnitude representation of negative numbers
+2. invertion based representation of negative numbers
+3. twos complement representation of negative numbers
