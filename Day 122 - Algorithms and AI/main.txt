@@ -1,0 +1,11 @@
+fourth way to represent negative numbers:
+excess offset - წანაცვლება
+
+ინტერპრეტირებადი vs კომპილირებადი ენები
+
+gcc compiler for C
+
+gcc -Wall 0 gamarjoba {ფაილის სახელი აქ}
+to create executable file
+
+elf format for linux executable file
