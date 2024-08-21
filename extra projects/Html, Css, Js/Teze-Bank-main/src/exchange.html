@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teze bank | Exchange</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="exchange.css">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/b5998aa8b2.js" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/logo.webp">
+</head>
+<body>
+    <header>
+        <div id="header-part1">
+            <img src="/assets/logo.webp" alt="Main-logo" onclick="location.href='./src/index.html'" style="pointer-events: none;">
+            <span onclick="location.href='./src/index.html'">TezeBank</span>
+            <a href="/src/products.html" aria-label="products">Products</a>
+            <a href="#"  aria-label="exchange">Exchange</a>
+        </div>
+        <div id="header-part2" class="hidden">
+            <p>Sign in <i class="fa-solid fa-arrow-right-to-bracket"></i></p>
+        </div>
+    </header>
+
+    <!-- section1 -->
+    <section id="section1" class="hidden">
+        <h1>Changing the way of banking since 2024</h1>
+    </section>
+
+    <!-- Section2 -->
+    <section id="section2" class="hidden">
+        <h2 class="hidden">Teze bank</h2>
+
+        <div id="section2-container">
+            <!-- section2 part1 -->
+            <div id="section2-part1" class="hidden">
+                <p id="section2-main-p">Money transfers, savings, investments, travel insurance and much more securely stored in one website in your pocket.</p>
+                <h4>Create account <i class="fa-solid fa-arrow-right"></i></h4>
+        
+                <div id="section2-grid-div">
+                    <div id="grid-part1">
+                        <span>12 M</span> <br>
+                        <p>Happy users</p>
+                    </div>
+                    <div id="grid-part2">
+                        <span>#1</span> <br>
+                        <p>Banking app</p>
+                    </div>
+                    <div id="grid-part3">
+                        <span>100+</span> <br>
+                        <p>Countries</p>
+                    </div>
+                    <div id="grid-part4">
+                        <span>20</span> <br>
+                        <p>Awards</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- section2 part2 - exchange -->
+            <div id="section2-part2" class="hidden">
+                <div id="main-div">
+                    <div id="currency-exchange-main">
+                        <h2>Currency Converter</h2>
+                        <label id="res-label"></label>
+                    </div>
+            
+                    <form id="currency-form">
+                        <div id="div1">
+                            <p>From country</p>
+                        </div>
+                
+                        <div id="div2">
+                            <p>To country</p>
+                        </div>
+                
+                        <button id="submit-button" type="submit">Convert</button>
+                    </form>
+                    
+                    <div id="result">Converted Value: 1.00 USD</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="hidden">
+        <div id="footer1">
+            <form>
+                <input type="email" name="email" id="input1" placeholder="Insert your email here" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div id="footer2">
+            <div id="footer2-1">
+                <h3>TezeBank</h3>
+                <a href="https://www.facebook.com/data.tezela" target="_blank"  aria-label="facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/datatezela/" target="_blank"  aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/tezeladata" target="_blank"  aria-label="github"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div id="footer2-2">
+                <a href="#footer2"  aria-label="help"><span>Help</span></a> <br>
+                <a href="#footer2" aria-label="faq">FAQ</a> <br>
+                <a href="#footer2" aria-label="customer service">Customer Service</a> <br>
+                <a href="#footer2" aria-label="guides">How to guides</a>
+            </div>
+            <div id="footer2-3">
+                <a href="#footer2"  aria-label="other"><span>Other</span></a> <br>
+                <a href="#footer2" aria-label="privacy policy">Privacy Policy</a> <br>
+                <a href="#footer2" aria-label="sitemap">Sitemap</a> <br>
+                <a href="#footer2" aria-label="subscriptions">Subscriptions</a>
+            </div>
+            <div id="footer2-4">
+                <a href="#footer2" aria-label="contact"><span>Contact us</span></a> <br>
+                <a href="#footer2"  aria-label="email">datatezelashvili8@gmail.com</a> <br>
+                <a href="#footer2" aria-label="phone number">+123 111 222 333</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- loader -->
+    <div class="loader"></div>
+    <script defer src="for-scroll.js"></script>
+    <script src="currency.js"></script>
+</body>
+</html>
