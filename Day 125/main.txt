@@ -1,0 +1,5 @@
+preprocessing file command:
+gcc -Wall -E -o gamarjoba.i hello_World.c
+
+command to open synaptic:
+synaptic-pkexec
