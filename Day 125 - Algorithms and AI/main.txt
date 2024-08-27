@@ -5,3 +5,4 @@ command to open synaptic:
 synaptic-pkexec
 
 homework:
+ახალი სიტყვები
