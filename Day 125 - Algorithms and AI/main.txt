@@ -6,3 +6,4 @@ synaptic-pkexec
 
 homework:
 ახალი სიტყვები მექნება სასწავლი
+
