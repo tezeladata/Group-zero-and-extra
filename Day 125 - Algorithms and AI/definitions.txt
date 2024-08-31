@@ -1,0 +1,117 @@
+preprocessing file command:
+gcc -Wall -E -o gamarjoba.i hello_World.c
+
+command to open synaptic:
+synaptic-pkexec
+
+homework:
+
+access - to read or modify the value of an object
+    object - region of data storage in the execution environment, the contents of which can represent
+             values
+        execution environment - Two execution environments are defined: freestanding and hosted. In both cases,
+                                program startup occurs when a designated C function is called by the execution
+                                environment. All objects with static storage duration shall be initialized (set to their
+                                initial values) before program startup. The manner and timing of such initialization are
+                                otherwise unspecified. Program termination returns control to the execution
+                                environment.
+        type -  The meaning of a value stored in an object or returned by a function is determined by the
+                type of the expression used to access it. (An identifier declared to be an object is the
+                simplest such expression; the type is specified in the declaration of the identifier.) Types
+                are partitioned into object types (types that describe objects) and function types (types
+                that describe functions).
+
+    expression -  An expression is a sequence of operators and operands that specifies computation of a
+                  value, or that designates an object or a function, or that generates side effects, or that
+                  performs a combination thereof. The value computations of the operands of an operator
+                  are sequenced before the value computation of the result of the operator.
+
+alignment - requirement that objects of a particular type be located on storage boundaries with
+            addresses that are particular multiples of a byte address
+    byte - addressable unit of data storage large enough to hold any member of the basic character
+           set of the execution environment
+        bit - unit of data storage in the execution environment large enough to hold an object that may
+              have one of two values
+
+argument - expression in the comma-separated list bounded by the parentheses in a function call
+           expression, or a sequence of preprocessing tokens in the comma-separated list bounded
+           by the parentheses in a function-like macro invocation
+    function call - A postfix expression followed by parentheses () containing a possibly empty, commaseparated list of expressions is a function call.
+    preprocessing token - The source file is decomposed into preprocessing tokens7) and sequences of
+                          white-space characters (including comments). A source file shall not end in a
+                          partial preprocessing token or in a partial comment. Each comment is replaced by
+                          one space character. New-line characters are retained. Whether each nonempty
+                          sequence of white-space characters other than new-line is retained or replaced by
+                          one space character is implementation-defined.
+    macro invocation - ?
+
+behavior - external appearance or action
+
+implementation-defined behavior - unspecified behavior where each implementation documents how the choice is made
+
+locale-specific behavior - behavior that depends on local conventions of nationality, culture, and language that each
+                           implementation documents
+
+undefined behavior - behavior, upon use of a nonportable or erroneous program construct or of erroneous data,
+                     for which this International Standard imposes no requirements
+    nonportable - ?
+
+unspecified behavior - use of an unspecified value, or other behavior where this International Standard provides
+                      two or more possibilities and imposes no further requirements on which is chosen in any
+                      instance
+    internation standard - where I get this information from
+
+character - member of a set of elements used for the organization, control, or
+            representation of data
+
+multibyte character - sequence of one or more bytes representing a member of the extended character set of
+                      either the source or the execution environment
+
+wide character - wide character value representable by an object of type wchar_t, capable of representing any character
+                 in the current locale
+    current locale - ?
+
+constraint - restriction, either syntactic or semantic, by which the exposition of language elements is
+             to be interpreted
+    interpret - ?
+
+correctly rounded result - representation in the result format that is nearest in value, subject to the current rounding
+                           mode, to what the result would be given unlimited range and precision
+
+diagnostic message - message belonging to an implementation-defined subset of the implementation’s message output
+
+implementation - particular set of software, running in a particular translation environment under particular
+                 control options, that performs translation of programs for, and supports execution of
+                 functions in, a particular execution environment
+
+implementation limit - restriction imposed upon programs by the implementation
+
+memory location - either an object of scalar type, or a maximal sequence of adjacent bit-fields all having nonzero width
+    scalar type - Arithmetic types and pointer types are collectively called scalar types.
+        pointer - A pointer type may be derived from a function type or an object type, called the
+                  referenced type. A pointer type describes an object whose value provides a reference
+                  to an entity of the referenced type. A pointer type derived from the referenced type T
+                  is sometimes called ‘‘pointer to T’’. The construction of a pointer type from a
+                  referenced type is called ‘‘pointer type derivation’’. A pointer type is a complete
+                  object type.
+    bit-field - ?
+
+parameter - object declared as part of a function declaration or definition that acquires a value on
+            entry to the function, or an identifier from the comma-separated list bounded by the
+            parentheses immediately following the macro name in a function-like macro definition
+
+recommended practice - specification that is strongly recommended as being in keeping with the intent of the
+                       standard, but that may be impractical for some implementations
+
+runtime-constraint - requirement on a program when calling a library function
+
+value - precise meaning of the contents of an object when interpreted as having a specific type
+
+indeterminate value - either an unspecified value or a trap representation
+
+unspecified value - valid value of the relevant type where this International Standard imposes no
+                    requirements on which value is chosen in any instance
+
+trap representation - an object representation that need not represent a value of the object type
+
+perform a trap - interrupt execution of the program such that no further operations are performed
