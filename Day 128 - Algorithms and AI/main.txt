@@ -1,0 +1,40 @@
+executable ფაილის შექმნა - gcc -Wall -o gamarjoba_kargi cw.c
+
+macro invocation - If the identifier-list in the macro definition does not end with an ellipsis, the number of
+arguments (including those arguments consisting of no preprocessing tokens) in an
+invocation of a function-like macro shall equal the number of parameters in the macro
+definition. Otherwise, there shall be more arguments in the invocation than there are
+parameters in the macro definition (excluding the ...). There shall exist a )
+preprocessing token that terminates the invocation.
+
+byte - addressable unit of data storage large enough to hold any member of the basic character
+set of the execution environment
+
+
+Both the basic source and basic execution character sets shall have the following
+members: the 26 uppercase letters of the Latin alphabet
+the 26 lowercase letters of the Latin alphabet
+the 10 decimal digits
+the following 29 graphic characters
+
+
+type - The meaning of a value stored in an object or returned by a function is determined by the
+type of the expression used to access it. (An identifier declared to be an object is the
+simplest such expression; the type is specified in the declaration of the identifier.) Types
+are partitioned into object types (types that describe objects) and function types (types
+that describe functions).
+
+type - მეხსიერების რეგიონის ინტერპრეტაცია
+
+
+main function - The function called at program startup is named main. The implementation declares no
+prototype for this function. It shall be defined with a return type of int and with no
+parameters
+
+
+The printf function returns the number of characters transmitted, or a negative value if
+an output or encoding error occurred.
+
+The printf function is equivalent to fprintf with the argument stdout interposed
+before the arguments to printf.
+
