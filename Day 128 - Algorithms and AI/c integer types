@@ -1,0 +1,14 @@
+signed char - 1 byte
+from -128 to 127
+
+short int - 2 bytes
+from -32768 to 32767
+
+int - 4 bytes
+from -2147483648 to 2147483647
+
+long int - 4 bytes or 8 bytes
+from -2147483648 to 2147483647 or from -9223372036854775808 to 9223372036854775807
+
+long long int - 8 bytes
+from -9223372036854775808 to 9223372036854775807
