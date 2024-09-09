@@ -1,0 +1,23 @@
+The printf function returns the number of characters transmitted, or a negative value if
+an output or encoding error occurred.
+
+The printf function is equivalent to fprintf with the argument stdout interposed
+before the arguments to printf.
+
+Input and output, whether to or from physical devices such as terminals and tape drives,
+or whether to or from files supported on structured storage devices, are mapped into
+logical data streams, whose properties are more uniform than their various inputs and
+outputs. Two forms of mapping are supported, for text streams and for binary
+streams.
+
+FILE
+which is an object type capable of recording all the information needed to control a
+stream, including its file position indicator, a pointer to its associated buffer (if any), an
+error indicator that records whether a read/write error has occurred, and an end-of-file
+indicator that records whether the end of the file has been reached;
+
+stdin, stfout, stferr - all of them are macros
+
+
+ The getchar function is equivalent to getc with the argument stdin.
+ 
