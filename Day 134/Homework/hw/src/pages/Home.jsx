@@ -25,6 +25,7 @@ export const Home = () => {
                 <p>Surname: {info.surname}</p>
             </section>
 
+
             <section className="bg-blue-800 text-white">
                 <p>Width: {size.width}</p>
                 <p>Height: {size.height}</p>
