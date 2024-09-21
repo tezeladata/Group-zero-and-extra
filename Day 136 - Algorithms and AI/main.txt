@@ -1,0 +1,5 @@
+mkdir "folder name" - to make directory
+pwd - to check in which directory we are in
+touch "file name" - to make file
+
+git checkout "branch name" - change branch

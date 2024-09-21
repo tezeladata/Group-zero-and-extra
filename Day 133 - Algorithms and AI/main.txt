@@ -1,0 +1,6 @@
+make exe file from c file: gcc -Wall -o "new file name" "c file name"
+
+EOF - end of file
+
+macros - directive of preprocessing which allows us to define some variables
+we use #define for macros
