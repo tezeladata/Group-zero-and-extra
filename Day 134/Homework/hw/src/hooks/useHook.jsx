@@ -1,10 +1,7 @@
 import { useState} from "react";
 
 const useHook = () => {
-    const [info, setInfo] = useState({
-        name: "",
-        surname: ""
-    });
+    const [info, setInfo] = useState({});
 
     const handleChange = (e) => {
         const { name, value } = e.target;
