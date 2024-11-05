@@ -6,7 +6,7 @@ def main():
 
     path = "C:/Users/PC/OneDrive/Desktop/coding course/extra projects/Python/Bulk file renamer/Images/"
     for filename in os.listdir(path):
-        my_dest = f"goa{i}.jpg"
+        my_dest = f"თოფურია{i}.jpg"
         my_source = path + filename
         my_dest = path + my_dest
 
