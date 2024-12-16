@@ -1,0 +1,13 @@
+{
+  "name": "John Doe",
+  "age": 30,
+  "email": "john.doe@example.com",
+  "isStudent": false,
+  "skills": ["JavaScript", "Python", "SQL"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "zip": "62701"
+  }
+}
