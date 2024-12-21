@@ -1,0 +1,16 @@
+1. HTTP (Hypertext Transfer Protocol)
+What it does: HTTP is the protocol used by web browsers and servers to communicate. It allows you to load websites, send form data, or retrieve information from the internet.
+Example: When you type www.example.com in your browser, HTTP handles the request to fetch the webpage.
+
+2. TCP (Transmission Control Protocol)
+What it does: TCP is like the delivery system for data on the internet. It ensures that all parts of your data (like a webpage or a file) are sent and received correctly, in the right order.
+Example: When you download a file, TCP makes sure every part of the file arrives at your device and reassembles it properly.
+
+3. TLS (Transport Layer Security)
+What it does: TLS encrypts data to keep it secure during transmission over the internet. This ensures that sensitive information, like passwords and credit card numbers, can't be intercepted.
+Example: When you see https:// in a website URL (with the "s"), it means TLS is being used to secure your connection.
+
+In short:
+HTTP is for communication.
+TCP ensures reliable delivery.
+TLS makes it secure.
