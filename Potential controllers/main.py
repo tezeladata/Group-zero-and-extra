@@ -4,7 +4,7 @@ import time
 # took out these controllers from list: "khuberishvili", "grdzelishvili", "motiashvili", "gvritishvili", "tsitlauri"
 # december first winners - abashidze, alavidze, kvaratskhelia
 all_leaders = [
-"kilasonia", "khuskivadze", "vanishvili", "samsonidze", "khmaladze", "gurgenidze", "abramiani", "narimanidze", "svanidze", "vakhtangashvili", "papunashvili", "adeishvili", "razmadze", "kobakhidze", "varazashvili", "arakhamia", "gujabidze", "kochalidze", "qoridze", "tchitadze", "macharashvili", "shavadze"
+"kilasonia", "khuskivadze", "vanishvili", "gurgenidze", "abramiani", "svanidze", "vakhtangashvili", "papunashvili", "razmadze", "kobakhidze", "arakhamia", "kochalidze", "tchitadze"
 ]
 
 winners = []
