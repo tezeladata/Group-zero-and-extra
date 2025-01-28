@@ -1,10 +1,8 @@
 import random
 import time
 
-# took out these controllers from list: "khuberishvili", "grdzelishvili", "motiashvili", "gvritishvili", "tsitlauri"
-# december first winners - abashidze, alavidze, kvaratskhelia
 all_leaders = [
-"kilasonia", "khuskivadze", "vanishvili", "gurgenidze", "abramiani", "svanidze", "vakhtangashvili", "papunashvili", "razmadze", "kobakhidze", "arakhamia", "kochalidze", "tchitadze"
+"kilasonia", "khuskivadze", "vanishvili", "gurgenidze", "khmaladze", "samsonidze", "kvaratskhelia", "tchitadze", "dzindzibadze", "alavidze", "kobakhidze", "adeishvili", "vakhtangashvili", "chapidze", "kochalidze", "edisherashvili", "qoridze", "shavadze", "chankvetadze", "gvritishvili", "abramiani", "macharashvili", "khutsishvili"
 ]
 
 winners = []
