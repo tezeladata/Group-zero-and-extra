@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "name": "apple"
+    },
+    {
+        "id": 1,
+        "name": "banana"
+    },
+    {
+        "id": 2,
+        "name": "cocomelon"
+    },
+    {
+        "id": 3,
+        "name": "dragon fruit"
+    },
+    {
+        "id": 4,
+        "name": "elder berry"
+    },
+    {
+        "id": 5,
+        "name": "feijoa"
+    },
+    {
+        "id": 6,
+        "name": "grape"
+    },
+    {
+        "id": 7,
+        "name": "hazelnut"
+    },
+    {
+        "id": 8,
+        "name": "ilama"
+    },
+    {
+        "id": 9,
+        "name": "jujube"
+    }
+]
