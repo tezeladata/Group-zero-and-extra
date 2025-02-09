@@ -1,5 +1,6 @@
 import express from 'express';
 import readFile from "../Utils/readFile.js";
+import appendFile from "../Utils/appendFile.js";
 
 export const productsRoute = express.Router();
 
@@ -7,7 +8,7 @@ productsRoute.get('/', async (req, res) => {
     const {limit, sort} = req.query;
 
     try {
-        let products = await readFile("C:\\Users\\PC\\OneDrive\\Desktop\\web development course\\Day 198\\Classwork\\database.json");
+        let products = await readFile("C:\\Users\\PC\\OneDrive\\Desktop\\web development course\\Day 199\\Classwork\\database.json");
 
         if (limit) {
             products = products.slice(0, parseInt(limit));
@@ -29,11 +30,15 @@ productsRoute.get('/', async (req, res) => {
     }
 })
 
+productsRoute.get("/category", (req, res) => {
+    res.json(["Accessories", "Laptops", "Displays", "Storage", "Audio", "Cameras", "Furniture", "Smart Home", "Drawing Tablets", "Networking"])
+});
+
 productsRoute.get('/:id', async (req, res) => {
     const {id} = req.params;
 
     try {
-        const products = await readFile("C:\\Users\\PC\\OneDrive\\Desktop\\web development course\\Day 198\\Classwork\\database.json");
+        const products = await readFile("C:\\Users\\PC\\OneDrive\\Desktop\\web development course\\Day 199\\Classwork\\database.json");
         const product = products.find(product => product.id === parseInt(id));
 
         if (!product) {
@@ -51,7 +56,7 @@ productsRoute.get("/category/:category", async (req, res) => {
     const { category } = req.params;
 
     try {
-        const products = await readFile("C:\\Users\\PC\\OneDrive\\Desktop\\web development course\\Day 198\\Classwork\\database.json");
+        const products = await readFile("C:\\Users\\PC\\OneDrive\\Desktop\\web development course\\Day 199\\Classwork\\database.json");
         const filteredProducts = products.filter((product) => product.category === category);
 
         console.log("Filtered products: ", filteredProducts);
@@ -66,6 +71,19 @@ productsRoute.get("/category/:category", async (req, res) => {
     }
 })
 
-productsRoute.get("/category", (req, res) => {
-    res.json(["Accessories", "Laptops", "Displays", "Storage", "Audio", "Cameras", "Furniture", "Smart Home", "Drawing Tablets", "Networking"])
+productsRoute.post("/add", async (req, res) => {
+    const { name, category, price, stock } = req.body;
+
+    if (!(name && category && price && stock)) {
+        return res.status(400).json({ error: 'Not enough information' });
+    }
+
+    try {
+        await appendFile("C:\\Users\\PC\\OneDrive\\Desktop\\web development course\\Day 199\\Classwork\\database.json",
+            { id: Date.now(), name, category, price, stock });
+
+        res.status(201).json({ message: "Product added successfully!" });
+    } catch (e) {
+        res.status(500).json({ error: e.message });
+    }
 });

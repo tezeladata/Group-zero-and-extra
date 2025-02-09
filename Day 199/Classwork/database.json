@@ -110,5 +110,19 @@
     "category": "Networking",
     "price": 129.99,
     "stock": 30
+  },
+  {
+    "id": 1739096529416,
+    "name": "Gaming Laptop",
+    "category": "Laptops",
+    "price": 11299.99,
+    "stock": 1000
+  },
+  {
+    "id": 1739096781754,
+    "name": "Gaming Laptop",
+    "category": "Laptops",
+    "price": 11299.99,
+    "stock": 1000
   }
 ]
