@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Mentor Control",
+    "duration": "90 minutes"
+  },
+  {
+    "id": 2,
+    "name": "Clean room",
+    "duration": "12 minutes"
+  },
+  {
+    "id": 3,
+    "name": "Build server",
+    "duration": "120 minutes"
+  }
+]
