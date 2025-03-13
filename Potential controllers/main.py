@@ -1,7 +1,7 @@
 import random
 import time
 
-all_leaders = ["Erekle Kilasonia", "Giorgi Khmaladze", "Ana Puturidze", "Giorgi Vanishvili", "Sophia Gorgadze", "Giorgi Tskhadadze",  "Giorgi Ziraqashvili", "Giorgi Giorgobiani", "Andria Korchilava", "Aleksandre Chankvetadze", "Nikoloz Tchitadze", "Guram Papunashvili", "Levani Samsonidze", "Zuka Qoridze", "Nikoloz Tevdoradze", "Nikoloz Edisherashvili", "Lika Chkhikvadze", "Luka Dgebuadze", "Goga Chalauri", "Giorgi Bibilashvili", "Daniel Abramiani", "Aleksandre Dzukaevi", "Davit Adeishvili"]
+all_leaders = ["Erekle Kilasonia", "Ana Puturidze", "Giorgi Vanishvili", "Giorgi Tskhadadze",  "Giorgi Ziraqashvili", "Aleksandre Chankvetadze", "Nikoloz Edisherashvili", "Lika Chkhikvadze", "Goga Chalauri", "Aleksandre Dzukaevi", "Davit Adeishvili", "Levan Skhulukhia", "Shio Elikashvili"]
 
 winners = []
 def lucky_leader(all, res_arr):
