@@ -1,0 +1,6 @@
+{
+    "userID": "1",
+    "name": "David",
+    "balance": 1000.0,
+    "currency": "USD"
+}
