@@ -1,0 +1,26 @@
+{
+    "board": "Platform launch",
+    "column": "TODO",
+    "heading": "Build UI for onboarding flow",
+    "description": "We know what we're planning to build for version one. Now we need to finalise the first pricing model we'll use.",
+    "current status": "Doing",
+    "subtasks count": 3,
+    "number of completed subtasks": 2, 
+    "subtasks": [
+        {
+            "task name": "Build UI for onboarding flow",
+            "name": "Research competitor pricing and business models",
+            "status": "Completed"
+        },
+        {
+            "task name": "Build UI for onboarding flow",
+            "name": "Outline a business model that works for solution",
+            "status": "Completed"
+        },
+        {
+            "task name": "Build UI for onboarding flow",
+            "name": "Talk to potential customers about our proposed solution and ask for fair price expectancy",
+            "status": "Not completed"
+        }
+    ]
+}
