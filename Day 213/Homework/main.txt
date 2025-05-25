@@ -1,0 +1,16 @@
+The TypeScript type annotation for array types is fairly straightforward: we put [] after the element type. In this code, names is an Array that can only contain strings:
+let names: string[] = ['Danny', 'Samantha'];
+
+An alternative method is to use the Array<T> syntax, where T stands for the type.
+let names: Array<string> = ['Danny', 'Samantha'];
+
+So far we’ve looked at string[] arrays, but we could also have arrays that only contain numbers (number[]) or booleans (boolean[]). In fact, we can make arrays of any type whatsoever.
+
+With TypeScript, we can define arrays with a fixed sequence of types:
+let ourTuple: [string, number, string, boolean] = ['Is', 7 , 'our favorite number?' , false]; 
+
+In TypeScript, when an array is typed with elements of specific types, it’s called a tuple.
+
+Assigning types to rest parameters is similar to assigning types to arrays.
+
+When working with functions which have lots of arguments, we can use tuples as arguments, 
